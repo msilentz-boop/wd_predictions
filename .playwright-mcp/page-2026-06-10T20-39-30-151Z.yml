@@ -1,0 +1,257 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]: "♠ OPERATION: WC2026 ♠"
+    - generic [ref=e4]: INTEL SYNCED · 10 Jun, 21:23
+  - generic [ref=e5]:
+    - generic [ref=e6]: ♠ ♥ ♦ ♣
+    - heading "WC 2026" [level=1] [ref=e7]
+    - paragraph [ref=e8]: Prediction Intelligence Syndicate
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - heading "♠ HIGH ROLLERS · STANDINGS" [level=2] [ref=e13]
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: ♠
+          - generic [ref=e17]: CONOR
+          - generic [ref=e18]:
+            - generic [ref=e19]:
+              - generic [ref=e20]: CORRECT
+              - text: 0/0
+            - generic [ref=e21]:
+              - generic [ref=e22]: ACCURACY
+              - text: —
+            - generic [ref=e23]:
+              - generic [ref=e24]: PTS
+              - text: "0"
+        - generic [ref=e25]:
+          - generic [ref=e26]: ♥
+          - generic [ref=e27]: CROW
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - generic [ref=e30]: CORRECT
+              - text: 0/0
+            - generic [ref=e31]:
+              - generic [ref=e32]: ACCURACY
+              - text: —
+            - generic [ref=e33]:
+              - generic [ref=e34]: PTS
+              - text: "0"
+        - generic [ref=e35]:
+          - generic [ref=e36]: ♦
+          - generic [ref=e37]: DAN
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - generic [ref=e40]: CORRECT
+              - text: 0/0
+            - generic [ref=e41]:
+              - generic [ref=e42]: ACCURACY
+              - text: —
+            - generic [ref=e43]:
+              - generic [ref=e44]: PTS
+              - text: "0"
+        - generic [ref=e45]:
+          - generic [ref=e46]: "4"
+          - generic [ref=e47]: HUGH
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: CORRECT
+              - text: 0/0
+            - generic [ref=e51]:
+              - generic [ref=e52]: ACCURACY
+              - text: —
+            - generic [ref=e53]:
+              - generic [ref=e54]: PTS
+              - text: "0"
+        - generic [ref=e55]:
+          - generic [ref=e56]: "5"
+          - generic [ref=e57]: MARC
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: CORRECT
+              - text: 0/0
+            - generic [ref=e61]:
+              - generic [ref=e62]: ACCURACY
+              - text: —
+            - generic [ref=e63]:
+              - generic [ref=e64]: PTS
+              - text: "0"
+        - generic [ref=e65]:
+          - generic [ref=e66]: "6"
+          - generic [ref=e67]: MICK
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: CORRECT
+              - text: 0/0
+            - generic [ref=e71]:
+              - generic [ref=e72]: ACCURACY
+              - text: —
+            - generic [ref=e73]:
+              - generic [ref=e74]: PTS
+              - text: "0"
+        - generic [ref=e75]:
+          - generic [ref=e76]: "7"
+          - generic [ref=e77]: MUFF
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - generic [ref=e80]: CORRECT
+              - text: 0/0
+            - generic [ref=e81]:
+              - generic [ref=e82]: ACCURACY
+              - text: —
+            - generic [ref=e83]:
+              - generic [ref=e84]: PTS
+              - text: "0"
+        - generic [ref=e85]:
+          - generic [ref=e86]: "8"
+          - generic [ref=e87]: PATRICK
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: CORRECT
+              - text: 0/0
+            - generic [ref=e91]:
+              - generic [ref=e92]: ACCURACY
+              - text: —
+            - generic [ref=e93]:
+              - generic [ref=e94]: PTS
+              - text: "0"
+    - generic [ref=e95]: ♠ ♥ ♦ ♣
+    - generic [ref=e96]:
+      - heading "♦ OPEN MARKETS · UPCOMING FIXTURES" [level=2] [ref=e98]
+      - generic [ref=e99]:
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: GROUP A
+            - generic [ref=e103]: 11 Jun, 20:00
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - generic [ref=e106]: Mexico
+              - generic [ref=e107]: HOME
+            - generic [ref=e109]:
+              - generic [ref=e110]: South Africa
+              - generic [ref=e111]: AWAY
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]: GROUP A
+            - generic [ref=e115]: 12 Jun, 03:00
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e118]: South Korea
+              - generic [ref=e119]: HOME
+            - generic [ref=e121]:
+              - generic [ref=e122]: Czech Republic
+              - generic [ref=e123]: AWAY
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e126]: GROUP B
+            - generic [ref=e127]: 12 Jun, 20:00
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: Canada
+              - generic [ref=e131]: HOME
+            - generic [ref=e133]:
+              - generic [ref=e134]: Bosnia & Herzegovina
+              - generic [ref=e135]: AWAY
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - generic [ref=e138]: GROUP B
+            - generic [ref=e139]: 13 Jun, 20:00
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Qatar
+              - generic [ref=e143]: HOME
+            - generic [ref=e145]:
+              - generic [ref=e146]: Switzerland
+              - generic [ref=e147]: AWAY
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: GROUP C
+            - generic [ref=e151]: 13 Jun, 23:00
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]: Brazil
+              - generic [ref=e155]: HOME
+            - generic [ref=e157]:
+              - generic [ref=e158]: Morocco
+              - generic [ref=e159]: AWAY
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]: GROUP D
+            - generic [ref=e163]: 13 Jun, 02:00
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - generic [ref=e166]: USA
+              - generic [ref=e167]: HOME
+            - generic [ref=e169]:
+              - generic [ref=e170]: Paraguay
+              - generic [ref=e171]: AWAY
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic [ref=e174]: GROUP C
+            - generic [ref=e175]: 14 Jun, 02:00
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: Haiti
+              - generic [ref=e179]: HOME
+            - generic [ref=e181]:
+              - generic [ref=e182]: Scotland
+              - generic [ref=e183]: AWAY
+        - generic [ref=e184]:
+          - generic [ref=e185]:
+            - generic [ref=e186]: GROUP D
+            - generic [ref=e187]: 14 Jun, 05:00
+          - generic [ref=e188]:
+            - generic [ref=e189]:
+              - generic [ref=e190]: Australia
+              - generic [ref=e191]: HOME
+            - generic [ref=e193]:
+              - generic [ref=e194]: Turkey
+              - generic [ref=e195]: AWAY
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - generic [ref=e198]: GROUP E
+            - generic [ref=e199]: 14 Jun, 18:00
+          - generic [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]: Germany
+              - generic [ref=e203]: HOME
+            - generic [ref=e205]:
+              - generic [ref=e206]: Curacao
+              - generic [ref=e207]: AWAY
+        - generic [ref=e208]:
+          - generic [ref=e209]:
+            - generic [ref=e210]: GROUP F
+            - generic [ref=e211]: 14 Jun, 21:00
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]: Netherlands
+              - generic [ref=e215]: HOME
+            - generic [ref=e217]:
+              - generic [ref=e218]: Japan
+              - generic [ref=e219]: AWAY
+        - generic [ref=e220]:
+          - generic [ref=e221]:
+            - generic [ref=e222]: GROUP E
+            - generic [ref=e223]: 15 Jun, 00:00
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - generic [ref=e226]: Ivory Coast
+              - generic [ref=e227]: HOME
+            - generic [ref=e229]:
+              - generic [ref=e230]: Ecuador
+              - generic [ref=e231]: AWAY
+        - generic [ref=e232]:
+          - generic [ref=e233]:
+            - generic [ref=e234]: GROUP F
+            - generic [ref=e235]: 15 Jun, 03:00
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - generic [ref=e238]: Sweden
+              - generic [ref=e239]: HOME
+            - generic [ref=e241]:
+              - generic [ref=e242]: Tunisia
+              - generic [ref=e243]: AWAY
+    - generic [ref=e244]: ♠ ♥ ♦ ♣
+    - generic [ref=e245]:
+      - heading "♣ CLOSED FILES · RESULTS & PICKS" [level=2] [ref=e247]
+      - generic [ref=e249]: NO CLOSED FILES YET — FIRST MATCH KICKS OFF SOON
+  - contentinfo [ref=e250]: LICENSED TO PREDICT · CLASSIFIED INTELLIGENCE · WC 2026
