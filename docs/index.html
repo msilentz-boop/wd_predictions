@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WC 2026 Pool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #0a0d14; font-family: ui-sans-serif, system-ui, sans-serif; }
+    .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; }
+    .pill-correct { background: #052e16; color: #4ade80; border: 1px solid #166534; }
+    .pill-wrong   { background: #2d0a0a; color: #f87171; border: 1px solid #7f1d1d; }
+    .pill-pending { background: #111827; color: #6b7280; border: 1px solid #1f2937; }
+    .gold  { color: #f59e0b; text-shadow: 0 0 8px rgba(245,158,11,.4); }
+    .silver { color: #94a3b8; }
+    .bronze { color: #b45309; }
+    ::-webkit-scrollbar { height: 4px; background: #111827; }
+    ::-webkit-scrollbar-thumb { background: #374151; border-radius: 2px; }
+  </style>
+</head>
+<body class="text-slate-100 min-h-screen pb-16">
+
+  <header class="sticky top-0 z-50 border-b border-slate-800 bg-[#0a0d14]/90 backdrop-blur px-5 py-3 flex items-center justify-between">
+    <span class="font-black tracking-widest text-emerald-400 uppercase text-sm">WC 2026 · PUNT BOARD</span>
+    <span id="sync-time" class="text-xs font-mono text-slate-500">loading…</span>
+  </header>
+
+  <main class="max-w-screen-xl mx-auto px-4 mt-6 space-y-8">
+
+    <!-- Leaderboard -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3 flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse inline-block"></span>
+        STANDINGS
+      </h2>
+      <div id="leaderboard" class="card overflow-hidden divide-y divide-slate-800"></div>
+    </section>
+
+    <!-- Upcoming fixtures -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3">UPCOMING FIXTURES</h2>
+      <div id="upcoming" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <!-- Results + picks grid -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3">RESULTS & PICKS</h2>
+      <div id="results" class="space-y-3"></div>
+    </section>
+
+  </main>
+
+  <script>
+    const fmtDate = iso =>
+      new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+    const rankIcon = r =>
+      r === 1 ? '<span class="gold font-black">🥇</span>'
+      : r === 2 ? '<span class="silver font-black">🥈</span>'
+      : r === 3 ? '<span class="bronze font-black">🥉</span>'
+      : `<span class="text-slate-500 font-mono w-5 text-center inline-block">${r}</span>`;
+
+    async function init() {
+      let data;
+      try {
+        const r = await fetch(`./data.json?t=${Date.now()}`);
+        data = await r.json();
+      } catch {
+        document.getElementById('sync-time').textContent = 'SYNC FAILED';
+        return;
+      }
+
+      document.getElementById('sync-time').textContent =
+        'SYNCED ' + new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+      // ── Leaderboard ──────────────────────────────────────────────────
+      const lb = document.getElementById('leaderboard');
+      if (!data.leaderboard.length) {
+        lb.innerHTML = '<div class="p-5 text-slate-500 text-sm">No results yet — first match is tomorrow.</div>';
+      } else {
+        lb.innerHTML = data.leaderboard.map((p, i) => {
+          const rank = i + 1;
+          const pct = p.played ? Math.round(p.accuracy * 100) + '%' : '—';
+          const rowCls = rank === 1 ? 'bg-amber-950/20 border-l-2 border-amber-500' : '';
+          return `
+            <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-800/30 transition ${rowCls}">
+              <div class="flex items-center gap-3">
+                ${rankIcon(rank)}
+                <span class="font-semibold tracking-wide">${p.name}</span>
+              </div>
+              <div class="flex items-center gap-4 font-mono text-xs">
+                <div class="text-right">
+                  <div class="text-slate-500 text-[10px]">CORRECT</div>
+                  <div class="text-slate-300">${p.correct}/${p.played}</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-slate-500 text-[10px]">ACC</div>
+                  <div class="text-slate-300">${pct}</div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded text-right min-w-[52px]">
+                  <div class="text-[10px] text-slate-500">PTS</div>
+                  <div class="text-emerald-400 font-black text-sm">${p.points}</div>
+                </div>
+              </div>
+            </div>`;
+        }).join('');
+      }
+
+      // ── Upcoming ──────────────────────────────────────────────────────
+      const upDiv = document.getElementById('upcoming');
+      const upcoming = data.upcoming.slice(0, 12);
+      if (!upcoming.length) {
+        upDiv.innerHTML = '<p class="text-slate-500 text-sm">No upcoming group stage fixtures.</p>';
+      } else {
+        upDiv.innerHTML = upcoming.map(m => {
+          const label = m.stage === 'GROUP_STAGE' ? `Group ${m.group?.replace('GROUP_','')}` : m.stage.replace(/_/g,' ');
+          return `
+            <div class="card p-4 hover:border-slate-700 transition">
+              <div class="text-[10px] font-mono text-slate-500 mb-1.5 uppercase flex justify-between">
+                <span>${label}</span>
+                <span>${fmtDate(m.date)}</span>
+              </div>
+              <div class="space-y-0.5 text-sm font-medium">
+                <div class="flex justify-between"><span>${m.homeTeam}</span><span class="text-slate-500 text-xs">HOME</span></div>
+                <div class="flex justify-between"><span>${m.awayTeam}</span><span class="text-slate-500 text-xs">AWAY</span></div>
+              </div>
+            </div>`;
+        }).join('');
+      }
+
+      // ── Results + picks grid ──────────────────────────────────────────
+      const resDiv = document.getElementById('results');
+      const finished = [...data.finished].reverse(); // most recent first
+      if (!finished.length) {
+        resDiv.innerHTML = '<p class="text-slate-500 text-sm">No matches finished yet.</p>';
+      } else {
+        resDiv.innerHTML = finished.map(m => {
+          const label = m.stage === 'GROUP_STAGE' ? `Group ${m.group?.replace('GROUP_','')}` : m.stage.replace(/_/g,' ');
+          const score = (m.homeScore != null && m.awayScore != null)
+            ? `<span class="text-emerald-400 font-black">${m.homeScore}–${m.awayScore}</span>`
+            : `<span class="text-slate-500">—</span>`;
+          const picks = data.players.map(p => {
+            const pick = m.picks?.[p] ?? '';
+            const state = m.correct?.[p];
+            const cls = state === true ? 'pill-correct' : state === false ? 'pill-wrong' : 'pill-pending';
+            return `<div class="flex flex-col items-center gap-0.5">
+              <span class="text-[9px] font-mono text-slate-500 uppercase">${p.slice(0,3)}</span>
+              <span class="text-[10px] font-mono px-1.5 py-0.5 rounded ${cls} whitespace-nowrap max-w-[64px] text-center truncate" title="${pick}">${pick || '—'}</span>
+            </div>`;
+          }).join('');
+
+          return `
+            <div class="card p-4">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <div class="text-[10px] font-mono text-slate-500 uppercase mb-0.5">${label} · ${fmtDate(m.date)}</div>
+                  <div class="text-sm font-semibold">${m.homeTeam} <span class="text-slate-500">vs</span> ${m.awayTeam}</div>
+                </div>
+                <div class="text-right shrink-0">
+                  <div class="text-[10px] font-mono text-slate-500 mb-0.5">RESULT</div>
+                  ${score}
+                  <div class="text-[10px] text-slate-400 mt-0.5">${m.result ?? ''}</div>
+                </div>
+              </div>
+              <div class="flex gap-2 flex-wrap">${picks}</div>
+            </div>`;
+        }).join('');
+      }
+    }
+
+    window.addEventListener('load', init);
+  </script>
+</body>
+</html>
