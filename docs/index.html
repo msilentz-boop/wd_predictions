@@ -3,62 +3,448 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WC 2026 Pool</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>WC 2026 Predictions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;900&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { background: #0a0d14; font-family: ui-sans-serif, system-ui, sans-serif; }
-    .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; }
-    .pill-correct { background: #052e16; color: #4ade80; border: 1px solid #166534; }
-    .pill-wrong   { background: #2d0a0a; color: #f87171; border: 1px solid #7f1d1d; }
-    .pill-pending { background: #111827; color: #6b7280; border: 1px solid #1f2937; }
-    .gold  { color: #f59e0b; text-shadow: 0 0 8px rgba(245,158,11,.4); }
-    .silver { color: #94a3b8; }
-    .bronze { color: #b45309; }
-    ::-webkit-scrollbar { height: 4px; background: #111827; }
-    ::-webkit-scrollbar-thumb { background: #374151; border-radius: 2px; }
+    :root {
+      --bg:          #0d1117;
+      --surface:     #161b22;
+      --surface-alt: #1c2330;
+      --border:      rgba(255,255,255,0.07);
+      --border-hi:   rgba(255,255,255,0.14);
+      --green:       #3DD68C;
+      --green-glow:  rgba(61,214,140,0.15);
+      --red:         #F85149;
+      --red-glow:    rgba(248,81,73,0.15);
+      --amber:       #E3B341;
+      --text:        #CDD9E5;
+      --text-mid:    #768390;
+      --text-dim:    #444C56;
+      --white:       #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      /* Subtle alternating pitch stripes */
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0px, transparent 80px,
+        rgba(255,255,255,0.012) 80px, rgba(255,255,255,0.012) 160px
+      );
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      min-height: 100vh;
+      padding-bottom: 80px;
+      line-height: 1.5;
+    }
+
+    ::-webkit-scrollbar { width: 5px; background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 3px; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Header ──────────────────────────────────────────────── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,17,23,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+      height: 52px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .wordmark {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .wordmark-badge {
+      background: var(--green);
+      color: #000;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 11px; letter-spacing: 0.12em;
+      padding: 3px 7px; border-radius: 3px;
+    }
+    .wordmark-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 16px; letter-spacing: 0.06em;
+      color: var(--white);
+    }
+
+    #sync-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-dim); letter-spacing: 0.04em;
+    }
+
+    /* ── Page hero ───────────────────────────────────────────── */
+    .hero {
+      padding: 44px 20px 36px;
+      max-width: 960px; margin: 0 auto;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.12em;
+      color: var(--green); margin-bottom: 10px; text-transform: uppercase;
+    }
+    .hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(40px, 8vw, 72px);
+      letter-spacing: 0.02em; line-height: 0.95;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .hero-title span { color: var(--green); }
+    .hero-sub {
+      font-size: 14px; color: var(--text-mid);
+      font-weight: 400; letter-spacing: 0.02em;
+    }
+
+    /* ── Layout ──────────────────────────────────────────────── */
+    main {
+      max-width: 960px; margin: 0 auto; padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 52px;
+      animation: fadeUp 0.55s ease both;
+    }
+    section:nth-child(1) { animation-delay: 0.08s; }
+    section:nth-child(2) { animation-delay: 0.16s; }
+    section:nth-child(3) { animation-delay: 0.24s; }
+
+    .section-label {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-label-bar {
+      width: 4px; height: 20px; background: var(--green); border-radius: 2px; flex-shrink: 0;
+    }
+    .section-label h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 13px; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--white);
+    }
+    .section-label-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--text-dim); margin-left: auto;
+    }
+
+    /* ── League table ────────────────────────────────────────── */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .table-head {
+      display: grid;
+      grid-template-columns: 36px 1fr 60px 80px 60px;
+      padding: 9px 16px;
+      background: var(--surface-alt);
+      border-bottom: 1px solid var(--border);
+    }
+    .th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-dim); text-align: right;
+    }
+    .th:first-child, .th:nth-child(2) { text-align: left; }
+
+    .lb-row {
+      display: grid;
+      grid-template-columns: 36px 1fr 60px 80px 60px;
+      padding: 13px 16px; align-items: center;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .lb-row:last-child { border-bottom: none; }
+    .lb-row:hover { background: rgba(255,255,255,0.02); }
+    .lb-row.top { background: rgba(61,214,140,0.06); }
+    .lb-row.top:hover { background: rgba(61,214,140,0.09); }
+
+    .lb-rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; font-weight: 700; color: var(--text-dim);
+    }
+    .lb-row.top .lb-rank { color: var(--green); }
+
+    .lb-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px; font-weight: 700; letter-spacing: 0.04em;
+      color: var(--white);
+    }
+
+    .lb-cell {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; text-align: right; color: var(--text);
+    }
+    .lb-cell.pts {
+      font-size: 18px; font-weight: 700; color: var(--green);
+      text-align: right;
+    }
+    .lb-cell.pts-2nd { color: var(--text-mid); }
+    .lb-cell.acc { color: var(--text-mid); font-size: 12px; }
+
+    /* ── Upcoming grid ───────────────────────────────────────── */
+    .fixture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .fixture-card {
+      background: var(--surface);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px 15px;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .fixture-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
+
+    .fx-top {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 10px;
+    }
+    .fx-group {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--green);
+    }
+    .fx-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-dim);
+    }
+    .fx-team {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 4px 0;
+    }
+    .fx-team-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
+      color: var(--text);
+    }
+    .fx-side {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; color: var(--text-dim); letter-spacing: 0.1em;
+    }
+    .fx-divider { height: 1px; background: var(--border); margin: 2px 0; }
+
+    /* ── Result cards ────────────────────────────────────────── */
+    .result-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .result-card {
+      background: var(--surface);
+      border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.15s;
+    }
+    .result-card:hover { border-color: var(--border-hi); }
+
+    .result-header {
+      display: flex; align-items: stretch;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .result-meta-col {
+      padding: 12px 16px; border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; justify-content: center; min-width: 120px;
+    }
+    .result-group {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 2px;
+    }
+    .result-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-dim);
+    }
+
+    .result-match-col {
+      flex: 1; padding: 10px 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .result-team {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 16px; letter-spacing: 0.03em; color: var(--text);
+      flex: 1;
+    }
+    .result-team.home { text-align: right; }
+    .result-team.away { text-align: left; }
+
+    .score-box {
+      display: flex; align-items: center; gap: 6px; flex-shrink: 0;
+    }
+    .score-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 28px; line-height: 1;
+      color: var(--white); min-width: 22px; text-align: center;
+    }
+    .score-sep {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px; color: var(--text-dim); margin: 0 -2px;
+    }
+    .score-pending {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; color: var(--text-dim);
+    }
+
+    .result-winner-col {
+      padding: 12px 14px; border-left: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; min-width: 96px;
+    }
+    .winner-pill {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green);
+      background: var(--green-glow);
+      border: 1px solid rgba(61,214,140,0.25);
+      padding: 4px 9px; border-radius: 4px; text-align: center;
+      max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+
+    /* ── Chips ───────────────────────────────────────────────── */
+    .picks-row {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      padding: 12px 16px;
+    }
+
+    .chip {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      cursor: default; transition: transform 0.12s;
+    }
+    .chip:hover { transform: translateY(-2px); }
+
+    .chip-circle {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 11px; letter-spacing: 0.05em;
+      text-transform: uppercase; border: 2px solid transparent;
+      position: relative;
+    }
+
+    .chip-ok {
+      background: var(--green-glow);
+      border-color: var(--green);
+      color: var(--green);
+    }
+    .chip-no {
+      background: var(--red-glow);
+      border-color: var(--red);
+      color: var(--red);
+    }
+    .chip-wait {
+      background: rgba(255,255,255,0.04);
+      border-color: var(--border-hi);
+      color: var(--text-dim);
+    }
+
+    .chip-player {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; color: var(--text-dim); letter-spacing: 0.06em;
+      text-transform: uppercase; text-align: center;
+    }
+    .chip-pick {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px; font-weight: 600; color: var(--text-mid);
+      max-width: 46px; text-align: center;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+
+    /* ── Empty states ────────────────────────────────────────── */
+    .empty {
+      padding: 28px 20px; text-align: center;
+      color: var(--text-dim); font-size: 13px;
+      border: 1px dashed var(--border); border-radius: 8px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center; margin-top: 60px; padding: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; letter-spacing: 0.1em;
+      color: var(--text-dim); opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .table-head, .lb-row { grid-template-columns: 28px 1fr 50px 70px; }
+      .table-head .th:nth-child(4), .lb-row .lb-cell:nth-child(4) { display: none; }
+      .result-header { flex-wrap: wrap; }
+      .result-winner-col { border-left: none; border-top: 1px solid var(--border); width: 100%; justify-content: flex-start; }
+    }
   </style>
 </head>
-<body class="text-slate-100 min-h-screen pb-16">
+<body>
 
-  <header class="sticky top-0 z-50 border-b border-slate-800 bg-[#0a0d14]/90 backdrop-blur px-5 py-3 flex items-center justify-between">
-    <span class="font-black tracking-widest text-emerald-400 uppercase text-sm">WC 2026 · PUNT BOARD</span>
-    <span id="sync-time" class="text-xs font-mono text-slate-500">loading…</span>
+  <header>
+    <div class="wordmark">
+      <span class="wordmark-badge">WC 2026</span>
+      <span class="wordmark-text">Prediction League</span>
+    </div>
+    <span id="sync-time">—</span>
   </header>
 
-  <main class="max-w-screen-xl mx-auto px-4 mt-6 space-y-8">
+  <div class="hero">
+    <div class="hero-eyebrow">⚽ FIFA World Cup 2026</div>
+    <h1 class="hero-title">WHO'S <span>WINNING</span><br>THE POOL?</h1>
+    <p class="hero-sub">+1 point per correct outcome · Group stage through Final</p>
+  </div>
 
-    <!-- Leaderboard -->
+  <main>
+
     <section>
-      <h2 class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3 flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse inline-block"></span>
-        STANDINGS
-      </h2>
-      <div id="leaderboard" class="card overflow-hidden divide-y divide-slate-800"></div>
+      <div class="section-label">
+        <div class="section-label-bar"></div>
+        <h2>Standings</h2>
+      </div>
+      <div id="leaderboard" class="table-wrap">
+        <div class="table-head">
+          <div class="th">#</div>
+          <div class="th">Player</div>
+          <div class="th">Pts</div>
+          <div class="th">Correct</div>
+          <div class="th">Acc</div>
+        </div>
+        <div id="lb-body"></div>
+      </div>
     </section>
 
-    <!-- Upcoming fixtures -->
     <section>
-      <h2 class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3">UPCOMING FIXTURES</h2>
-      <div id="upcoming" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
+      <div class="section-label">
+        <div class="section-label-bar"></div>
+        <h2>Upcoming Fixtures</h2>
+        <span class="section-label-count" id="upcoming-count"></span>
+      </div>
+      <div id="upcoming" class="fixture-grid"></div>
     </section>
 
-    <!-- Results + picks grid -->
     <section>
-      <h2 class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3">RESULTS & PICKS</h2>
-      <div id="results" class="space-y-3"></div>
+      <div class="section-label">
+        <div class="section-label-bar"></div>
+        <h2>Results &amp; Picks</h2>
+        <span class="section-label-count" id="results-count"></span>
+      </div>
+      <div id="results" class="result-list"></div>
     </section>
 
   </main>
+
+  <footer>WC 2026 · PREDICTION LEAGUE · AUTO-UPDATED EVERY 2H</footer>
 
   <script>
     const fmtDate = iso =>
       new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
-    const rankIcon = r =>
-      r === 1 ? '<span class="gold font-black">🥇</span>'
-      : r === 2 ? '<span class="silver font-black">🥈</span>'
-      : r === 3 ? '<span class="bronze font-black">🥉</span>'
-      : `<span class="text-slate-500 font-mono w-5 text-center inline-block">${r}</span>`;
+    const fmtGroup = m =>
+      m.stage === 'GROUP_STAGE'
+        ? `Group ${(m.group || '').replace('GROUP_', '')}`
+        : m.stage.replace(/_/g, ' ');
 
     async function init() {
       let data;
@@ -66,106 +452,111 @@
         const r = await fetch(`./data.json?t=${Date.now()}`);
         data = await r.json();
       } catch {
-        document.getElementById('sync-time').textContent = 'SYNC FAILED';
+        document.getElementById('sync-time').textContent = 'sync failed';
         return;
       }
 
       document.getElementById('sync-time').textContent =
-        'SYNCED ' + new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        'updated ' + new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
-      // ── Leaderboard ──────────────────────────────────────────────────
-      const lb = document.getElementById('leaderboard');
+      // ── Leaderboard ───────────────────────────────────────────────
+      const lbBody = document.getElementById('lb-body');
       if (!data.leaderboard.length) {
-        lb.innerHTML = '<div class="p-5 text-slate-500 text-sm">No results yet — first match is tomorrow.</div>';
+        lbBody.innerHTML = '<div class="empty">No results yet — first matches start Jun 11</div>';
       } else {
-        lb.innerHTML = data.leaderboard.map((p, i) => {
+        const maxPts = data.leaderboard[0].points || 1;
+        lbBody.innerHTML = data.leaderboard.map((p, i) => {
           const rank = i + 1;
           const pct = p.played ? Math.round(p.accuracy * 100) + '%' : '—';
-          const rowCls = rank === 1 ? 'bg-amber-950/20 border-l-2 border-amber-500' : '';
+          const isTop = rank === 1 && p.points > 0;
+          const ptsClass = isTop ? 'lb-cell pts' : 'lb-cell pts-2nd';
           return `
-            <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-800/30 transition ${rowCls}">
-              <div class="flex items-center gap-3">
-                ${rankIcon(rank)}
-                <span class="font-semibold tracking-wide">${p.name}</span>
-              </div>
-              <div class="flex items-center gap-4 font-mono text-xs">
-                <div class="text-right">
-                  <div class="text-slate-500 text-[10px]">CORRECT</div>
-                  <div class="text-slate-300">${p.correct}/${p.played}</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-slate-500 text-[10px]">ACC</div>
-                  <div class="text-slate-300">${pct}</div>
-                </div>
-                <div class="bg-slate-950 border border-slate-800 px-3 py-1.5 rounded text-right min-w-[52px]">
-                  <div class="text-[10px] text-slate-500">PTS</div>
-                  <div class="text-emerald-400 font-black text-sm">${p.points}</div>
-                </div>
-              </div>
+            <div class="lb-row ${isTop ? 'top' : ''}">
+              <span class="lb-rank">${rank}</span>
+              <span class="lb-name">${p.name}</span>
+              <span class="${ptsClass}">${p.points}</span>
+              <span class="lb-cell">${p.correct}/${p.played}</span>
+              <span class="lb-cell acc">${pct}</span>
             </div>`;
         }).join('');
       }
 
-      // ── Upcoming ──────────────────────────────────────────────────────
+      // ── Upcoming ──────────────────────────────────────────────────
       const upDiv = document.getElementById('upcoming');
       const upcoming = data.upcoming.slice(0, 12);
+      document.getElementById('upcoming-count').textContent = `${data.upcoming.length} to play`;
       if (!upcoming.length) {
-        upDiv.innerHTML = '<p class="text-slate-500 text-sm">No upcoming group stage fixtures.</p>';
+        upDiv.innerHTML = '<div class="empty">All group matches complete</div>';
       } else {
-        upDiv.innerHTML = upcoming.map(m => {
-          const label = m.stage === 'GROUP_STAGE' ? `Group ${m.group?.replace('GROUP_','')}` : m.stage.replace(/_/g,' ');
-          return `
-            <div class="card p-4 hover:border-slate-700 transition">
-              <div class="text-[10px] font-mono text-slate-500 mb-1.5 uppercase flex justify-between">
-                <span>${label}</span>
-                <span>${fmtDate(m.date)}</span>
-              </div>
-              <div class="space-y-0.5 text-sm font-medium">
-                <div class="flex justify-between"><span>${m.homeTeam}</span><span class="text-slate-500 text-xs">HOME</span></div>
-                <div class="flex justify-between"><span>${m.awayTeam}</span><span class="text-slate-500 text-xs">AWAY</span></div>
-              </div>
-            </div>`;
-        }).join('');
+        upDiv.innerHTML = upcoming.map(m => `
+          <div class="fixture-card">
+            <div class="fx-top">
+              <span class="fx-group">${fmtGroup(m)}</span>
+              <span class="fx-date">${fmtDate(m.date)}</span>
+            </div>
+            <div class="fx-team">
+              <span class="fx-team-name">${m.homeTeam}</span>
+              <span class="fx-side">H</span>
+            </div>
+            <div class="fx-divider"></div>
+            <div class="fx-team">
+              <span class="fx-team-name">${m.awayTeam}</span>
+              <span class="fx-side">A</span>
+            </div>
+          </div>`).join('');
       }
 
-      // ── Results + picks grid ──────────────────────────────────────────
+      // ── Results ───────────────────────────────────────────────────
       const resDiv = document.getElementById('results');
-      const finished = [...data.finished].reverse(); // most recent first
+      const finished = [...data.finished].reverse();
+      document.getElementById('results-count').textContent = `${finished.length} played`;
       if (!finished.length) {
-        resDiv.innerHTML = '<p class="text-slate-500 text-sm">No matches finished yet.</p>';
-      } else {
-        resDiv.innerHTML = finished.map(m => {
-          const label = m.stage === 'GROUP_STAGE' ? `Group ${m.group?.replace('GROUP_','')}` : m.stage.replace(/_/g,' ');
-          const score = (m.homeScore != null && m.awayScore != null)
-            ? `<span class="text-emerald-400 font-black">${m.homeScore}–${m.awayScore}</span>`
-            : `<span class="text-slate-500">—</span>`;
-          const picks = data.players.map(p => {
-            const pick = m.picks?.[p] ?? '';
-            const state = m.correct?.[p];
-            const cls = state === true ? 'pill-correct' : state === false ? 'pill-wrong' : 'pill-pending';
-            return `<div class="flex flex-col items-center gap-0.5">
-              <span class="text-[9px] font-mono text-slate-500 uppercase">${p.slice(0,3)}</span>
-              <span class="text-[10px] font-mono px-1.5 py-0.5 rounded ${cls} whitespace-nowrap max-w-[64px] text-center truncate" title="${pick}">${pick || '—'}</span>
-            </div>`;
-          }).join('');
+        resDiv.innerHTML = '<div class="empty">First match kicks off Jun 11 — check back then</div>';
+        return;
+      }
 
+      resDiv.innerHTML = finished.map(m => {
+        const hasScore = m.homeScore != null && m.awayScore != null;
+        const scoreHtml = hasScore
+          ? `<div class="score-box">
+               <span class="score-num">${m.homeScore}</span>
+               <span class="score-sep">–</span>
+               <span class="score-num">${m.awayScore}</span>
+             </div>`
+          : `<div class="score-box"><span class="score-pending">vs</span></div>`;
+
+        const chips = data.players.map(p => {
+          const pick = m.picks?.[p] ?? '';
+          const state = m.correct?.[p];
+          const cls  = state === true ? 'chip-ok' : state === false ? 'chip-no' : 'chip-wait';
+          const abbr = p.slice(0, 3).toUpperCase();
           return `
-            <div class="card p-4">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <div class="text-[10px] font-mono text-slate-500 uppercase mb-0.5">${label} · ${fmtDate(m.date)}</div>
-                  <div class="text-sm font-semibold">${m.homeTeam} <span class="text-slate-500">vs</span> ${m.awayTeam}</div>
-                </div>
-                <div class="text-right shrink-0">
-                  <div class="text-[10px] font-mono text-slate-500 mb-0.5">RESULT</div>
-                  ${score}
-                  <div class="text-[10px] text-slate-400 mt-0.5">${m.result ?? ''}</div>
-                </div>
-              </div>
-              <div class="flex gap-2 flex-wrap">${picks}</div>
+            <div class="chip" title="${p}: ${pick || '—'}">
+              <div class="chip-circle ${cls}">${abbr}</div>
+              <span class="chip-player">${p.slice(0,3)}</span>
+              <span class="chip-pick">${pick || '—'}</span>
             </div>`;
         }).join('');
-      }
+
+        return `
+          <div class="result-card">
+            <div class="result-header">
+              <div class="result-meta-col">
+                <div class="result-group">${fmtGroup(m)}</div>
+                <div class="result-date">${fmtDate(m.date)}</div>
+              </div>
+              <div class="result-match-col">
+                <span class="result-team home">${m.homeTeam}</span>
+                ${scoreHtml}
+                <span class="result-team away">${m.awayTeam}</span>
+              </div>
+              <div class="result-winner-col">
+                ${m.result ? `<span class="winner-pill">${m.result}</span>` : ''}
+              </div>
+            </div>
+            <div class="picks-row">${chips}</div>
+          </div>`;
+      }).join('');
     }
 
     window.addEventListener('load', init);
