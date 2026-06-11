@@ -603,9 +603,43 @@
     }
 
     @media (max-width: 600px) {
-      .table-head, .lb-row { grid-template-columns: 28px 1fr 50px 50px 70px; }
-      .table-head.no-live, .lb-row.no-live { grid-template-columns: 28px 1fr 50px 70px; }
-      .table-head .th:nth-child(5), .lb-row .lb-cell:nth-child(5) { display: none; }
+      /* Leaderboard — LIVE: show #, Player, Pts, Proj; hide Correct + Acc */
+      .table-head:not(.no-live),
+      .lb-row:not(.no-live) { grid-template-columns: 28px 1fr 50px 50px; }
+      .table-head:not(.no-live) .th:nth-child(5),
+      .table-head:not(.no-live) .th:nth-child(6),
+      .lb-row:not(.no-live) .lb-cell:nth-child(5),
+      .lb-row:not(.no-live) .lb-cell:nth-child(6) { display: none; }
+
+      /* Leaderboard — NO-LIVE: show #, Player, Pts, Correct; hide Acc */
+      /* header DOM: #(1) Player(2) Pts(3) Proj(4,hidden by JS) Correct(5) Acc(6→hide) */
+      .table-head.no-live { grid-template-columns: 28px 1fr 50px 70px; }
+      .table-head.no-live .th:nth-child(6) { display: none; }
+      /* lb-row DOM (no proj cell): rank(1) name(2) pts(3) correct(4) acc(5→hide) */
+      .lb-row.no-live { grid-template-columns: 28px 1fr 50px 70px; }
+      .lb-row.no-live .lb-cell:nth-child(5) { display: none; }
+
+      /* Live card — stack meta above score on narrow screens */
+      .live-card-header { flex-direction: column; }
+      .live-meta {
+        border-right: none; border-bottom: 1px solid var(--border);
+        min-width: unset; flex-direction: row; align-items: center;
+        justify-content: space-between; padding: 10px 16px;
+      }
+      .live-score-area { padding: 12px 14px; gap: 10px; }
+      .live-score-num { font-size: 28px; }
+      .live-scorers-inline { max-width: 100px; }
+
+      /* Next match — stack meta above score */
+      .next-match-header { flex-direction: column; }
+      .next-match-meta {
+        border-right: none; border-bottom: 1px solid var(--border);
+        min-width: unset; flex-direction: row; align-items: center;
+        justify-content: space-between; padding: 12px 16px;
+      }
+      .next-match-score-area { padding: 14px 16px; gap: 12px; }
+
+      /* Result cards */
       .result-header { flex-wrap: wrap; }
       .result-winner-col { border-left: none; border-top: 1px solid var(--border); width: 100%; justify-content: flex-start; }
     }
