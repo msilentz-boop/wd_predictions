@@ -192,6 +192,117 @@
     .lb-cell.pts-2nd { color: var(--text-mid); }
     .lb-cell.acc { color: var(--text-mid); font-size: 12px; }
 
+    /* ── Live now section ───────────────────────────────────────── */
+    @keyframes pulse-live {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.45; }
+    }
+
+    .live-grid {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    .live-card {
+      background: var(--surface);
+      border: 1px solid rgba(248,81,73,0.35); border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .live-card-header {
+      display: flex; align-items: stretch;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .live-meta {
+      padding: 14px 18px; border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      min-width: 120px;
+    }
+    .live-badge {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--red); font-weight: 700;
+    }
+    .live-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--red);
+      animation: pulse-live 1.2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    .live-group {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--green);
+    }
+    .live-status-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-dim);
+    }
+
+    .live-score-area {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      gap: 16px; padding: 16px 20px;
+    }
+    .live-team {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(20px, 3vw, 30px);
+      letter-spacing: 0.03em; color: var(--white); flex: 1;
+    }
+    .live-team.home { text-align: right; }
+    .live-team.away { text-align: left; }
+    .live-scorebox {
+      display: flex; align-items: center; gap: 6px; flex-shrink: 0;
+      background: rgba(248,81,73,0.08);
+      border: 1px solid rgba(248,81,73,0.25);
+      border-radius: 8px; padding: 8px 14px;
+    }
+    .live-score-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 36px; line-height: 1;
+      color: var(--white); min-width: 24px; text-align: center;
+    }
+    .live-score-sep {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px; color: var(--text-dim);
+    }
+
+    .live-picks {
+      padding: 14px 16px;
+    }
+    .live-picks-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 12px;
+    }
+    .live-picks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 8px;
+    }
+    .live-pick-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 10px 8px 9px;
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+    }
+    .live-pick-player {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .live-pick-choice {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px; font-weight: 700; letter-spacing: 0.03em;
+      color: var(--white); text-align: center; line-height: 1.2;
+    }
+    .live-pick-card.pick-home { border-color: rgba(61,214,140,0.3); background: rgba(61,214,140,0.06); }
+    .live-pick-card.pick-home .live-pick-choice { color: var(--green); }
+    .live-pick-card.pick-away { border-color: rgba(248,81,73,0.3); background: rgba(248,81,73,0.06); }
+    .live-pick-card.pick-away .live-pick-choice { color: var(--red); }
+    .live-pick-card.pick-draw { border-color: rgba(227,179,65,0.3); background: rgba(227,179,65,0.06); }
+    .live-pick-card.pick-draw .live-pick-choice { color: var(--amber); }
+
     /* ── Next match panel ───────────────────────────────────────── */
     .next-match-panel {
       background: var(--surface);
@@ -501,6 +612,15 @@
 
   <main>
 
+    <section id="live-section" style="display:none">
+      <div class="section-label">
+        <div class="section-label-bar" style="background:var(--red)"></div>
+        <h2 style="color:var(--red)">Live Now</h2>
+        <span class="section-label-count" id="live-count"></span>
+      </div>
+      <div id="live-grid" class="live-grid"></div>
+    </section>
+
     <section id="next-match-section">
       <div class="section-label">
         <div class="section-label-bar" style="background:var(--amber)"></div>
@@ -570,13 +690,69 @@
       document.getElementById('sync-time').textContent =
         'updated ' + new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
+      // ── Live Now ─────────────────────────────────────────────────
+      const liveSection = document.getElementById('live-section');
+      const liveGrid = document.getElementById('live-grid');
+      const liveMatches = data.upcoming.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED');
+
+      if (liveMatches.length) {
+        liveSection.style.display = '';
+        document.getElementById('live-count').textContent = `${liveMatches.length} match${liveMatches.length > 1 ? 'es' : ''} live`;
+
+        liveGrid.innerHTML = liveMatches.map(m => {
+          const picks = m.picks || {};
+          const homeName = m.homeTeam;
+          const awayName = m.awayTeam;
+          const statusLabel = m.status === 'PAUSED' ? 'Half-time' : 'In progress';
+
+          const pickCards = data.players.map(p => {
+            const pick = picks[p] || '—';
+            let cls = '';
+            if (pick === homeName) cls = 'pick-home';
+            else if (pick === awayName) cls = 'pick-away';
+            else if (pick === 'Draw') cls = 'pick-draw';
+            return `<div class="live-pick-card ${cls}">
+              <span class="live-pick-player">${p}</span>
+              <span class="live-pick-choice">${pick}</span>
+            </div>`;
+          }).join('');
+
+          const homeScore = m.homeScore != null ? m.homeScore : '0';
+          const awayScore = m.awayScore != null ? m.awayScore : '0';
+
+          return `<div class="live-card">
+            <div class="live-card-header">
+              <div class="live-meta">
+                <span class="live-badge"><span class="live-dot"></span>LIVE</span>
+                <span class="live-group">${fmtGroup(m)}</span>
+                <span class="live-status-label">${statusLabel}</span>
+              </div>
+              <div class="live-score-area">
+                <span class="live-team home">${m.homeTeam}</span>
+                <div class="live-scorebox">
+                  <span class="live-score-num">${homeScore}</span>
+                  <span class="live-score-sep">–</span>
+                  <span class="live-score-num">${awayScore}</span>
+                </div>
+                <span class="live-team away">${m.awayTeam}</span>
+              </div>
+            </div>
+            <div class="live-picks">
+              <div class="live-picks-label">Predictions</div>
+              <div class="live-picks-grid">${pickCards}</div>
+            </div>
+          </div>`;
+        }).join('');
+      }
+
       // ── Next Match ───────────────────────────────────────────────
       const nextPanel = document.getElementById('next-match-panel');
       const nextMatchSection = document.getElementById('next-match-section');
-      if (!data.upcoming.length) {
+      const timedMatches = data.upcoming.filter(m => m.status !== 'IN_PLAY' && m.status !== 'PAUSED');
+      if (!timedMatches.length) {
         nextMatchSection.style.display = 'none';
       } else {
-        const nm = data.upcoming[0];
+        const nm = timedMatches[0];
         const picks = nm.picks || {};
         const players = data.players;
 
@@ -657,8 +833,9 @@
 
       // ── Upcoming ──────────────────────────────────────────────────
       const upDiv = document.getElementById('upcoming');
-      const upcoming = data.upcoming.slice(0, 12);
-      document.getElementById('upcoming-count').textContent = `${data.upcoming.length} to play`;
+      const upcomingAll = data.upcoming.filter(m => m.status !== 'IN_PLAY' && m.status !== 'PAUSED');
+      const upcoming = upcomingAll.slice(0, 12);
+      document.getElementById('upcoming-count').textContent = `${upcomingAll.length} to play`;
       if (!upcoming.length) {
         upDiv.innerHTML = '<div class="empty">All group matches complete</div>';
       } else {
