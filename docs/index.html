@@ -192,6 +192,109 @@
     .lb-cell.pts-2nd { color: var(--text-mid); }
     .lb-cell.acc { color: var(--text-mid); font-size: 12px; }
 
+    /* ── Next match panel ───────────────────────────────────────── */
+    .next-match-panel {
+      background: var(--surface);
+      border: 1px solid var(--border-hi); border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .next-match-header {
+      display: flex; align-items: stretch; gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .next-match-meta {
+      padding: 20px 22px; border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; justify-content: center; gap: 6px;
+      min-width: 130px;
+    }
+    .next-match-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--amber);
+    }
+    .next-match-group {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--green);
+    }
+    .next-match-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--text-dim);
+    }
+
+    .next-match-score-area {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      gap: 20px; padding: 22px 24px;
+    }
+    .next-match-team {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(22px, 3.5vw, 34px);
+      letter-spacing: 0.03em; color: var(--white); flex: 1;
+    }
+    .next-match-team.home { text-align: right; }
+    .next-match-team.away { text-align: left; }
+    .next-match-vs {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px; font-weight: 700; color: var(--text-dim);
+      letter-spacing: 0.1em; flex-shrink: 0;
+    }
+
+    .next-match-picks {
+      padding: 18px 20px;
+    }
+    .next-match-picks-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 14px;
+    }
+    .next-picks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    .next-pick-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 12px 10px 11px;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+    }
+    .next-pick-player {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .next-pick-choice {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px; font-weight: 700; letter-spacing: 0.03em;
+      color: var(--white); text-align: center;
+      word-break: break-word; max-width: 100%; line-height: 1.2;
+    }
+    .next-pick-card.pick-home { border-color: rgba(61,214,140,0.3); background: rgba(61,214,140,0.06); }
+    .next-pick-card.pick-home .next-pick-choice { color: var(--green); }
+    .next-pick-card.pick-away { border-color: rgba(248,81,73,0.3); background: rgba(248,81,73,0.06); }
+    .next-pick-card.pick-away .next-pick-choice { color: var(--red); }
+    .next-pick-card.pick-draw { border-color: rgba(227,179,65,0.3); background: rgba(227,179,65,0.06); }
+    .next-pick-card.pick-draw .next-pick-choice { color: var(--amber); }
+
+    .next-match-bar {
+      border-top: 1px solid var(--border);
+      display: flex; gap: 2px; align-items: stretch; height: 48px;
+      border-radius: 0 0 10px 10px; overflow: hidden;
+      background: var(--bg);
+    }
+    .consensus-segment {
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.06em;
+      transition: flex 0.4s ease; overflow: hidden;
+      white-space: nowrap; min-width: 0; padding: 0 10px;
+    }
+    .consensus-segment.seg-home { background: rgba(61,214,140,0.2); color: var(--green); }
+    .consensus-segment.seg-draw { background: rgba(227,179,65,0.2); color: var(--amber); }
+    .consensus-segment.seg-away { background: rgba(248,81,73,0.2); color: var(--red); }
+
     /* ── Upcoming grid ───────────────────────────────────────── */
     .fixture-grid {
       display: grid;
@@ -398,6 +501,14 @@
 
   <main>
 
+    <section id="next-match-section">
+      <div class="section-label">
+        <div class="section-label-bar" style="background:var(--amber)"></div>
+        <h2>Next Match</h2>
+      </div>
+      <div id="next-match-panel"></div>
+    </section>
+
     <section>
       <div class="section-label">
         <div class="section-label-bar"></div>
@@ -458,6 +569,69 @@
 
       document.getElementById('sync-time').textContent =
         'updated ' + new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+      // ── Next Match ───────────────────────────────────────────────
+      const nextPanel = document.getElementById('next-match-panel');
+      const nextMatchSection = document.getElementById('next-match-section');
+      if (!data.upcoming.length) {
+        nextMatchSection.style.display = 'none';
+      } else {
+        const nm = data.upcoming[0];
+        const picks = nm.picks || {};
+        const players = data.players;
+
+        const homeName = nm.homeTeam;
+        const awayName = nm.awayTeam;
+        let homeCount = 0, awayCount = 0, drawCount = 0;
+        players.forEach(p => {
+          const pick = picks[p];
+          if (pick === homeName) homeCount++;
+          else if (pick === awayName) awayCount++;
+          else if (pick === 'Draw') drawCount++;
+        });
+        const total = homeCount + awayCount + drawCount || 1;
+
+        const pickCards = players.map(p => {
+          const pick = picks[p] || '—';
+          let cls = '';
+          if (pick === homeName) cls = 'pick-home';
+          else if (pick === awayName) cls = 'pick-away';
+          else if (pick === 'Draw') cls = 'pick-draw';
+          return `<div class="next-pick-card ${cls}">
+            <span class="next-pick-player">${p}</span>
+            <span class="next-pick-choice">${pick}</span>
+          </div>`;
+        }).join('');
+
+        const seg = (count, cls, label) => count
+          ? `<div class="consensus-segment ${cls}" style="flex:${count}">${label} ${count}</div>`
+          : '';
+
+        nextPanel.innerHTML = `
+          <div class="next-match-panel">
+            <div class="next-match-header">
+              <div class="next-match-meta">
+                <span class="next-match-badge">▶ NEXT UP</span>
+                <span class="next-match-group">${fmtGroup(nm)}</span>
+                <span class="next-match-date">${fmtDate(nm.date)}</span>
+              </div>
+              <div class="next-match-score-area">
+                <span class="next-match-team home">${nm.homeTeam}</span>
+                <span class="next-match-vs">VS</span>
+                <span class="next-match-team away">${nm.awayTeam}</span>
+              </div>
+            </div>
+            <div class="next-match-picks">
+              <div class="next-match-picks-label">Predictions</div>
+              <div class="next-picks-grid">${pickCards}</div>
+            </div>
+            <div class="next-match-bar">
+              ${seg(homeCount, 'seg-home', nm.homeTeam)}
+              ${seg(drawCount, 'seg-draw', 'Draw')}
+              ${seg(awayCount, 'seg-away', nm.awayTeam)}
+            </div>
+          </div>`;
+      }
 
       // ── Leaderboard ───────────────────────────────────────────────
       const lbBody = document.getElementById('lb-body');
