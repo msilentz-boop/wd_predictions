@@ -13,8 +13,9 @@ CSV_URL = os.environ.get(
 )
 API_KEY = os.environ["FOOTBALL_DATA_API_KEY"]
 API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
+LIVE_API_URL = "https://worldcup26.ir/get/games"
 
-# Sheet team names that differ from the API's names
+# Sheet team names that differ from the football-data.org API names
 SHEET_TO_API = {
     "Bosnia & Herzegovina": "Bosnia-Herzegovina",
     "Cape Verde": "Cape Verde Islands",
@@ -24,9 +25,47 @@ SHEET_TO_API = {
     "USA": "United States",
 }
 
+# Sheet team names that differ from worldcup26.ir names
+LIVE_TO_SHEET = {
+    "Bosnia and Herzegovina": "Bosnia & Herzegovina",
+    "United States": "USA",
+    "Côte d'Ivoire": "Ivory Coast",
+    "Cote d'Ivoire": "Ivory Coast",
+    "Curaçao": "Curacao",
+    "Czechia": "Czech Republic",
+    "Cape Verde Islands": "Cape Verde",
+    "Congo DR": "DR Congo",
+}
+
 
 def normalize(name):
     return SHEET_TO_API.get(name, name)
+
+
+def _parse_scorers(raw):
+    if not raw or raw == "null":
+        return []
+    # Format from API: `{"J. Quiñones 9'"}` or `{"Goal 1'","Goal 2'"}`
+    inner = raw.strip().lstrip("{").rstrip("}")
+    return [s.strip().strip('"') for s in inner.split('","') if s.strip().strip('"')]
+
+
+def fetch_live_scores():
+    """Return dict of (home_sheet, away_sheet) -> live game data from worldcup26.ir."""
+    try:
+        resp = requests.get(LIVE_API_URL, timeout=15)
+        resp.raise_for_status()
+        games = resp.json().get("games", [])
+    except Exception as e:
+        print(f"WARNING: Could not fetch live scores: {e}")
+        return {}
+
+    by_pair = {}
+    for g in games:
+        home = LIVE_TO_SHEET.get(g.get("home_team_name_en", ""), g.get("home_team_name_en", ""))
+        away = LIVE_TO_SHEET.get(g.get("away_team_name_en", ""), g.get("away_team_name_en", ""))
+        by_pair[(home, away)] = g
+    return by_pair
 
 
 def fetch_api_matches():
@@ -71,6 +110,10 @@ def main():
     print("Fetching API match data…")
     api_by_pair, last_updated = fetch_api_matches()
 
+    print("Fetching live scores from worldcup26.ir…")
+    live_by_pair = fetch_live_scores()
+    print(f"  Live games found: {len([g for g in live_by_pair.values() if g.get('time_elapsed') == 'live'])}")
+
     print("Fetching sheet predictions from public CSV…")
     rows, players = fetch_sheet_rows()
     print(f"  Players: {players}")
@@ -97,6 +140,25 @@ def main():
         home_score = ft.get("home")
         away_score = ft.get("away")
         result_label = None
+        time_elapsed = None
+
+        # Override with live data from worldcup26.ir if available
+        live = live_by_pair.get((home_sheet, away_sheet))
+        if live:
+            te = live.get("time_elapsed", "")
+            if te == "live":
+                status = "IN_PLAY"
+                time_elapsed = "live"
+            elif te in ("halftime", "half"):
+                status = "PAUSED"
+                time_elapsed = "halftime"
+            elif live.get("finished") == "TRUE":
+                status = "FINISHED"
+            try:
+                home_score = int(live["home_score"])
+                away_score = int(live["away_score"])
+            except (KeyError, TypeError, ValueError):
+                pass
 
         if status == "FINISHED":
             result_label = derive_result_label(m, home_sheet, away_sheet)
@@ -128,6 +190,9 @@ def main():
             "homeScore": home_score,
             "awayScore": away_score,
             "status": status,
+            "timeElapsed": time_elapsed,
+            "homeScorers": _parse_scorers(live.get("home_scorers")) if live else [],
+            "awayScorers": _parse_scorers(live.get("away_scorers")) if live else [],
             "result": result_label,
             "picks": picks,
             "correct": correct_map,

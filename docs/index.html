@@ -676,7 +676,7 @@
 
   </main>
 
-  <footer>WC 2026 · PREDICTION LEAGUE · AUTO-UPDATED EVERY 2H</footer>
+  <footer>WC 2026 · PREDICTION LEAGUE · LIVE SCORES UPDATED EVERY 5 MIN</footer>
 
   <script>
     const fmtDate = iso =>
@@ -700,66 +700,28 @@
       document.getElementById('sync-time').textContent =
         'updated ' + new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
-      // ── Live Now (worldcup26.ir) ──────────────────────────────────
-      const LIVE_API = 'https://worldcup26.ir/get/games';
-
-      // Normalize team names to match our data.json names
-      const LIVE_TO_SHEET = {
-        'Bosnia and Herzegovina': 'Bosnia & Herzegovina',
-        'United States': 'USA',
-        'DR Congo': 'DR Congo',
-        'Congo DR': 'DR Congo',
-        "Côte d'Ivoire": 'Ivory Coast',
-        "Cote d'Ivoire": 'Ivory Coast',
-        'Curaçao': 'Curacao',
-        'Czechia': 'Czech Republic',
-        'Cape Verde Islands': 'Cape Verde',
-      };
-      const normLive = n => LIVE_TO_SHEET[n] || n;
-
-      function parseScorers(raw) {
-        if (!raw || raw === 'null') return [];
-        try {
-          const cleaned = raw.replace(/^\{/, '[').replace(/\}$/, ']').replace(/"/g, '"');
-          return JSON.parse(cleaned);
-        } catch {
-          return raw.replace(/[{}"]/g, '').split(',').map(s => s.trim()).filter(Boolean);
-        }
-      }
-
-      async function renderLive() {
+      // ── Live Now ─────────────────────────────────────────────────
+      function renderLive() {
         const liveSection = document.getElementById('live-section');
         const liveGrid = document.getElementById('live-grid');
-        let games;
-        try {
-          const r = await fetch(LIVE_API);
-          const d = await r.json();
-          games = d.games || d;
-        } catch {
-          return;
-        }
+        const liveMatches = data.upcoming.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED');
 
-        const liveGames = games.filter(g => g.time_elapsed === 'live' || g.time_elapsed === 'halftime' || g.time_elapsed === 'half');
-
-        if (!liveGames.length) {
+        if (!liveMatches.length) {
           liveSection.style.display = 'none';
           return;
         }
 
         liveSection.style.display = '';
         document.getElementById('live-count').textContent =
-          `${liveGames.length} match${liveGames.length > 1 ? 'es' : ''} live`;
+          `${liveMatches.length} match${liveMatches.length > 1 ? 'es' : ''} live`;
 
-        liveGrid.innerHTML = liveGames.map(g => {
-          const homeName = normLive(g.home_team_name_en);
-          const awayName = normLive(g.away_team_name_en);
-          const statusLabel = (g.time_elapsed === 'halftime' || g.time_elapsed === 'half') ? 'Half-time' : 'In progress';
-
-          // match predictions from data.json
-          const allMatches = [...data.upcoming, ...data.finished];
-          const pred = allMatches.find(m => m.homeTeam === homeName && m.awayTeam === awayName);
-          const picks = pred?.picks || {};
-          const group = pred ? fmtGroup(pred) : `Group ${g.group}`;
+        liveGrid.innerHTML = liveMatches.map(m => {
+          const homeName = m.homeTeam;
+          const awayName = m.awayTeam;
+          const statusLabel = m.status === 'PAUSED' ? 'Half-time' : 'In progress';
+          const picks = m.picks || {};
+          const homeScorers = m.homeScorers || [];
+          const awayScorers = m.awayScorers || [];
 
           const pickCards = data.players.map(p => {
             const pick = picks[p] || '—';
@@ -773,19 +735,11 @@
             </div>`;
           }).join('');
 
-          const homeScorers = parseScorers(g.home_scorers);
-          const awayScorers = parseScorers(g.away_scorers);
-          const scorerHtml = (homeScorers.length || awayScorers.length) ? `
-            <div class="live-scorers">
-              <span class="live-scorers-home">${homeScorers.join(', ') || ''}</span>
-              <span class="live-scorers-away">${awayScorers.join(', ') || ''}</span>
-            </div>` : '';
-
           return `<div class="live-card">
             <div class="live-card-header">
               <div class="live-meta">
                 <span class="live-badge"><span class="live-dot"></span>LIVE</span>
-                <span class="live-group">${group}</span>
+                <span class="live-group">${fmtGroup(m)}</span>
                 <span class="live-status-label">${statusLabel}</span>
               </div>
               <div class="live-score-area">
@@ -794,9 +748,9 @@
                   ${homeScorers.length ? `<span class="live-scorers-inline home">${homeScorers.join(', ')}</span>` : ''}
                 </div>
                 <div class="live-scorebox">
-                  <span class="live-score-num">${g.home_score ?? 0}</span>
+                  <span class="live-score-num">${m.homeScore ?? 0}</span>
                   <span class="live-score-sep">–</span>
-                  <span class="live-score-num">${g.away_score ?? 0}</span>
+                  <span class="live-score-num">${m.awayScore ?? 0}</span>
                 </div>
                 <div class="live-team-col away">
                   <span class="live-team">${awayName}</span>
@@ -813,7 +767,6 @@
       }
 
       renderLive();
-      setInterval(renderLive, 60000);
 
       // ── Next Match ───────────────────────────────────────────────
       const nextPanel = document.getElementById('next-match-panel');
