@@ -5,10 +5,17 @@ on:
     - cron: '0 12 * * 1'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   keep-alive:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Keep workflow active
-        uses: gautamkrishnar/keepalive-workflow@v2
+      - name: Empty commit to keep scheduled workflows active
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git commit --allow-empty -m "Keep alive [skip ci]"
+          git push
