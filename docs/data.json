@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T17:24:38.475674+00:00",
+  "lastUpdated": "2026-06-12T22:56:31.820594+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,59 +12,59 @@
   ],
   "leaderboard": [
     {
+      "name": "Conor",
+      "points": 2,
+      "correct": 2,
+      "played": 3,
+      "accuracy": 0.667
+    },
+    {
       "name": "Hugh",
       "points": 2,
       "correct": 2,
-      "played": 2,
-      "accuracy": 1.0
-    },
-    {
-      "name": "Conor",
-      "points": 1,
-      "correct": 1,
-      "played": 2,
-      "accuracy": 0.5
+      "played": 3,
+      "accuracy": 0.667
     },
     {
       "name": "Crow",
       "points": 1,
       "correct": 1,
-      "played": 2,
-      "accuracy": 0.5
+      "played": 3,
+      "accuracy": 0.333
     },
     {
       "name": "Marc",
       "points": 1,
       "correct": 1,
-      "played": 2,
-      "accuracy": 0.5
+      "played": 3,
+      "accuracy": 0.333
     },
     {
       "name": "Mick",
       "points": 1,
       "correct": 1,
-      "played": 2,
-      "accuracy": 0.5
+      "played": 3,
+      "accuracy": 0.333
     },
     {
       "name": "Patrick",
       "points": 1,
       "correct": 1,
-      "played": 2,
-      "accuracy": 0.5
+      "played": 3,
+      "accuracy": 0.333
     },
     {
       "name": "Dan",
       "points": 0,
       "correct": 0,
-      "played": 2,
+      "played": 3,
       "accuracy": 0.0
     },
     {
       "name": "Muff",
       "points": 0,
       "correct": 0,
-      "played": 2,
+      "played": 3,
       "accuracy": 0.0
     }
   ],
@@ -145,9 +145,7 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537333,
       "date": "2026-06-12T19:00:00Z",
@@ -155,13 +153,17 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "C. Larin 11'"
+      ],
+      "awayScorers": [
+        "Jovo Luki\u0107 21'"
+      ],
+      "result": "Draw",
       "picks": {
         "Patrick": "Bosnia & Herzegovina",
         "Conor": "Draw",
@@ -173,16 +175,18 @@
         "Marc": "Canada"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537334,
       "date": "2026-06-13T19:00:00Z",
