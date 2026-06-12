@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11T20:06:01.913129+00:00",
+  "lastUpdated": "2026-06-12T05:51:49.009757+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,64 +12,63 @@
   ],
   "leaderboard": [
     {
+      "name": "Hugh",
+      "points": 2,
+      "correct": 2,
+      "played": 2,
+      "accuracy": 1.0
+    },
+    {
       "name": "Conor",
-      "points": 0,
-      "correct": 0,
-      "played": 0,
-      "accuracy": 0.0
+      "points": 1,
+      "correct": 1,
+      "played": 2,
+      "accuracy": 0.5
     },
     {
       "name": "Crow",
-      "points": 0,
-      "correct": 0,
-      "played": 0,
-      "accuracy": 0.0
+      "points": 1,
+      "correct": 1,
+      "played": 2,
+      "accuracy": 0.5
+    },
+    {
+      "name": "Marc",
+      "points": 1,
+      "correct": 1,
+      "played": 2,
+      "accuracy": 0.5
+    },
+    {
+      "name": "Mick",
+      "points": 1,
+      "correct": 1,
+      "played": 2,
+      "accuracy": 0.5
+    },
+    {
+      "name": "Patrick",
+      "points": 1,
+      "correct": 1,
+      "played": 2,
+      "accuracy": 0.5
     },
     {
       "name": "Dan",
       "points": 0,
       "correct": 0,
-      "played": 0,
-      "accuracy": 0.0
-    },
-    {
-      "name": "Hugh",
-      "points": 0,
-      "correct": 0,
-      "played": 0,
-      "accuracy": 0.0
-    },
-    {
-      "name": "Marc",
-      "points": 0,
-      "correct": 0,
-      "played": 0,
-      "accuracy": 0.0
-    },
-    {
-      "name": "Mick",
-      "points": 0,
-      "correct": 0,
-      "played": 0,
+      "played": 2,
       "accuracy": 0.0
     },
     {
       "name": "Muff",
       "points": 0,
       "correct": 0,
-      "played": 0,
-      "accuracy": 0.0
-    },
-    {
-      "name": "Patrick",
-      "points": 0,
-      "correct": 0,
-      "played": 0,
+      "played": 2,
       "accuracy": 0.0
     }
   ],
-  "finished": [],
-  "upcoming": [
+  "finished": [
     {
       "id": 537327,
       "date": "2026-06-11T19:00:00Z",
@@ -77,15 +76,15 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
+      "status": "FINISHED",
+      "timeElapsed": null,
       "homeScorers": [
-        "\u201cJ. Qui\u00f1ones 9'\u201d"
+        "\u201cJ. Qui\u00f1ones 9'\u201d,\u201dR. Jim\u00e9nez 67'\u201d"
       ],
       "awayScorers": [],
-      "result": null,
+      "result": "Mexico",
       "picks": {
         "Patrick": "Mexico",
         "Conor": "Mexico",
@@ -97,14 +96,14 @@
         "Marc": "Mexico"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": false,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -114,13 +113,18 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "South Korea",
       "awayTeam": "Czech Republic",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "I.B. Hwang 67'",
+        "H.G. Oh 80'"
+      ],
+      "awayScorers": [
+        "L. Krej\u010d\u00ed 59'"
+      ],
+      "result": "South Korea",
       "picks": {
         "Patrick": "Draw",
         "Conor": "Czech Republic",
@@ -132,16 +136,18 @@
         "Marc": "Draw"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537333,
       "date": "2026-06-12T19:00:00Z",
