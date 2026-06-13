@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13T15:59:49.776091+00:00",
+  "lastUpdated": "2026-06-13T20:50:17.533957+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -237,11 +237,13 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
+      "awayScore": 1,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
       "homeScorers": [],
-      "awayScorers": [],
+      "awayScorers": [
+        "Breel Embolo 17' (p)"
+      ],
       "result": null,
       "picks": {
         "Patrick": "Switzerland",
@@ -448,7 +450,7 @@
       "awayTeam": "Ecuador",
       "homeScore": 0,
       "awayScore": 0,
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
