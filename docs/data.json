@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T22:56:31.820594+00:00",
+  "lastUpdated": "2026-06-13T09:47:14.080693+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,59 +12,59 @@
   ],
   "leaderboard": [
     {
+      "name": "Hugh",
+      "points": 3,
+      "correct": 3,
+      "played": 4,
+      "accuracy": 0.75
+    },
+    {
       "name": "Conor",
       "points": 2,
       "correct": 2,
-      "played": 3,
-      "accuracy": 0.667
-    },
-    {
-      "name": "Hugh",
-      "points": 2,
-      "correct": 2,
-      "played": 3,
-      "accuracy": 0.667
+      "played": 4,
+      "accuracy": 0.5
     },
     {
       "name": "Crow",
-      "points": 1,
-      "correct": 1,
-      "played": 3,
-      "accuracy": 0.333
+      "points": 2,
+      "correct": 2,
+      "played": 4,
+      "accuracy": 0.5
     },
     {
       "name": "Marc",
+      "points": 2,
+      "correct": 2,
+      "played": 4,
+      "accuracy": 0.5
+    },
+    {
+      "name": "Dan",
       "points": 1,
       "correct": 1,
-      "played": 3,
-      "accuracy": 0.333
+      "played": 4,
+      "accuracy": 0.25
     },
     {
       "name": "Mick",
       "points": 1,
       "correct": 1,
-      "played": 3,
-      "accuracy": 0.333
+      "played": 4,
+      "accuracy": 0.25
     },
     {
       "name": "Patrick",
       "points": 1,
       "correct": 1,
-      "played": 3,
-      "accuracy": 0.333
-    },
-    {
-      "name": "Dan",
-      "points": 0,
-      "correct": 0,
-      "played": 3,
-      "accuracy": 0.0
+      "played": 4,
+      "accuracy": 0.25
     },
     {
       "name": "Muff",
       "points": 0,
       "correct": 0,
-      "played": 3,
+      "played": 4,
       "accuracy": 0.0
     }
   ],
@@ -184,6 +184,48 @@
         "Mick": false,
         "Marc": false
       }
+    },
+    {
+      "id": 537345,
+      "date": "2026-06-13T01:00:00Z",
+      "group": "D",
+      "stage": "GROUP_STAGE",
+      "homeTeam": "USA",
+      "awayTeam": "Paraguay",
+      "homeScore": 4,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "D. Bobadilla 7'(OG)",
+        "F. Balogun 31'",
+        "F. Balogun 45'+5'",
+        "G. Reyna 90'+8'"
+      ],
+      "awayScorers": [
+        "Maur\u00edcio 73'"
+      ],
+      "result": "USA",
+      "picks": {
+        "Patrick": "Draw",
+        "Conor": "Draw",
+        "Dan": "USA",
+        "Crow": "USA",
+        "Hugh": "USA",
+        "Muff": "Paraguay",
+        "Mick": "Draw",
+        "Marc": "USA"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": true
+      }
     }
   ],
   "upcoming": [
@@ -245,41 +287,6 @@
         "Muff": "Morocco",
         "Mick": "Brazil",
         "Marc": "Brazil"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537345,
-      "date": "2026-06-13T01:00:00Z",
-      "group": "D",
-      "stage": "GROUP_STAGE",
-      "homeTeam": "USA",
-      "awayTeam": "Paraguay",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Draw",
-        "Conor": "Draw",
-        "Dan": "USA",
-        "Crow": "USA",
-        "Hugh": "USA",
-        "Muff": "Paraguay",
-        "Mick": "Draw",
-        "Marc": "USA"
       },
       "correct": {
         "Patrick": null,
