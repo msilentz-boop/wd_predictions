@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13T20:50:17.533957+00:00",
+  "lastUpdated": "2026-06-14T08:56:42.806333+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 3,
-      "correct": 3,
-      "played": 4,
+      "points": 6,
+      "correct": 6,
+      "played": 8,
       "accuracy": 0.75
     },
     {
       "name": "Conor",
-      "points": 2,
-      "correct": 2,
-      "played": 4,
-      "accuracy": 0.5
+      "points": 5,
+      "correct": 5,
+      "played": 8,
+      "accuracy": 0.625
     },
     {
       "name": "Crow",
-      "points": 2,
-      "correct": 2,
-      "played": 4,
+      "points": 4,
+      "correct": 4,
+      "played": 8,
       "accuracy": 0.5
     },
     {
       "name": "Marc",
-      "points": 2,
-      "correct": 2,
-      "played": 4,
-      "accuracy": 0.5
-    },
-    {
-      "name": "Dan",
-      "points": 1,
-      "correct": 1,
-      "played": 4,
-      "accuracy": 0.25
+      "points": 3,
+      "correct": 3,
+      "played": 8,
+      "accuracy": 0.375
     },
     {
       "name": "Mick",
-      "points": 1,
-      "correct": 1,
-      "played": 4,
-      "accuracy": 0.25
+      "points": 3,
+      "correct": 3,
+      "played": 8,
+      "accuracy": 0.375
     },
     {
-      "name": "Patrick",
-      "points": 1,
-      "correct": 1,
-      "played": 4,
+      "name": "Dan",
+      "points": 2,
+      "correct": 2,
+      "played": 8,
       "accuracy": 0.25
     },
     {
       "name": "Muff",
-      "points": 0,
-      "correct": 0,
-      "played": 4,
-      "accuracy": 0.0
+      "points": 2,
+      "correct": 2,
+      "played": 8,
+      "accuracy": 0.25
+    },
+    {
+      "name": "Patrick",
+      "points": 2,
+      "correct": 2,
+      "played": 8,
+      "accuracy": 0.25
     }
   ],
   "finished": [
@@ -186,6 +186,84 @@
       }
     },
     {
+      "id": 537334,
+      "date": "2026-06-13T19:00:00Z",
+      "group": "B",
+      "stage": "GROUP_STAGE",
+      "homeTeam": "Qatar",
+      "awayTeam": "Switzerland",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "B. Khoukhi 90'+5'"
+      ],
+      "awayScorers": [
+        "Breel Embolo 17' (p)"
+      ],
+      "result": "Draw",
+      "picks": {
+        "Patrick": "Switzerland",
+        "Conor": "Draw",
+        "Dan": "Switzerland",
+        "Crow": "Draw",
+        "Hugh": "Draw",
+        "Muff": "Switzerland",
+        "Mick": "Draw",
+        "Marc": "Switzerland"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": true,
+        "Dan": false,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": false
+      }
+    },
+    {
+      "id": 537339,
+      "date": "2026-06-13T22:00:00Z",
+      "group": "C",
+      "stage": "GROUP_STAGE",
+      "homeTeam": "Brazil",
+      "awayTeam": "Morocco",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "V. J\u00fanior 32'"
+      ],
+      "awayScorers": [
+        "I. Saibari 21'"
+      ],
+      "result": "Draw",
+      "picks": {
+        "Patrick": "Brazil",
+        "Conor": "Draw",
+        "Dan": "Brazil",
+        "Crow": "Brazil",
+        "Hugh": "Draw",
+        "Muff": "Morocco",
+        "Mick": "Brazil",
+        "Marc": "Brazil"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
+      }
+    },
+    {
       "id": 537345,
       "date": "2026-06-13T01:00:00Z",
       "group": "D",
@@ -226,80 +304,6 @@
         "Mick": false,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
-    {
-      "id": 537334,
-      "date": "2026-06-13T19:00:00Z",
-      "group": "B",
-      "stage": "GROUP_STAGE",
-      "homeTeam": "Qatar",
-      "awayTeam": "Switzerland",
-      "homeScore": 0,
-      "awayScore": 1,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
-      "homeScorers": [],
-      "awayScorers": [
-        "Breel Embolo 17' (p)"
-      ],
-      "result": null,
-      "picks": {
-        "Patrick": "Switzerland",
-        "Conor": "Draw",
-        "Dan": "Switzerland",
-        "Crow": "Draw",
-        "Hugh": "Draw",
-        "Muff": "Switzerland",
-        "Mick": "Draw",
-        "Marc": "Switzerland"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537339,
-      "date": "2026-06-13T22:00:00Z",
-      "group": "C",
-      "stage": "GROUP_STAGE",
-      "homeTeam": "Brazil",
-      "awayTeam": "Morocco",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Brazil",
-        "Conor": "Draw",
-        "Dan": "Brazil",
-        "Crow": "Brazil",
-        "Hugh": "Draw",
-        "Muff": "Morocco",
-        "Mick": "Brazil",
-        "Marc": "Brazil"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
     },
     {
       "id": 537340,
@@ -309,12 +313,14 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "awayScorers": [
+        "J. McGinn 28'"
+      ],
+      "result": "Scotland",
       "picks": {
         "Patrick": "Scotland",
         "Conor": "Scotland",
@@ -326,14 +332,14 @@
         "Marc": "Scotland"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -343,13 +349,16 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Australia",
       "awayTeam": "Turkey",
-      "homeScore": 0,
+      "homeScore": 2,
       "awayScore": 0,
-      "status": "TIMED",
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Nestory Irankunda 27'",
+        "C. Metcalfe 75'"
+      ],
       "awayScorers": [],
-      "result": null,
+      "result": "Australia",
       "picks": {
         "Patrick": "Turkey",
         "Conor": "Turkey",
@@ -361,16 +370,18 @@
         "Marc": "Turkey"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537351,
       "date": "2026-06-14T17:00:00Z",
@@ -450,7 +461,7 @@
       "awayTeam": "Ecuador",
       "homeScore": 0,
       "awayScore": 0,
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
