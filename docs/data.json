@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-14T15:29:29.001037+00:00",
+  "lastUpdated": "2026-06-14T20:24:00.341109+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 6,
-      "correct": 6,
-      "played": 8,
-      "accuracy": 0.75
+      "points": 7,
+      "correct": 7,
+      "played": 9,
+      "accuracy": 0.778
     },
     {
       "name": "Conor",
-      "points": 5,
-      "correct": 5,
-      "played": 8,
-      "accuracy": 0.625
+      "points": 6,
+      "correct": 6,
+      "played": 9,
+      "accuracy": 0.667
     },
     {
       "name": "Crow",
-      "points": 4,
-      "correct": 4,
-      "played": 8,
-      "accuracy": 0.5
+      "points": 5,
+      "correct": 5,
+      "played": 9,
+      "accuracy": 0.556
     },
     {
       "name": "Marc",
-      "points": 3,
-      "correct": 3,
-      "played": 8,
-      "accuracy": 0.375
+      "points": 4,
+      "correct": 4,
+      "played": 9,
+      "accuracy": 0.444
     },
     {
       "name": "Mick",
-      "points": 3,
-      "correct": 3,
-      "played": 8,
-      "accuracy": 0.375
+      "points": 4,
+      "correct": 4,
+      "played": 9,
+      "accuracy": 0.444
     },
     {
       "name": "Dan",
-      "points": 2,
-      "correct": 2,
-      "played": 8,
-      "accuracy": 0.25
+      "points": 3,
+      "correct": 3,
+      "played": 9,
+      "accuracy": 0.333
     },
     {
       "name": "Muff",
-      "points": 2,
-      "correct": 2,
-      "played": 8,
-      "accuracy": 0.25
+      "points": 3,
+      "correct": 3,
+      "played": 9,
+      "accuracy": 0.333
     },
     {
       "name": "Patrick",
-      "points": 2,
-      "correct": 2,
-      "played": 8,
-      "accuracy": 0.25
+      "points": 3,
+      "correct": 3,
+      "played": 9,
+      "accuracy": 0.333
     }
   ],
   "finished": [
@@ -379,9 +379,7 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537351,
       "date": "2026-06-14T17:00:00Z",
@@ -389,13 +387,23 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Germany",
       "awayTeam": "Curacao",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "homeScore": 7,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Felix Nmecha 7'",
+        "N. Schlotterbeck 38'",
+        "K. Havertz 45'+5'(p)",
+        "J. Musiala 47'",
+        "N. Brown 68'",
+        "D. Undav 78'",
+        "K. Havertz 88'"
+      ],
+      "awayScorers": [
+        "L. Comenencia 21'"
+      ],
+      "result": "Germany",
       "picks": {
         "Patrick": "Germany",
         "Conor": "Germany",
@@ -407,16 +415,18 @@
         "Marc": "Germany"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537357,
       "date": "2026-06-14T20:00:00Z",
@@ -426,8 +436,8 @@
       "awayTeam": "Japan",
       "homeScore": 0,
       "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
       "homeScorers": [],
       "awayScorers": [],
       "result": null,
