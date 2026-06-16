@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T18:14:09.622920+00:00",
+  "lastUpdated": "2026-06-16T23:54:06.706679+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 11,
-      "correct": 11,
-      "played": 16,
-      "accuracy": 0.688
+      "points": 12,
+      "correct": 12,
+      "played": 17,
+      "accuracy": 0.706
     },
     {
       "name": "Conor",
       "points": 10,
       "correct": 10,
-      "played": 16,
-      "accuracy": 0.625
+      "played": 17,
+      "accuracy": 0.588
     },
     {
       "name": "Marc",
-      "points": 8,
-      "correct": 8,
-      "played": 16,
-      "accuracy": 0.5
+      "points": 9,
+      "correct": 9,
+      "played": 17,
+      "accuracy": 0.529
     },
     {
       "name": "Crow",
-      "points": 6,
-      "correct": 6,
-      "played": 16,
-      "accuracy": 0.375
+      "points": 7,
+      "correct": 7,
+      "played": 17,
+      "accuracy": 0.412
     },
     {
       "name": "Mick",
-      "points": 6,
-      "correct": 6,
-      "played": 16,
-      "accuracy": 0.375
+      "points": 7,
+      "correct": 7,
+      "played": 17,
+      "accuracy": 0.412
     },
     {
       "name": "Patrick",
-      "points": 6,
-      "correct": 6,
-      "played": 16,
-      "accuracy": 0.375
+      "points": 7,
+      "correct": 7,
+      "played": 17,
+      "accuracy": 0.412
+    },
+    {
+      "name": "Dan",
+      "points": 5,
+      "correct": 5,
+      "played": 17,
+      "accuracy": 0.294
     },
     {
       "name": "Muff",
       "points": 5,
       "correct": 5,
-      "played": 16,
-      "accuracy": 0.312
-    },
-    {
-      "name": "Dan",
-      "points": 4,
-      "correct": 4,
-      "played": 16,
-      "accuracy": 0.25
+      "played": 17,
+      "accuracy": 0.294
     }
   ],
   "finished": [
@@ -628,9 +628,7 @@
         "Mick": true,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537391,
       "date": "2026-06-16T19:00:00Z",
@@ -638,13 +636,13 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "France",
       "awayTeam": "Senegal",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "France",
       "picks": {
         "Patrick": "France",
         "Conor": "Draw",
@@ -656,16 +654,18 @@
         "Marc": "France"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537392,
       "date": "2026-06-16T22:00:00Z",
@@ -673,9 +673,9 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "IN_PLAY",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
