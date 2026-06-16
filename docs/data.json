@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T23:17:29.089050+00:00",
+  "lastUpdated": "2026-06-16T18:14:09.622920+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,60 +12,60 @@
   ],
   "leaderboard": [
     {
+      "name": "Hugh",
+      "points": 11,
+      "correct": 11,
+      "played": 16,
+      "accuracy": 0.688
+    },
+    {
       "name": "Conor",
       "points": 10,
       "correct": 10,
-      "played": 14,
-      "accuracy": 0.714
-    },
-    {
-      "name": "Hugh",
-      "points": 9,
-      "correct": 9,
-      "played": 14,
-      "accuracy": 0.643
+      "played": 16,
+      "accuracy": 0.625
     },
     {
       "name": "Marc",
-      "points": 7,
-      "correct": 7,
-      "played": 14,
+      "points": 8,
+      "correct": 8,
+      "played": 16,
       "accuracy": 0.5
     },
     {
       "name": "Crow",
       "points": 6,
       "correct": 6,
-      "played": 14,
-      "accuracy": 0.429
+      "played": 16,
+      "accuracy": 0.375
     },
     {
       "name": "Mick",
-      "points": 5,
-      "correct": 5,
-      "played": 14,
-      "accuracy": 0.357
+      "points": 6,
+      "correct": 6,
+      "played": 16,
+      "accuracy": 0.375
+    },
+    {
+      "name": "Patrick",
+      "points": 6,
+      "correct": 6,
+      "played": 16,
+      "accuracy": 0.375
     },
     {
       "name": "Muff",
       "points": 5,
       "correct": 5,
-      "played": 14,
-      "accuracy": 0.357
-    },
-    {
-      "name": "Patrick",
-      "points": 5,
-      "correct": 5,
-      "played": 14,
-      "accuracy": 0.357
+      "played": 16,
+      "accuracy": 0.312
     },
     {
       "name": "Dan",
       "points": 4,
       "correct": 4,
-      "played": 14,
-      "accuracy": 0.286
+      "played": 16,
+      "accuracy": 0.25
     }
   ],
   "finished": [
@@ -558,9 +558,7 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537370,
       "date": "2026-06-15T22:00:00Z",
@@ -569,12 +567,12 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "homeScore": 1,
-      "awayScore": 0,
-      "status": "IN_PLAY",
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "Draw",
       "picks": {
         "Patrick": "Uruguay",
         "Conor": "Uruguay",
@@ -586,14 +584,14 @@
         "Marc": "Uruguay"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
     },
     {
@@ -603,13 +601,13 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 2,
+      "awayScore": 2,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "Draw",
       "picks": {
         "Patrick": "Draw",
         "Conor": "New Zealand",
@@ -621,16 +619,18 @@
         "Marc": "Draw"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537391,
       "date": "2026-06-16T19:00:00Z",
