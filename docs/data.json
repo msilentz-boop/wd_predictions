@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T23:54:06.706679+00:00",
+  "lastUpdated": "2026-06-17T13:02:48.683887+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 12,
-      "correct": 12,
-      "played": 17,
-      "accuracy": 0.706
+      "points": 15,
+      "correct": 15,
+      "played": 20,
+      "accuracy": 0.75
     },
     {
       "name": "Conor",
-      "points": 10,
-      "correct": 10,
-      "played": 17,
-      "accuracy": 0.588
+      "points": 12,
+      "correct": 12,
+      "played": 20,
+      "accuracy": 0.6
     },
     {
       "name": "Marc",
-      "points": 9,
-      "correct": 9,
-      "played": 17,
-      "accuracy": 0.529
+      "points": 12,
+      "correct": 12,
+      "played": 20,
+      "accuracy": 0.6
     },
     {
       "name": "Crow",
-      "points": 7,
-      "correct": 7,
-      "played": 17,
-      "accuracy": 0.412
-    },
-    {
-      "name": "Mick",
-      "points": 7,
-      "correct": 7,
-      "played": 17,
-      "accuracy": 0.412
+      "points": 10,
+      "correct": 10,
+      "played": 20,
+      "accuracy": 0.5
     },
     {
       "name": "Patrick",
-      "points": 7,
-      "correct": 7,
-      "played": 17,
-      "accuracy": 0.412
+      "points": 10,
+      "correct": 10,
+      "played": 20,
+      "accuracy": 0.5
     },
     {
       "name": "Dan",
-      "points": 5,
-      "correct": 5,
-      "played": 17,
-      "accuracy": 0.294
+      "points": 8,
+      "correct": 8,
+      "played": 20,
+      "accuracy": 0.4
+    },
+    {
+      "name": "Mick",
+      "points": 8,
+      "correct": 8,
+      "played": 20,
+      "accuracy": 0.4
     },
     {
       "name": "Muff",
-      "points": 5,
-      "correct": 5,
-      "played": 17,
-      "accuracy": 0.294
+      "points": 6,
+      "correct": 6,
+      "played": 20,
+      "accuracy": 0.3
     }
   ],
   "finished": [
@@ -80,7 +80,9 @@
       "awayScore": 0,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "\u201cJ. Qui\u00f1ones 9'\u201d,\u201dR. Jim\u00e9nez 67'\u201d"
+      ],
       "awayScorers": [],
       "result": "Mexico",
       "picks": {
@@ -115,8 +117,13 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "I.B. Hwang 67'",
+        "H.G. Oh 80'"
+      ],
+      "awayScorers": [
+        "L. Krej\u010d\u00ed 59'"
+      ],
       "result": "South Korea",
       "picks": {
         "Patrick": "Draw",
@@ -150,8 +157,12 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "C. Larin 11'"
+      ],
+      "awayScorers": [
+        "Jovo Luki\u0107 21'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Bosnia & Herzegovina",
@@ -185,8 +196,12 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "B. Khoukhi 90'+5'"
+      ],
+      "awayScorers": [
+        "Breel Embolo 17' (p)"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Switzerland",
@@ -220,8 +235,12 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "V. J\u00fanior 32'"
+      ],
+      "awayScorers": [
+        "I. Saibari 21'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Brazil",
@@ -255,8 +274,15 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "D. Bobadilla 7'(OG)",
+        "F. Balogun 31'",
+        "F. Balogun 45'+5'",
+        "G. Reyna 90'+8'"
+      ],
+      "awayScorers": [
+        "Maur\u00edcio 73'"
+      ],
       "result": "USA",
       "picks": {
         "Patrick": "Draw",
@@ -291,7 +317,9 @@
       "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
+      "awayScorers": [
+        "J. McGinn 28'"
+      ],
       "result": "Scotland",
       "picks": {
         "Patrick": "Scotland",
@@ -325,7 +353,10 @@
       "awayScore": 0,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Nestory Irankunda 27'",
+        "C. Metcalfe 75'"
+      ],
       "awayScorers": [],
       "result": "Australia",
       "picks": {
@@ -360,8 +391,18 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Felix Nmecha 7'",
+        "N. Schlotterbeck 38'",
+        "K. Havertz 45'+5'(p)",
+        "J. Musiala 47'",
+        "N. Brown 68'",
+        "D. Undav 78'",
+        "K. Havertz 88'"
+      ],
+      "awayScorers": [
+        "L. Comenencia 21'"
+      ],
       "result": "Germany",
       "picks": {
         "Patrick": "Germany",
@@ -395,8 +436,14 @@
       "awayScore": 2,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Virgil van Dijk 51'",
+        "C. Summerville 64'"
+      ],
+      "awayScorers": [
+        "K. Nakamura 57'",
+        "K. Ogawa 89'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Netherlands",
@@ -430,7 +477,9 @@
       "awayScore": 0,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "A. Diallo 90'"
+      ],
       "awayScorers": [],
       "result": "Ivory Coast",
       "picks": {
@@ -465,8 +514,16 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Y.Ayari 7'",
+        "A. Isak 30'",
+        "V. Gy\u00f6keres 59'",
+        "M. Svanberg 84'",
+        "Y.Ayari 90'+6'"
+      ],
+      "awayScorers": [
+        "O. Rekik 43'"
+      ],
       "result": "Sweden",
       "picks": {
         "Patrick": "Sweden",
@@ -500,8 +557,12 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Mohamed Hany 66'"
+      ],
+      "awayScorers": [
+        "Emam Ashour 20'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Draw",
@@ -570,8 +631,12 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Abdulelah Al-Amri 41'"
+      ],
+      "awayScorers": [
+        "Maximiliano Ara\u00fajo 80'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Uruguay",
@@ -605,8 +670,14 @@
       "awayScore": 2,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Ramin Rezaiian 32'",
+        "Mohammad Mohebi 64'"
+      ],
+      "awayScorers": [
+        "Elijah Just 7'",
+        "Elijah Just 54'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Draw",
@@ -640,8 +711,14 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "K. Mbapp\u00e9 66'",
+        "B. Barcola 82'",
+        "K. Mbapp\u00e9 90+6'"
+      ],
+      "awayScorers": [
+        "I. Mbaye 90+5'"
+      ],
       "result": "France",
       "picks": {
         "Patrick": "France",
@@ -663,9 +740,7 @@
         "Mick": true,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537392,
       "date": "2026-06-16T22:00:00Z",
@@ -674,12 +749,19 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "homeScore": 1,
-      "awayScore": 3,
-      "status": "IN_PLAY",
+      "awayScore": 4,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Aymen Hussein 39'"
+      ],
+      "awayScorers": [
+        "Erling Haaland 29'",
+        "Erling Haaland 43'",
+        "Leo \u00d8stig\u00e5rd 76'",
+        "Aymen Hussein 90+7'"
+      ],
+      "result": "Norway",
       "picks": {
         "Patrick": "Norway",
         "Conor": "Norway",
@@ -691,14 +773,14 @@
         "Marc": "Norway"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": false,
+        "Marc": true
       }
     },
     {
@@ -708,13 +790,17 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Lionel Messi 17'",
+        "Lionel Messi 60'",
+        "Lionel Messi 76'"
+      ],
       "awayScorers": [],
-      "result": null,
+      "result": "Argentina",
       "picks": {
         "Patrick": "Argentina",
         "Conor": "Draw",
@@ -726,14 +812,14 @@
         "Marc": "Argentina"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -743,13 +829,18 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Rvmanv Ashmid 21'",
+        "Izn Alarb 76'"
+      ],
+      "awayScorers": [
+        "Ali Avlvan 50'"
+      ],
+      "result": "Austria",
       "picks": {
         "Patrick": "Austria",
         "Conor": "Austria",
@@ -761,16 +852,18 @@
         "Marc": "Austria"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537403,
       "date": "2026-06-17T17:00:00Z",
@@ -813,8 +906,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "England",
       "awayTeam": "Croatia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -848,8 +941,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Czech Republic",
       "awayTeam": "South Africa",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -883,8 +976,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -918,8 +1011,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -953,8 +1046,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -988,8 +1081,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1023,8 +1116,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1058,8 +1151,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1093,8 +1186,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "USA",
       "awayTeam": "Australia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1128,8 +1221,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1163,8 +1256,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1198,8 +1291,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Turkey",
       "awayTeam": "Paraguay",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1233,8 +1326,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1268,8 +1361,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Ecuador",
       "awayTeam": "Curacao",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1303,8 +1396,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1338,8 +1431,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1373,8 +1466,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1408,8 +1501,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1443,8 +1536,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1478,8 +1571,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "France",
       "awayTeam": "Iraq",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1513,8 +1606,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Argentina",
       "awayTeam": "Austria",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1548,8 +1641,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Norway",
       "awayTeam": "Senegal",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1583,8 +1676,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Jordan",
       "awayTeam": "Algeria",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1618,8 +1711,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Portugal",
       "awayTeam": "Uzbekistan",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1653,8 +1746,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "England",
       "awayTeam": "Ghana",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1688,8 +1781,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Switzerland",
       "awayTeam": "Canada",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1723,8 +1816,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Bosnia & Herzegovina",
       "awayTeam": "Qatar",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1758,8 +1851,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Morocco",
       "awayTeam": "Haiti",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1793,8 +1886,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Scotland",
       "awayTeam": "Brazil",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1863,8 +1956,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1898,8 +1991,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "South Africa",
       "awayTeam": "South Korea",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1933,8 +2026,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Czech Republic",
       "awayTeam": "Mexico",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -1968,8 +2061,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Curacao",
       "awayTeam": "Ivory Coast",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2003,8 +2096,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Ecuador",
       "awayTeam": "Germany",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2038,8 +2131,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Turkey",
       "awayTeam": "USA",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2073,8 +2166,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Paraguay",
       "awayTeam": "Australia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2108,8 +2201,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Tunisia",
       "awayTeam": "Netherlands",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2143,8 +2236,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Japan",
       "awayTeam": "Sweden",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2178,8 +2271,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Norway",
       "awayTeam": "France",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2213,8 +2306,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Senegal",
       "awayTeam": "Iraq",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2248,8 +2341,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "New Zealand",
       "awayTeam": "Belgium",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2283,8 +2376,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Egypt",
       "awayTeam": "Iran",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2318,8 +2411,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Cape Verde",
       "awayTeam": "Saudi Arabia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2353,8 +2446,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Uruguay",
       "awayTeam": "Spain",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2388,8 +2481,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Panama",
       "awayTeam": "England",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2423,8 +2516,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Croatia",
       "awayTeam": "Ghana",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2458,8 +2551,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Algeria",
       "awayTeam": "Austria",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2493,8 +2586,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Jordan",
       "awayTeam": "Argentina",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2528,8 +2621,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Colombia",
       "awayTeam": "Portugal",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
