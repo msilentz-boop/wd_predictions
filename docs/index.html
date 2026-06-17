@@ -881,24 +881,7 @@
       return { lastUpdated: new Date().toISOString(), players, leaderboard, finished, upcoming };
     }
 
-    async function init() {
-      document.getElementById('sync-time').textContent = 'loading…';
-
-      let data, isLive = false;
-      try {
-        data = await fetchLiveData();
-        isLive = true;
-      } catch (err) {
-        console.warn('Live fetch failed, using cached data:', err);
-        try {
-          const r = await fetch(`./data.json?t=${Date.now()}`);
-          data = await r.json();
-        } catch {
-          document.getElementById('sync-time').textContent = 'sync failed';
-          return;
-        }
-      }
-
+    function render(data, isLive) {
       document.getElementById('sync-time').textContent =
         (isLive ? '⚡ live · ' : 'cached · ') +
         new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
@@ -1057,6 +1040,9 @@
       if (!hasLive) {
         lbHead.classList.add('no-live');
         projHeader.style.display = 'none';
+      } else {
+        lbHead.classList.remove('no-live');
+        projHeader.style.display = '';
       }
 
       if (!data.leaderboard.length) {
@@ -1163,9 +1149,37 @@
             <div class="picks-row">${chips}</div>
           </div>`;
       }).join('');
+    } // end render()
+
+    async function init() {
+      document.getElementById('sync-time').textContent = 'loading…';
+
+      // 1. Render cached data immediately so the page is never blank
+      try {
+        const r = await fetch(`./data.json?t=${Date.now()}`);
+        const cached = await r.json();
+        render(cached, false);
+      } catch {
+        document.getElementById('sync-time').textContent = 'loading live…';
+      }
+
+      // 2. Fetch live data in background; re-render if successful
+      try {
+        const livePromise = fetchLiveData();
+        const timeoutPromise = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('timeout')), 8000)
+        );
+        const data = await Promise.race([livePromise, timeoutPromise]);
+        render(data, true);
+      } catch (err) {
+        console.warn('Live fetch failed or timed out:', err);
+        // Cached render is already showing — nothing more to do
+        const el = document.getElementById('sync-time');
+        if (el.textContent === 'loading live…') el.textContent = 'sync failed';
+      }
     }
 
-    window.addEventListener('load', init);
+    document.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
 </html>
