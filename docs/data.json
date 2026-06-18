@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T11:57:57.979229+00:00",
+  "lastUpdated": "2026-06-18T20:43:04.010550+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,60 +12,60 @@
   ],
   "leaderboard": [
     {
+      "name": "Conor",
+      "points": 17,
+      "correct": 17,
+      "played": 25,
+      "accuracy": 0.68
+    },
+    {
       "name": "Hugh",
       "points": 17,
       "correct": 17,
-      "played": 24,
-      "accuracy": 0.708
-    },
-    {
-      "name": "Conor",
-      "points": 16,
-      "correct": 16,
-      "played": 24,
-      "accuracy": 0.667
+      "played": 25,
+      "accuracy": 0.68
     },
     {
       "name": "Marc",
-      "points": 15,
-      "correct": 15,
-      "played": 24,
-      "accuracy": 0.625
+      "points": 16,
+      "correct": 16,
+      "played": 25,
+      "accuracy": 0.64
     },
     {
       "name": "Patrick",
       "points": 13,
       "correct": 13,
-      "played": 24,
-      "accuracy": 0.542
+      "played": 25,
+      "accuracy": 0.52
     },
     {
       "name": "Crow",
       "points": 12,
       "correct": 12,
-      "played": 24,
-      "accuracy": 0.5
+      "played": 25,
+      "accuracy": 0.48
     },
     {
       "name": "Dan",
       "points": 11,
       "correct": 11,
-      "played": 24,
-      "accuracy": 0.458
+      "played": 25,
+      "accuracy": 0.44
     },
     {
       "name": "Mick",
       "points": 9,
       "correct": 9,
-      "played": 24,
-      "accuracy": 0.375
+      "played": 25,
+      "accuracy": 0.36
     },
     {
       "name": "Muff",
       "points": 8,
       "correct": 8,
-      "played": 24,
-      "accuracy": 0.333
+      "played": 25,
+      "accuracy": 0.32
     }
   ],
   "finished": [
@@ -840,6 +840,41 @@
       }
     },
     {
+      "id": 537329,
+      "date": "2026-06-18T16:00:00Z",
+      "group": "A",
+      "stage": "GROUP_STAGE",
+      "homeTeam": "Czech Republic",
+      "awayTeam": "South Africa",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": "Draw",
+      "picks": {
+        "Patrick": "Czech Republic",
+        "Conor": "Draw",
+        "Dan": "Czech Republic",
+        "Crow": "Czech Republic",
+        "Hugh": "Czech Republic",
+        "Muff": "Czech Republic",
+        "Mick": "Czech Republic",
+        "Marc": "Draw"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": true
+      }
+    },
+    {
       "id": 537404,
       "date": "2026-06-18T02:00:00Z",
       "group": "K",
@@ -912,50 +947,15 @@
   ],
   "upcoming": [
     {
-      "id": 537329,
-      "date": "2026-06-18T16:00:00Z",
-      "group": "A",
-      "stage": "GROUP_STAGE",
-      "homeTeam": "Czech Republic",
-      "awayTeam": "South Africa",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Czech Republic",
-        "Conor": "Draw",
-        "Dan": "Czech Republic",
-        "Crow": "Czech Republic",
-        "Hugh": "Czech Republic",
-        "Muff": "Czech Republic",
-        "Mick": "Czech Republic",
-        "Marc": "Draw"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
       "id": 537335,
       "date": "2026-06-18T19:00:00Z",
       "group": "B",
       "stage": "GROUP_STAGE",
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "IN_PLAY",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
