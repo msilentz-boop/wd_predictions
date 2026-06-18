@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T21:24:47.177874+00:00",
+  "lastUpdated": "2026-06-18T11:57:57.979229+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 15,
-      "correct": 15,
-      "played": 21,
-      "accuracy": 0.714
+      "points": 17,
+      "correct": 17,
+      "played": 24,
+      "accuracy": 0.708
     },
     {
       "name": "Conor",
-      "points": 13,
-      "correct": 13,
-      "played": 21,
-      "accuracy": 0.619
+      "points": 16,
+      "correct": 16,
+      "played": 24,
+      "accuracy": 0.667
     },
     {
       "name": "Marc",
-      "points": 12,
-      "correct": 12,
-      "played": 21,
-      "accuracy": 0.571
-    },
-    {
-      "name": "Crow",
-      "points": 10,
-      "correct": 10,
-      "played": 21,
-      "accuracy": 0.476
+      "points": 15,
+      "correct": 15,
+      "played": 24,
+      "accuracy": 0.625
     },
     {
       "name": "Patrick",
-      "points": 10,
-      "correct": 10,
-      "played": 21,
-      "accuracy": 0.476
+      "points": 13,
+      "correct": 13,
+      "played": 24,
+      "accuracy": 0.542
+    },
+    {
+      "name": "Crow",
+      "points": 12,
+      "correct": 12,
+      "played": 24,
+      "accuracy": 0.5
     },
     {
       "name": "Dan",
-      "points": 8,
-      "correct": 8,
-      "played": 21,
-      "accuracy": 0.381
+      "points": 11,
+      "correct": 11,
+      "played": 24,
+      "accuracy": 0.458
     },
     {
       "name": "Mick",
-      "points": 8,
-      "correct": 8,
-      "played": 21,
-      "accuracy": 0.381
+      "points": 9,
+      "correct": 9,
+      "played": 24,
+      "accuracy": 0.375
     },
     {
       "name": "Muff",
-      "points": 6,
-      "correct": 6,
-      "played": 21,
-      "accuracy": 0.286
+      "points": 8,
+      "correct": 8,
+      "played": 24,
+      "accuracy": 0.333
     }
   ],
   "finished": [
@@ -803,9 +803,7 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537409,
       "date": "2026-06-17T20:00:00Z",
@@ -813,13 +811,13 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "England",
       "awayTeam": "Croatia",
-      "homeScore": 3,
+      "homeScore": 4,
       "awayScore": 2,
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "England",
       "picks": {
         "Patrick": "England",
         "Conor": "England",
@@ -831,16 +829,88 @@
         "Marc": "England"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": true
       }
     },
+    {
+      "id": 537404,
+      "date": "2026-06-18T02:00:00Z",
+      "group": "K",
+      "stage": "GROUP_STAGE",
+      "homeTeam": "Uzbekistan",
+      "awayTeam": "Colombia",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": "Colombia",
+      "picks": {
+        "Patrick": "Colombia",
+        "Conor": "Colombia",
+        "Dan": "Colombia",
+        "Crow": "Colombia",
+        "Hugh": "Draw",
+        "Muff": "Colombia",
+        "Mick": "Uzbekistan",
+        "Marc": "Colombia"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": true
+      }
+    },
+    {
+      "id": 537410,
+      "date": "2026-06-17T23:00:00Z",
+      "group": "L",
+      "stage": "GROUP_STAGE",
+      "homeTeam": "Ghana",
+      "awayTeam": "Panama",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": "Ghana",
+      "picks": {
+        "Patrick": "Ghana",
+        "Conor": "Ghana",
+        "Dan": "Ghana",
+        "Crow": "Draw",
+        "Hugh": "Ghana",
+        "Muff": "Ghana",
+        "Mick": "Ghana",
+        "Marc": "Ghana"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
+      }
+    }
+  ],
+  "upcoming": [
     {
       "id": 537329,
       "date": "2026-06-18T16:00:00Z",
@@ -934,76 +1004,6 @@
         "Muff": "Canada",
         "Mick": "Qatar",
         "Marc": "Canada"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537404,
-      "date": "2026-06-18T02:00:00Z",
-      "group": "K",
-      "stage": "GROUP_STAGE",
-      "homeTeam": "Uzbekistan",
-      "awayTeam": "Colombia",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Colombia",
-        "Conor": "Colombia",
-        "Dan": "Colombia",
-        "Crow": "Colombia",
-        "Hugh": "Draw",
-        "Muff": "Colombia",
-        "Mick": "Uzbekistan",
-        "Marc": "Colombia"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537410,
-      "date": "2026-06-17T23:00:00Z",
-      "group": "L",
-      "stage": "GROUP_STAGE",
-      "homeTeam": "Ghana",
-      "awayTeam": "Panama",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Ghana",
-        "Conor": "Ghana",
-        "Dan": "Ghana",
-        "Crow": "Draw",
-        "Hugh": "Ghana",
-        "Muff": "Ghana",
-        "Mick": "Ghana",
-        "Marc": "Ghana"
       },
       "correct": {
         "Patrick": null,
