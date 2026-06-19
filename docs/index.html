@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;900&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="preload" href="./data.json" as="fetch" crossorigin>
   <style>
     :root {
       --bg:          #0d1117;
@@ -1187,10 +1186,11 @@
       const stored = loadFromStorage();
       if (stored) render(stored, false);
 
-      // 1b. Fetch data.json (browser cache handles ETags; no cache-bust)
+      // 1b. Revalidate data.json — cache:'no-cache' forces a conditional GET
+      //     (sends If-None-Match, gets 304 if unchanged or fresh content if updated)
       let cached = stored;
       try {
-        const r = await fetch('./data.json');
+        const r = await fetch('./data.json', { cache: 'no-cache' });
         cached = await r.json();
         if (!stored || cached.lastUpdated !== stored?.lastUpdated) {
           render(cached, false);
