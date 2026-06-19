@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;900&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="./data.json" as="fetch" crossorigin>
   <style>
     :root {
       --bg:          #0d1117;
@@ -609,6 +610,10 @@
       color: var(--text-dim); opacity: 0.5;
     }
 
+    @media (hover: none) {
+      header { backdrop-filter: none; background: rgba(13,17,23,0.98); }
+    }
+
     @media (max-width: 600px) {
       /* Leaderboard — LIVE: show #, Player, Pts, Proj; hide Correct + Acc */
       .table-head:not(.no-live),
@@ -1151,29 +1156,65 @@
       }).join('');
     } // end render()
 
+    const LS_KEY = 'wd_data_v1';
+
+    function loadFromStorage() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch { return null; }
+    }
+
+    function saveToStorage(data) {
+      try { localStorage.setItem(LS_KEY, JSON.stringify(data)); } catch {}
+    }
+
+    function hasActiveOrUpcomingMatch(data) {
+      if (!data?.upcoming) return false;
+      const now = Date.now();
+      const twoHours = 2 * 60 * 60 * 1000;
+      return data.upcoming.some(m => {
+        if (m.status === 'IN_PLAY' || m.status === 'PAUSED') return true;
+        const t = parseDateStr(m.date).getTime();
+        return t > now && t - now < twoHours;
+      });
+    }
+
     async function init() {
       document.getElementById('sync-time').textContent = 'loading…';
 
-      // 1. Render cached data immediately so the page is never blank
+      // 1a. Render from localStorage synchronously — zero network latency
+      const stored = loadFromStorage();
+      if (stored) render(stored, false);
+
+      // 1b. Fetch data.json (browser cache handles ETags; no cache-bust)
+      let cached = stored;
       try {
-        const r = await fetch(`./data.json?t=${Date.now()}`);
-        const cached = await r.json();
-        render(cached, false);
+        const r = await fetch('./data.json');
+        cached = await r.json();
+        if (!stored || cached.lastUpdated !== stored?.lastUpdated) {
+          render(cached, false);
+          saveToStorage(cached);
+        }
       } catch {
-        document.getElementById('sync-time').textContent = 'loading live…';
+        if (!stored) document.getElementById('sync-time').textContent = 'loading live…';
       }
 
-      // 2. Fetch live data in background; re-render if successful
+      // 2. Only hit live APIs when a match is active or starting within 2h
+      if (!hasActiveOrUpcomingMatch(cached)) return;
+
       try {
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+        const timeoutMs = isMobile ? 4000 : 8000;
         const livePromise = fetchLiveData();
         const timeoutPromise = new Promise((_, reject) =>
-          setTimeout(() => reject(new Error('timeout')), 8000)
+          setTimeout(() => reject(new Error('timeout')), timeoutMs)
         );
         const data = await Promise.race([livePromise, timeoutPromise]);
         render(data, true);
+        saveToStorage(data);
       } catch (err) {
         console.warn('Live fetch failed or timed out:', err);
-        // Cached render is already showing — nothing more to do
         const el = document.getElementById('sync-time');
         if (el.textContent === 'loading live…') el.textContent = 'sync failed';
       }
