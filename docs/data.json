@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T15:24:18.026994+00:00",
+  "lastUpdated": "2026-06-20T18:27:21.908332+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -1198,9 +1198,9 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 4,
+      "awayScore": 1,
+      "status": "IN_PLAY",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
