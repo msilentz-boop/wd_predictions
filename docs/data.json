@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T20:08:28.749813+00:00",
+  "lastUpdated": "2026-06-20T23:55:28.033983+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -15,57 +15,57 @@
       "name": "Hugh",
       "points": 21,
       "correct": 21,
-      "played": 33,
-      "accuracy": 0.636
+      "played": 34,
+      "accuracy": 0.618
     },
     {
       "name": "Conor",
+      "points": 20,
+      "correct": 20,
+      "played": 34,
+      "accuracy": 0.588
+    },
+    {
+      "name": "Crow",
       "points": 19,
       "correct": 19,
-      "played": 33,
-      "accuracy": 0.576
+      "played": 34,
+      "accuracy": 0.559
     },
     {
       "name": "Marc",
       "points": 19,
       "correct": 19,
-      "played": 33,
-      "accuracy": 0.576
-    },
-    {
-      "name": "Crow",
-      "points": 18,
-      "correct": 18,
-      "played": 33,
-      "accuracy": 0.545
+      "played": 34,
+      "accuracy": 0.559
     },
     {
       "name": "Dan",
-      "points": 16,
-      "correct": 16,
-      "played": 33,
-      "accuracy": 0.485
+      "points": 17,
+      "correct": 17,
+      "played": 34,
+      "accuracy": 0.5
     },
     {
       "name": "Muff",
       "points": 16,
       "correct": 16,
-      "played": 33,
-      "accuracy": 0.485
+      "played": 34,
+      "accuracy": 0.471
     },
     {
       "name": "Patrick",
-      "points": 15,
-      "correct": 15,
-      "played": 33,
-      "accuracy": 0.455
+      "points": 16,
+      "correct": 16,
+      "played": 34,
+      "accuracy": 0.471
     },
     {
       "name": "Mick",
-      "points": 13,
-      "correct": 13,
-      "played": 33,
-      "accuracy": 0.394
+      "points": 14,
+      "correct": 14,
+      "played": 34,
+      "accuracy": 0.412
     }
   ],
   "finished": [
@@ -1368,9 +1368,7 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537353,
       "date": "2026-06-20T20:00:00Z",
@@ -1378,13 +1376,18 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Dniz Avndav 68'",
+        "Dniz Avndav 90+4'"
+      ],
+      "awayScorers": [
+        "Franck Kessi\u00e9 30'"
+      ],
+      "result": "Germany",
       "picks": {
         "Patrick": "Germany",
         "Conor": "Germany",
@@ -1396,16 +1399,18 @@
         "Marc": "Draw"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": true,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537354,
       "date": "2026-06-21T00:00:00Z",
