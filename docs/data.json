@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T23:55:28.033983+00:00",
+  "lastUpdated": "2026-06-21T11:33:25.489290+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 21,
-      "correct": 21,
-      "played": 34,
-      "accuracy": 0.618
+      "points": 22,
+      "correct": 22,
+      "played": 36,
+      "accuracy": 0.611
     },
     {
       "name": "Conor",
-      "points": 20,
-      "correct": 20,
-      "played": 34,
-      "accuracy": 0.588
+      "points": 21,
+      "correct": 21,
+      "played": 36,
+      "accuracy": 0.583
     },
     {
       "name": "Crow",
-      "points": 19,
-      "correct": 19,
-      "played": 34,
-      "accuracy": 0.559
+      "points": 20,
+      "correct": 20,
+      "played": 36,
+      "accuracy": 0.556
     },
     {
       "name": "Marc",
-      "points": 19,
-      "correct": 19,
-      "played": 34,
-      "accuracy": 0.559
+      "points": 20,
+      "correct": 20,
+      "played": 36,
+      "accuracy": 0.556
     },
     {
       "name": "Dan",
-      "points": 17,
-      "correct": 17,
-      "played": 34,
+      "points": 18,
+      "correct": 18,
+      "played": 36,
       "accuracy": 0.5
     },
     {
       "name": "Muff",
-      "points": 16,
-      "correct": 16,
-      "played": 34,
-      "accuracy": 0.471
+      "points": 17,
+      "correct": 17,
+      "played": 36,
+      "accuracy": 0.472
     },
     {
       "name": "Patrick",
-      "points": 16,
-      "correct": 16,
-      "played": 34,
-      "accuracy": 0.471
+      "points": 17,
+      "correct": 17,
+      "played": 36,
+      "accuracy": 0.472
     },
     {
       "name": "Mick",
       "points": 14,
       "correct": 14,
-      "played": 34,
-      "accuracy": 0.412
+      "played": 36,
+      "accuracy": 0.389
     }
   ],
   "finished": [
@@ -1408,9 +1408,7 @@
         "Mick": true,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537354,
       "date": "2026-06-21T00:00:00Z",
@@ -1418,13 +1416,13 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Ecuador",
       "awayTeam": "Curacao",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "Draw",
       "picks": {
         "Patrick": "Ecuador",
         "Conor": "Ecuador",
@@ -1436,14 +1434,14 @@
         "Marc": "Ecuador"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
     },
     {
@@ -1453,13 +1451,18 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 0,
+      "awayScore": 4,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "awayScorers": [
+        "Daichi Kamada 4'",
+        "Aiash Ivida 31'",
+        "Junya It\u014d 69'",
+        "Aiash Ivida 83'"
+      ],
+      "result": "Japan",
       "picks": {
         "Patrick": "Japan",
         "Conor": "Japan",
@@ -1471,16 +1474,18 @@
         "Marc": "Japan"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": false,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537365,
       "date": "2026-06-21T19:00:00Z",
