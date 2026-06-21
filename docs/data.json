@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T17:10:40.475214+00:00",
+  "lastUpdated": "2026-06-21T22:02:32.672141+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,60 +12,60 @@
   ],
   "leaderboard": [
     {
-      "name": "Hugh",
-      "points": 22,
-      "correct": 22,
-      "played": 35,
-      "accuracy": 0.629
+      "name": "Conor",
+      "points": 23,
+      "correct": 23,
+      "played": 38,
+      "accuracy": 0.605
     },
     {
-      "name": "Conor",
-      "points": 20,
-      "correct": 20,
-      "played": 35,
-      "accuracy": 0.571
+      "name": "Hugh",
+      "points": 23,
+      "correct": 23,
+      "played": 38,
+      "accuracy": 0.605
     },
     {
       "name": "Crow",
-      "points": 20,
-      "correct": 20,
-      "played": 35,
-      "accuracy": 0.571
+      "points": 21,
+      "correct": 21,
+      "played": 38,
+      "accuracy": 0.553
     },
     {
       "name": "Marc",
-      "points": 20,
-      "correct": 20,
-      "played": 35,
-      "accuracy": 0.571
+      "points": 21,
+      "correct": 21,
+      "played": 38,
+      "accuracy": 0.553
     },
     {
       "name": "Dan",
-      "points": 18,
-      "correct": 18,
-      "played": 35,
-      "accuracy": 0.514
+      "points": 19,
+      "correct": 19,
+      "played": 38,
+      "accuracy": 0.5
+    },
+    {
+      "name": "Patrick",
+      "points": 19,
+      "correct": 19,
+      "played": 38,
+      "accuracy": 0.5
     },
     {
       "name": "Muff",
       "points": 17,
       "correct": 17,
-      "played": 35,
-      "accuracy": 0.486
-    },
-    {
-      "name": "Patrick",
-      "points": 17,
-      "correct": 17,
-      "played": 35,
-      "accuracy": 0.486
+      "played": 38,
+      "accuracy": 0.447
     },
     {
       "name": "Mick",
-      "points": 14,
-      "correct": 14,
-      "played": 35,
-      "accuracy": 0.4
+      "points": 15,
+      "correct": 15,
+      "played": 38,
+      "accuracy": 0.395
     }
   ],
   "finished": [
@@ -163,7 +163,7 @@
       "awayScorers": [
         "Jovo Luki\u0107 21'"
       ],
-      "result": null,
+      "result": "Draw",
       "picks": {
         "Patrick": "Bosnia & Herzegovina",
         "Conor": "Draw",
@@ -175,14 +175,14 @@
         "Marc": "Canada"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
     },
     {
@@ -1483,9 +1483,7 @@
         "Mick": false,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537365,
       "date": "2026-06-21T19:00:00Z",
@@ -1493,13 +1491,13 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "Draw",
       "picks": {
         "Patrick": "Draw",
         "Conor": "Draw",
@@ -1511,14 +1509,14 @@
         "Marc": "Belgium"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
     },
     {
@@ -1528,13 +1526,18 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
-      "homeScore": 3,
+      "homeScore": 4,
       "awayScore": 0,
-      "status": "PAUSED",
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Lamine Yamal 10'",
+        "Mikel Oyarzabal 21'",
+        "Mikel Oyarzabal 24'",
+        "Hassan Mohamed Altmbkti 49'"
+      ],
       "awayScorers": [],
-      "result": null,
+      "result": "Spain",
       "picks": {
         "Patrick": "Spain",
         "Conor": "Spain",
@@ -1546,16 +1549,18 @@
         "Marc": "Spain"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537372,
       "date": "2026-06-21T22:00:00Z",
@@ -1565,7 +1570,7 @@
       "awayTeam": "Cape Verde",
       "homeScore": 0,
       "awayScore": 0,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
@@ -1598,8 +1603,8 @@
       "stage": "GROUP_STAGE",
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
