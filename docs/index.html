@@ -83,6 +83,28 @@
       font-size: 10px; color: var(--text-dim); letter-spacing: 0.04em;
     }
 
+    /* ── Announcement banner ─────────────────────────────────── */
+    .announcement {
+      background: linear-gradient(90deg, rgba(61,214,140,0.12), rgba(61,214,140,0.06));
+      border-bottom: 1px solid rgba(61,214,140,0.25);
+      padding: 10px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .announcement-body {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--text);
+    }
+    .announcement-icon {
+      font-size: 16px; flex-shrink: 0;
+    }
+    .announcement strong { color: var(--green); }
+    .announcement-dismiss {
+      background: none; border: none; cursor: pointer;
+      color: var(--text-dim); font-size: 18px; line-height: 1;
+      padding: 2px 4px; flex-shrink: 0;
+    }
+    .announcement-dismiss:hover { color: var(--text); }
+
     /* ── Page hero ───────────────────────────────────────────── */
     .hero {
       padding: 44px 20px 36px;
@@ -666,10 +688,18 @@
     <span id="sync-time">—</span>
   </header>
 
+  <div class="announcement" id="knockout-banner">
+    <div class="announcement-body">
+      <span class="announcement-icon">🏆</span>
+      <span><strong>Knockout scoring unlocked:</strong> 8 points shared among correct predictors — sole correct pick takes all 8.</span>
+    </div>
+    <button class="announcement-dismiss" onclick="document.getElementById('knockout-banner').style.display='none'" aria-label="Dismiss">×</button>
+  </div>
+
   <div class="hero">
     <div class="hero-eyebrow">⚽ FIFA World Cup 2026</div>
     <h1 class="hero-title">WHO'S <span>WINNING</span><br>THE POOL?</h1>
-    <p class="hero-sub">+1 point per correct outcome · Group stage through Final</p>
+    <p class="hero-sub">Group stage: 1pt per correct pick · Knockout rounds: 8pts shared among correct picks</p>
   </div>
 
   <main>
