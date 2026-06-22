@@ -6,16 +6,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  actions: write
 
 jobs:
   keep-alive:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Empty commit to keep scheduled workflows active
+      - name: Re-enable scheduled workflows
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          git commit --allow-empty -m "Keep alive [skip ci]"
-          git push
+          gh workflow enable update_scores.yml --repo ${{ github.repository }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
