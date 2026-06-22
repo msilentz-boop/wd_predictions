@@ -171,20 +171,30 @@ def main():
                 continue
             picks[p] = pick
             if result_label is not None:
-                is_correct = pick == result_label
-                correct_map[p] = is_correct
-                leaderboard[p]["played"] += 1
-                if is_correct:
-                    leaderboard[p]["points"] += 1
-                    leaderboard[p]["correct"] += 1
+                correct_map[p] = pick == result_label
             else:
                 correct_map[p] = None
+
+        is_knockout = m["stage"] != "GROUP_STAGE"
+        knockout_pool = 8
+
+        if result_label is not None:
+            correct_count = sum(1 for v in correct_map.values() if v)
+            points_each = (knockout_pool / correct_count) if (is_knockout and correct_count > 0) else (0 if is_knockout else 1)
+            for p, is_correct in correct_map.items():
+                leaderboard[p]["played"] += 1
+                if is_correct:
+                    leaderboard[p]["points"] += points_each
+                    leaderboard[p]["correct"] += 1
+
+        points_available = knockout_pool if is_knockout else 1
 
         match_payload = {
             "id": m["id"],
             "date": m["utcDate"],
             "group": row.get("Group", ""),
             "stage": m["stage"],
+            "pointsAvailable": points_available,
             "homeTeam": home_sheet,
             "awayTeam": away_sheet,
             "homeScore": home_score,
@@ -213,6 +223,7 @@ def main():
     for entry in sorted_lb:
         played = entry["played"]
         entry["accuracy"] = round(entry["correct"] / played, 3) if played else 0.0
+        entry["points"] = round(entry["points"], 2)
 
     output = {
         "lastUpdated": last_updated,

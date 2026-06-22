@@ -846,24 +846,36 @@
           result = hs > as_ ? homeSheet : as_ > hs ? awaySheet : 'Draw';
         }
 
+        const stage = game.type === 'group' ? 'GROUP_STAGE' : (game.type || '').toUpperCase();
+        const isKnockout = stage !== 'GROUP_STAGE';
+        const knockoutPool = 8;
+
         const picks = {}, correct = {};
         players.forEach((p, i) => {
           const pick = row[awayIdx + 1 + i]?.trim() || '';
           if (pick) picks[p] = pick;
-          if (result !== null) {
-            correct[p] = pick === result;
-            lb[p].played++;
-            if (pick === result) { lb[p].points++; lb[p].correct++; }
-          } else {
-            correct[p] = null;
-          }
+          correct[p] = result !== null ? (pick === result) : null;
         });
+
+        if (result !== null) {
+          const correctCount = Object.values(correct).filter(v => v === true).length;
+          const pointsEach = isKnockout ? (correctCount > 0 ? knockoutPool / correctCount : 0) : 1;
+          players.forEach(p => {
+            if (correct[p] !== null) {
+              lb[p].played++;
+              if (correct[p]) { lb[p].points += pointsEach; lb[p].correct++; }
+            }
+          });
+        }
+
+        const pointsAvailable = isKnockout ? knockoutPool : 1;
 
         const payload = {
           id: game.id,
           date: game.local_date || '',
           group,
-          stage: game.type === 'group' ? 'GROUP_STAGE' : (game.type || '').toUpperCase(),
+          stage,
+          pointsAvailable,
           homeTeam: homeSheet, awayTeam: awaySheet,
           homeScore: hs, awayScore: as_,
           status,
@@ -1057,8 +1069,9 @@
           const pct = p.played ? Math.round(p.accuracy * 100) + '%' : '—';
           const isTop = rank === 1 && p.points > 0;
           const ptsClass = isTop ? 'lb-cell pts' : 'lb-cell pts-2nd';
+          const fmtPts = v => Number.isInteger(v) ? v : +v.toFixed(2);
           const bonus = projBonus[p.name] ?? 0;
-          const projTotal = p.points + bonus;
+          const projTotal = fmtPts(p.points + bonus);
           const projCell = hasLive
             ? (bonus > 0
                 ? `<span class="lb-cell proj">${projTotal}</span>`
@@ -1068,7 +1081,7 @@
             <div class="lb-row ${isTop ? 'top' : ''} ${hasLive ? '' : 'no-live'}">
               <span class="lb-rank">${rank}</span>
               <span class="lb-name">${p.name}</span>
-              <span class="${ptsClass}">${p.points}</span>
+              <span class="${ptsClass}">${fmtPts(p.points)}</span>
               ${projCell}
               <span class="lb-cell">${p.correct}/${p.played}</span>
               <span class="lb-cell acc">${pct}</span>
