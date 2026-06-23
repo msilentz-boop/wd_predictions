@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T10:48:08.995379+00:00",
+  "lastUpdated": "2026-06-23T17:30:21.774325+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -1854,12 +1854,17 @@
       "pointsAvailable": 1,
       "homeTeam": "Portugal",
       "awayTeam": "Uzbekistan",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
+      "homeScorers": [
+        "Cristiano Ronaldo 6'",
+        "Nvnv Mndz 17'"
+      ],
+      "awayScorers": [
+        "Aziz Jan Ganivf 29'"
+      ],
       "result": null,
       "picks": {
         "Patrick": "Portugal",
@@ -1890,8 +1895,8 @@
       "pointsAvailable": 1,
       "homeTeam": "England",
       "awayTeam": "Ghana",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2106,8 +2111,8 @@
       "pointsAvailable": 1,
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
