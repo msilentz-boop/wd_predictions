@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T17:31:34.120797+00:00",
+  "lastUpdated": "2026-06-24T22:02:02.113036+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -15,57 +15,57 @@
       "name": "Crow",
       "points": 29,
       "correct": 29,
-      "played": 48,
-      "accuracy": 0.604
+      "played": 50,
+      "accuracy": 0.58
     },
     {
       "name": "Hugh",
       "points": 29,
       "correct": 29,
-      "played": 48,
-      "accuracy": 0.604
+      "played": 50,
+      "accuracy": 0.58
+    },
+    {
+      "name": "Dan",
+      "points": 28,
+      "correct": 28,
+      "played": 50,
+      "accuracy": 0.56
     },
     {
       "name": "Marc",
       "points": 28,
       "correct": 28,
-      "played": 48,
-      "accuracy": 0.583
+      "played": 50,
+      "accuracy": 0.56
+    },
+    {
+      "name": "Patrick",
+      "points": 27,
+      "correct": 27,
+      "played": 50,
+      "accuracy": 0.54
     },
     {
       "name": "Conor",
       "points": 26,
       "correct": 26,
-      "played": 48,
-      "accuracy": 0.542
-    },
-    {
-      "name": "Dan",
-      "points": 26,
-      "correct": 26,
-      "played": 48,
-      "accuracy": 0.542
-    },
-    {
-      "name": "Patrick",
-      "points": 25,
-      "correct": 25,
-      "played": 48,
-      "accuracy": 0.521
+      "played": 50,
+      "accuracy": 0.52
     },
     {
       "name": "Muff",
-      "points": 23,
-      "correct": 23,
-      "played": 48,
-      "accuracy": 0.479
+      "points": 25,
+      "correct": 25,
+      "played": 50,
+      "accuracy": 0.5
     },
     {
       "name": "Mick",
       "points": 21,
       "correct": 21,
-      "played": 48,
-      "accuracy": 0.438
+      "played": 50,
+      "accuracy": 0.42
     }
   ],
   "finished": [
@@ -1923,6 +1923,89 @@
       }
     },
     {
+      "id": 537337,
+      "date": "2026-06-24T19:00:00Z",
+      "group": "B",
+      "stage": "GROUP_STAGE",
+      "pointsAvailable": 1,
+      "homeTeam": "Switzerland",
+      "awayTeam": "Canada",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Rub\u00e9n Vargas 46'",
+        "Jvhan Mnzambi 57'"
+      ],
+      "awayScorers": [
+        "Prvmis Divid 76'"
+      ],
+      "result": "Switzerland",
+      "picks": {
+        "Patrick": "Switzerland",
+        "Conor": "Draw",
+        "Dan": "Switzerland",
+        "Crow": "Draw",
+        "Hugh": "Draw",
+        "Muff": "Switzerland",
+        "Mick": "Draw",
+        "Marc": "Canada"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": false
+      }
+    },
+    {
+      "id": 537338,
+      "date": "2026-06-24T19:00:00Z",
+      "group": "B",
+      "stage": "GROUP_STAGE",
+      "pointsAvailable": 1,
+      "homeTeam": "Bosnia & Herzegovina",
+      "awayTeam": "Qatar",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Karim Alaibgvvich 29'",
+        "Abvnad 34'",
+        "Armin Mhmich 80'"
+      ],
+      "awayScorers": [
+        "Hassan Al-Haydos 42'"
+      ],
+      "result": "Bosnia & Herzegovina",
+      "picks": {
+        "Patrick": "Bosnia & Herzegovina",
+        "Conor": "Draw",
+        "Dan": "Bosnia & Herzegovina",
+        "Crow": "Draw",
+        "Hugh": "Draw",
+        "Muff": "Bosnia & Herzegovina",
+        "Mick": "Qatar",
+        "Marc": "Draw"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": false
+      }
+    },
+    {
       "id": 537406,
       "date": "2026-06-24T02:00:00Z",
       "group": "K",
@@ -1998,78 +2081,6 @@
     }
   ],
   "upcoming": [
-    {
-      "id": 537337,
-      "date": "2026-06-24T19:00:00Z",
-      "group": "B",
-      "stage": "GROUP_STAGE",
-      "pointsAvailable": 1,
-      "homeTeam": "Switzerland",
-      "awayTeam": "Canada",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Switzerland",
-        "Conor": "Draw",
-        "Dan": "Switzerland",
-        "Crow": "Draw",
-        "Hugh": "Draw",
-        "Muff": "Switzerland",
-        "Mick": "Draw",
-        "Marc": "Canada"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537338,
-      "date": "2026-06-24T19:00:00Z",
-      "group": "B",
-      "stage": "GROUP_STAGE",
-      "pointsAvailable": 1,
-      "homeTeam": "Bosnia & Herzegovina",
-      "awayTeam": "Qatar",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Bosnia & Herzegovina",
-        "Conor": "Draw",
-        "Dan": "Bosnia & Herzegovina",
-        "Crow": "Draw",
-        "Hugh": "Draw",
-        "Muff": "Bosnia & Herzegovina",
-        "Mick": "Qatar",
-        "Marc": "Draw"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
     {
       "id": 537344,
       "date": "2026-06-24T22:00:00Z",
@@ -2150,8 +2161,8 @@
       "pointsAvailable": 1,
       "homeTeam": "South Africa",
       "awayTeam": "South Korea",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2186,8 +2197,8 @@
       "pointsAvailable": 1,
       "homeTeam": "Czech Republic",
       "awayTeam": "Mexico",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
