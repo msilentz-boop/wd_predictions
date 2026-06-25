@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T10:19:51.525379+00:00",
+  "lastUpdated": "2026-06-25T17:33:47.178136+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -2251,8 +2251,8 @@
       "pointsAvailable": 1,
       "homeTeam": "Curacao",
       "awayTeam": "Ivory Coast",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -2287,8 +2287,8 @@
       "pointsAvailable": 1,
       "homeTeam": "Ecuador",
       "awayTeam": "Germany",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
