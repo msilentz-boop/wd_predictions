@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T21:50:21.048444+00:00",
+  "lastUpdated": "2026-06-27T08:09:56.139573+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 37,
-      "correct": 37,
-      "played": 62,
-      "accuracy": 0.597
+      "points": 40,
+      "correct": 40,
+      "played": 66,
+      "accuracy": 0.606
     },
     {
       "name": "Crow",
-      "points": 36,
-      "correct": 36,
-      "played": 62,
-      "accuracy": 0.581
+      "points": 38,
+      "correct": 38,
+      "played": 66,
+      "accuracy": 0.576
     },
     {
       "name": "Dan",
-      "points": 35,
-      "correct": 35,
-      "played": 62,
-      "accuracy": 0.565
+      "points": 37,
+      "correct": 37,
+      "played": 66,
+      "accuracy": 0.561
     },
     {
       "name": "Marc",
-      "points": 35,
-      "correct": 35,
-      "played": 62,
-      "accuracy": 0.565
+      "points": 37,
+      "correct": 37,
+      "played": 66,
+      "accuracy": 0.561
     },
     {
       "name": "Patrick",
-      "points": 33,
-      "correct": 33,
-      "played": 62,
-      "accuracy": 0.532
+      "points": 36,
+      "correct": 36,
+      "played": 66,
+      "accuracy": 0.545
     },
     {
       "name": "Conor",
-      "points": 32,
-      "correct": 32,
-      "played": 62,
-      "accuracy": 0.516
-    },
-    {
-      "name": "Muff",
-      "points": 31,
-      "correct": 31,
-      "played": 62,
-      "accuracy": 0.5
+      "points": 34,
+      "correct": 34,
+      "played": 66,
+      "accuracy": 0.515
     },
     {
       "name": "Mick",
-      "points": 29,
-      "correct": 29,
-      "played": 62,
-      "accuracy": 0.468
+      "points": 32,
+      "correct": 32,
+      "played": 66,
+      "accuracy": 0.485
+    },
+    {
+      "name": "Muff",
+      "points": 32,
+      "correct": 32,
+      "played": 66,
+      "accuracy": 0.485
     }
   ],
   "finished": [
@@ -2566,9 +2566,7 @@
         "Mick": true,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537367,
       "date": "2026-06-27T03:00:00Z",
@@ -2577,13 +2575,21 @@
       "pointsAvailable": 1,
       "homeTeam": "New Zealand",
       "awayTeam": "Belgium",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 5,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Ali Jast 84'"
+      ],
+      "awayScorers": [
+        "Leandro Trossard 28'",
+        "Leandro Trossard 50'",
+        "Kevin De Bruyne 66'",
+        "Romelu Lukaku 86'",
+        "Alexis Saelemaekers 90+4'"
+      ],
+      "result": "Belgium",
       "picks": {
         "Patrick": "Draw",
         "Conor": "Belgium",
@@ -2595,14 +2601,14 @@
         "Marc": "Belgium"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -2613,13 +2619,17 @@
       "pointsAvailable": 1,
       "homeTeam": "Egypt",
       "awayTeam": "Iran",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Mahmoud Saber 5'"
+      ],
+      "awayScorers": [
+        "Ramin Rezaeian 14'"
+      ],
+      "result": "Draw",
       "picks": {
         "Patrick": "Draw",
         "Conor": "Egypt",
@@ -2631,14 +2641,14 @@
         "Marc": "Egypt"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": false
       }
     },
     {
@@ -2649,13 +2659,13 @@
       "pointsAvailable": 1,
       "homeTeam": "Cape Verde",
       "awayTeam": "Saudi Arabia",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "Draw",
       "picks": {
         "Patrick": "Draw",
         "Conor": "Draw",
@@ -2667,14 +2677,14 @@
         "Marc": "Saudi Arabia"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
     },
     {
@@ -2685,13 +2695,15 @@
       "pointsAvailable": 1,
       "homeTeam": "Uruguay",
       "awayTeam": "Spain",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 0,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "awayScorers": [
+        "\u00c1lex Baena 42'"
+      ],
+      "result": "Spain",
       "picks": {
         "Patrick": "Spain",
         "Conor": "Draw",
@@ -2703,16 +2715,18 @@
         "Marc": "Spain"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537413,
       "date": "2026-06-27T21:00:00Z",
