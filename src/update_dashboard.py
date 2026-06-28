@@ -11,6 +11,10 @@ CSV_URL = os.environ.get(
     "CSV_URL",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQtsVsHJG4CKahR4G-Atj6wgI7LpjcjeP899NjMj8RrdSKRVjgrkY5Qt561ax-PJhagyra_69r_aydh/pub?output=csv",
 )
+KNOCKOUT_CSV_URL = os.environ.get(
+    "KNOCKOUT_CSV_URL",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGds2d4oRC1LtJo8CcBfZwjpywjt-G5gB1TdwRuAZlkBycPMKl-nLe80Q86ZSAKQ/pub?output=csv",
+)
 API_KEY = os.environ["FOOTBALL_DATA_API_KEY"]
 API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
 LIVE_API_URL = "https://worldcup26.ir/get/games"
@@ -83,14 +87,17 @@ def fetch_api_matches():
     return by_pair, last_updated
 
 
-def fetch_sheet_rows():
-    resp = requests.get(CSV_URL, timeout=30)
+NON_PLAYER_COLS = {"Date", "Group", "Match", "Home Team", "Away Team", "Result"}
+
+
+def fetch_sheet_rows(url):
+    resp = requests.get(url, timeout=30)
     resp.raise_for_status()
     reader = csv.DictReader(io.StringIO(resp.text))
     rows = list(reader)
     if not rows:
         raise ValueError("CSV is empty")
-    players = [f for f in reader.fieldnames if f not in ("Date", "Group", "Home Team", "Away Team", "Result")]
+    players = [f for f in reader.fieldnames if f not in NON_PLAYER_COLS]
     return rows, players
 
 
@@ -114,10 +121,17 @@ def main():
     live_by_pair = fetch_live_scores()
     print(f"  Live games found: {len([g for g in live_by_pair.values() if g.get('time_elapsed') == 'live'])}")
 
-    print("Fetching sheet predictions from public CSV…")
-    rows, players = fetch_sheet_rows()
-    print(f"  Players: {players}")
-    print(f"  Rows: {len(rows)}")
+    print("Fetching group stage predictions…")
+    rows_group, players_group = fetch_sheet_rows(CSV_URL)
+    print(f"  Players: {players_group}, Rows: {len(rows_group)}")
+
+    print("Fetching knockout stage predictions…")
+    rows_knockout, players_knockout = fetch_sheet_rows(KNOCKOUT_CSV_URL)
+    print(f"  Players: {players_knockout}, Rows: {len(rows_knockout)}")
+
+    players = list(dict.fromkeys(players_group + players_knockout))
+    rows = rows_group + rows_knockout
+    print(f"  Combined: {len(players)} players, {len(rows)} rows")
 
     leaderboard = {p: {"name": p, "points": 0, "correct": 0, "played": 0} for p in players}
     finished_matches = []
@@ -127,6 +141,8 @@ def main():
     for row in rows:
         home_sheet = row["Home Team"].strip()
         away_sheet = row["Away Team"].strip()
+        if not home_sheet or not away_sheet:
+            continue
         home_api = normalize(home_sheet)
         away_api = normalize(away_sheet)
 
@@ -192,7 +208,7 @@ def main():
         match_payload = {
             "id": m["id"],
             "date": m["utcDate"],
-            "group": row.get("Group", ""),
+            "group": row.get("Group") or row.get("Match", ""),
             "stage": m["stage"],
             "pointsAvailable": points_available,
             "homeTeam": home_sheet,
