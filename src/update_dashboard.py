@@ -148,7 +148,36 @@ def main():
 
         m = api_by_pair.get((home_api, away_api))
         if m is None:
-            unmatched.append(f"{home_sheet} vs {away_sheet}")
+            # Football-data.org doesn't have this fixture yet (common for early knockout rounds).
+            # If the sheet has no result, synthesize a TIMED upcoming entry so it appears on the dashboard.
+            sheet_result = row.get("Result", "").strip()
+            if sheet_result:
+                unmatched.append(f"{home_sheet} vs {away_sheet}")
+                continue
+            raw_date = row.get("Date", "").strip()
+            try:
+                iso_date = datetime.strptime(raw_date, "%d-%b-%Y").replace(tzinfo=timezone.utc).isoformat()
+            except ValueError:
+                iso_date = ""
+            picks = {p: row.get(p, "").strip() for p in players if row.get(p, "").strip()}
+            upcoming_matches.append({
+                "id": hash(f"{home_sheet}|{away_sheet}") & 0x7FFFFFFF,
+                "date": iso_date,
+                "group": row.get("Group") or row.get("Match", ""),
+                "stage": "ROUND_OF_32",
+                "pointsAvailable": 8,
+                "homeTeam": home_sheet,
+                "awayTeam": away_sheet,
+                "homeScore": None,
+                "awayScore": None,
+                "status": "TIMED",
+                "timeElapsed": None,
+                "homeScorers": [],
+                "awayScorers": [],
+                "result": None,
+                "picks": picks,
+                "correct": {p: None for p in picks},
+            })
             continue
 
         status = m["status"]

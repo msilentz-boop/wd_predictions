@@ -764,6 +764,7 @@
   <script>
     // ── Live data sources ────────────────────────────────────────
     const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQtsVsHJG4CKahR4G-Atj6wgI7LpjcjeP899NjMj8RrdSKRVjgrkY5Qt561ax-PJhagyra_69r_aydh/pub?output=csv';
+    const KNOCKOUT_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQGds2d4oRC1LtJo8CcBfZwjpywjt-G5gB1TdwRuAZlkBycPMKl-nLe80Q86ZSAKQ/pub?output=csv';
     const LIVE_URL = 'https://worldcup26.ir/get/games';
 
     // worldcup26.ir names → Google Sheet names
@@ -828,61 +829,85 @@
     }
 
     async function fetchLiveData() {
-      const [gRes, cRes] = await Promise.all([
+      const t = Date.now();
+      const [gRes, cRes, koRes] = await Promise.all([
         fetch(LIVE_URL),
-        fetch(CSV_URL + '&t=' + Date.now()),
+        fetch(CSV_URL + '&t=' + t),
+        fetch(KNOCKOUT_CSV_URL + '&t=' + t),
       ]);
       if (!gRes.ok) throw new Error(`worldcup26.ir ${gRes.status}`);
       if (!cRes.ok) throw new Error(`sheet ${cRes.status}`);
 
       const { games = [] } = await gRes.json();
       const csvText = await cRes.text();
+      const koCsvText = koRes.ok ? await koRes.text() : '';
 
       // Build lookup: "HomeSheet|||AwaySheet" → game object
       const byPair = {};
       for (const g of games) {
         const h = toSheetName(g.home_team_name_en || '');
         const a = toSheetName(g.away_team_name_en || '');
-        byPair[`${h}|||${a}`] = g;
+        if (h && a) byPair[`${h}|||${a}`] = g;
       }
 
-      // Parse prediction sheet
+      // Parse group stage sheet
       const allRows = parseCSV(csvText);
       const headers = allRows[0];
       const awayIdx = headers.indexOf('Away Team');
       const resultIdx = headers.lastIndexOf('Result');
       const players = headers.slice(awayIdx + 1, resultIdx < 0 ? undefined : resultIdx).filter(Boolean);
 
+      // Merge knockout sheet rows
+      const koAllRows = koCsvText ? parseCSV(koCsvText) : [];
+      const koDataRows = koAllRows.slice(1).filter(r => r[2]?.trim() && r[3]?.trim());
+
       const lb = {};
       players.forEach(p => (lb[p] = { name: p, points: 0, correct: 0, played: 0 }));
 
       const finished = [], upcoming = [];
 
-      for (const row of allRows.slice(1)) {
+      // Combine group stage + knockout rows for processing
+      // Each entry: [row array, isKnockout flag, awayColIndex]
+      const koAwayIdx = koAllRows[0] ? koAllRows[0].indexOf('Away Team') : 3;
+      const allDataRows = [
+        ...allRows.slice(1).map(r => [r, false, awayIdx]),
+        ...koDataRows.map(r => [r, true, koAwayIdx]),
+      ];
+
+      for (const [row, isKnockoutRow, aIdx] of allDataRows) {
         const group     = row[1]?.trim() || '';
         const homeSheet = row[2]?.trim() || '';
         const awaySheet = row[3]?.trim() || '';
         if (!homeSheet || !awaySheet) continue;
 
         const game = byPair[`${homeSheet}|||${awaySheet}`];
-        if (!game) continue;
 
-        const status = getStatus(game);
-        const hs  = game.home_score !== '' && game.home_score != null ? +game.home_score : null;
-        const as_ = game.away_score !== '' && game.away_score != null ? +game.away_score : null;
+        let status, hs, as_, result, stage, timeElapsed;
 
-        let result = null;
-        if (status === 'FINISHED' && hs != null && as_ != null) {
-          result = hs > as_ ? homeSheet : as_ > hs ? awaySheet : 'Draw';
+        if (game) {
+          status = getStatus(game);
+          hs  = game.home_score !== '' && game.home_score != null ? +game.home_score : null;
+          as_ = game.away_score !== '' && game.away_score != null ? +game.away_score : null;
+          result = null;
+          if (status === 'FINISHED' && hs != null && as_ != null) {
+            result = hs > as_ ? homeSheet : as_ > hs ? awaySheet : 'Draw';
+          }
+          stage = game.type === 'group' ? 'GROUP_STAGE' : (game.type || 'R32').toUpperCase();
+          timeElapsed = status === 'IN_PLAY' ? 'live' : status === 'PAUSED' ? 'halftime' : null;
+        } else if (isKnockoutRow) {
+          // Knockout match not in live API yet — show as upcoming
+          status = 'TIMED'; hs = null; as_ = null; result = null;
+          stage = 'ROUND_OF_32'; timeElapsed = null;
+        } else {
+          continue;
         }
 
-        const stage = game.type === 'group' ? 'GROUP_STAGE' : (game.type || '').toUpperCase();
         const isKnockout = stage !== 'GROUP_STAGE';
         const knockoutPool = 8;
 
         const picks = {}, correct = {};
         players.forEach((p, i) => {
-          const pick = row[awayIdx + 1 + i]?.trim() || '';
+          const pick = row[aIdx + 1 + i]?.trim() || '';
           if (pick) picks[p] = pick;
           correct[p] = result !== null ? (pick === result) : null;
         });
@@ -901,17 +926,17 @@
         const pointsAvailable = isKnockout ? knockoutPool : 1;
 
         const payload = {
-          id: game.id,
-          date: game.local_date || '',
+          id: game ? game.id : Math.abs(homeSheet.charCodeAt(0) * 1000 + awaySheet.charCodeAt(0)),
+          date: game ? (game.local_date || '') : row[0]?.trim() || '',
           group,
           stage,
           pointsAvailable,
           homeTeam: homeSheet, awayTeam: awaySheet,
           homeScore: hs, awayScore: as_,
           status,
-          timeElapsed: status === 'IN_PLAY' ? 'live' : status === 'PAUSED' ? 'halftime' : null,
-          homeScorers: parseScorers(game.home_scorers),
-          awayScorers: parseScorers(game.away_scorers),
+          timeElapsed,
+          homeScorers: game ? parseScorers(game.home_scorers) : [],
+          awayScorers: game ? parseScorers(game.away_scorers) : [],
           result, picks, correct,
         };
 
@@ -1125,7 +1150,7 @@
       const upcoming = upcomingAll.slice(0, 12);
       document.getElementById('upcoming-count').textContent = `${upcomingAll.length} to play`;
       if (!upcoming.length) {
-        upDiv.innerHTML = '<div class="empty">All group matches complete</div>';
+        upDiv.innerHTML = '<div class="empty">No upcoming fixtures</div>';
       } else {
         upDiv.innerHTML = upcoming.map(m => `
           <div class="fixture-card">
