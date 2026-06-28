@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T19:57:48.965850+00:00",
+  "lastUpdated": "2026-06-28T23:48:11.935532+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,60 +12,60 @@
   ],
   "leaderboard": [
     {
+      "name": "Marc",
+      "points": 43.67,
+      "correct": 42,
+      "played": 73,
+      "accuracy": 0.575
+    },
+    {
       "name": "Hugh",
       "points": 43,
       "correct": 43,
-      "played": 72,
-      "accuracy": 0.597
+      "played": 73,
+      "accuracy": 0.589
+    },
+    {
+      "name": "Crow",
+      "points": 42.67,
+      "correct": 41,
+      "played": 73,
+      "accuracy": 0.562
+    },
+    {
+      "name": "Patrick",
+      "points": 42.67,
+      "correct": 41,
+      "played": 73,
+      "accuracy": 0.562
     },
     {
       "name": "Dan",
       "points": 41,
       "correct": 41,
-      "played": 72,
-      "accuracy": 0.569
-    },
-    {
-      "name": "Marc",
-      "points": 41,
-      "correct": 41,
-      "played": 72,
-      "accuracy": 0.569
-    },
-    {
-      "name": "Crow",
-      "points": 40,
-      "correct": 40,
-      "played": 72,
-      "accuracy": 0.556
-    },
-    {
-      "name": "Patrick",
-      "points": 40,
-      "correct": 40,
-      "played": 72,
-      "accuracy": 0.556
+      "played": 73,
+      "accuracy": 0.562
     },
     {
       "name": "Conor",
       "points": 39,
       "correct": 39,
-      "played": 72,
-      "accuracy": 0.542
+      "played": 73,
+      "accuracy": 0.534
     },
     {
       "name": "Mick",
       "points": 35,
       "correct": 35,
-      "played": 72,
-      "accuracy": 0.486
+      "played": 73,
+      "accuracy": 0.479
     },
     {
       "name": "Muff",
       "points": 35,
       "correct": 35,
-      "played": 72,
-      "accuracy": 0.486
+      "played": 73,
+      "accuracy": 0.479
     }
   ],
   "finished": [
@@ -2962,9 +2962,7 @@
         "Mick": false,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537417,
       "date": "2026-06-28T19:00:00Z",
@@ -2974,12 +2972,14 @@
       "homeTeam": "South Africa",
       "awayTeam": "Canada",
       "homeScore": 0,
-      "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "awayScorers": [
+        "Astfan Avstakviv 90+2'"
+      ],
+      "result": "Canada",
       "picks": {
         "Patrick": "Canada",
         "Conor": "South Africa",
@@ -2991,16 +2991,18 @@
         "Marc": "Canada"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": false,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537415,
       "date": "2026-06-29T20:30:00Z",
