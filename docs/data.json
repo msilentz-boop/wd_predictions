@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T14:39:09.268881+00:00",
+  "lastUpdated": "2026-06-29T21:01:54.875792+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Marc",
-      "points": 43.67,
-      "correct": 42,
-      "played": 73,
-      "accuracy": 0.575
+      "points": 45.27,
+      "correct": 43,
+      "played": 74,
+      "accuracy": 0.581
     },
     {
       "name": "Hugh",
-      "points": 43,
-      "correct": 43,
-      "played": 73,
-      "accuracy": 0.589
+      "points": 44.6,
+      "correct": 44,
+      "played": 74,
+      "accuracy": 0.595
     },
     {
       "name": "Crow",
-      "points": 42.67,
-      "correct": 41,
-      "played": 73,
-      "accuracy": 0.562
+      "points": 44.27,
+      "correct": 42,
+      "played": 74,
+      "accuracy": 0.568
     },
     {
       "name": "Patrick",
       "points": 42.67,
       "correct": 41,
-      "played": 73,
-      "accuracy": 0.562
+      "played": 74,
+      "accuracy": 0.554
     },
     {
       "name": "Dan",
-      "points": 41,
-      "correct": 41,
-      "played": 73,
-      "accuracy": 0.562
+      "points": 42.6,
+      "correct": 42,
+      "played": 74,
+      "accuracy": 0.568
     },
     {
       "name": "Conor",
       "points": 39,
       "correct": 39,
-      "played": 73,
-      "accuracy": 0.534
+      "played": 74,
+      "accuracy": 0.527
+    },
+    {
+      "name": "Muff",
+      "points": 36.6,
+      "correct": 36,
+      "played": 74,
+      "accuracy": 0.486
     },
     {
       "name": "Mick",
       "points": 35,
       "correct": 35,
-      "played": 73,
-      "accuracy": 0.479
-    },
-    {
-      "name": "Muff",
-      "points": 35,
-      "correct": 35,
-      "played": 73,
-      "accuracy": 0.479
+      "played": 74,
+      "accuracy": 0.473
     }
   ],
   "finished": [
@@ -3000,6 +3000,47 @@
         "Mick": false,
         "Marc": true
       }
+    },
+    {
+      "id": 537423,
+      "date": "2026-06-29T17:00:00Z",
+      "group": "Match 76",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Brazil",
+      "awayTeam": "Japan",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Casemiro 56'",
+        "Gabriel Martinelli 90+5'"
+      ],
+      "awayScorers": [
+        "Kaish\u016b Sano 29'"
+      ],
+      "result": "Brazil",
+      "picks": {
+        "Patrick": "Japan",
+        "Conor": "Japan",
+        "Dan": "Brazil",
+        "Crow": "Brazil",
+        "Hugh": "Brazil",
+        "Muff": "Brazil",
+        "Mick": "Draw",
+        "Marc": "Brazil"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": false,
+        "Marc": true
+      }
     }
   ],
   "upcoming": [
@@ -3011,10 +3052,10 @@
       "pointsAvailable": 8,
       "homeTeam": "Germany",
       "awayTeam": "Paraguay",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
       "homeScorers": [],
       "awayScorers": [],
       "result": null,
@@ -3063,42 +3104,6 @@
         "Muff": "Morocco",
         "Mick": "Draw",
         "Marc": "Draw"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537423,
-      "date": "2026-06-29T17:00:00Z",
-      "group": "Match 76",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Brazil",
-      "awayTeam": "Japan",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Japan",
-        "Conor": "Japan",
-        "Dan": "Brazil",
-        "Crow": "Brazil",
-        "Hugh": "Brazil",
-        "Muff": "Brazil",
-        "Mick": "Draw",
-        "Marc": "Brazil"
       },
       "correct": {
         "Patrick": null,
