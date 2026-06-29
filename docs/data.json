@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T23:48:11.935532+00:00",
+  "lastUpdated": "2026-06-29T14:39:09.268881+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -3011,8 +3011,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Germany",
       "awayTeam": "Paraguay",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -3083,8 +3083,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Brazil",
       "awayTeam": "Japan",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
