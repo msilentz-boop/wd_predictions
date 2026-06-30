@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T16:37:44.647375+00:00",
+  "lastUpdated": "2026-06-30T22:02:09.573533+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,60 +12,60 @@
   ],
   "leaderboard": [
     {
+      "name": "Patrick",
+      "points": 45.33,
+      "correct": 42,
+      "played": 77,
+      "accuracy": 0.545
+    },
+    {
+      "name": "Dan",
+      "points": 45.27,
+      "correct": 43,
+      "played": 77,
+      "accuracy": 0.558
+    },
+    {
       "name": "Marc",
       "points": 45.27,
       "correct": 43,
-      "played": 76,
-      "accuracy": 0.566
+      "played": 77,
+      "accuracy": 0.558
     },
     {
       "name": "Hugh",
       "points": 44.6,
       "correct": 44,
-      "played": 76,
-      "accuracy": 0.579
+      "played": 77,
+      "accuracy": 0.571
     },
     {
       "name": "Muff",
       "points": 44.6,
       "correct": 37,
-      "played": 76,
-      "accuracy": 0.487
+      "played": 77,
+      "accuracy": 0.481
     },
     {
       "name": "Crow",
       "points": 44.27,
       "correct": 42,
-      "played": 76,
-      "accuracy": 0.553
-    },
-    {
-      "name": "Patrick",
-      "points": 42.67,
-      "correct": 41,
-      "played": 76,
-      "accuracy": 0.539
-    },
-    {
-      "name": "Dan",
-      "points": 42.6,
-      "correct": 42,
-      "played": 76,
-      "accuracy": 0.553
+      "played": 77,
+      "accuracy": 0.545
     },
     {
       "name": "Conor",
-      "points": 39,
-      "correct": 39,
-      "played": 76,
-      "accuracy": 0.513
+      "points": 41.67,
+      "correct": 40,
+      "played": 77,
+      "accuracy": 0.519
     },
     {
       "name": "Mick",
       "points": 35,
       "correct": 35,
-      "played": 76,
-      "accuracy": 0.461
+      "played": 77,
+      "accuracy": 0.455
     }
   ],
   "finished": [
@@ -3121,6 +3121,47 @@
         "Mick": false,
         "Marc": true
       }
+    },
+    {
+      "id": 537424,
+      "date": "2026-06-30T17:00:00Z",
+      "group": "Match 78",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Ivory Coast",
+      "awayTeam": "Norway",
+      "homeScore": 1,
+      "awayScore": 2,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Amad Diallo 74'"
+      ],
+      "awayScorers": [
+        "Antonio Nusa 39'",
+        "Erling Haaland 86'"
+      ],
+      "result": "Norway",
+      "picks": {
+        "Patrick": "Norway",
+        "Conor": "Norway",
+        "Dan": "Norway",
+        "Crow": "Ivory Coast",
+        "Hugh": "Draw",
+        "Muff": "Ivory Coast",
+        "Mick": "Ivory Coast",
+        "Marc": "Draw"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
+      }
     }
   ],
   "upcoming": [
@@ -3132,11 +3173,13 @@
       "pointsAvailable": 8,
       "homeTeam": "France",
       "awayTeam": "Sweden",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
+      "homeScorers": [
+        "Kylian Mbapp\u00e9 45'"
+      ],
       "awayScorers": [],
       "result": null,
       "picks": {
@@ -3161,42 +3204,6 @@
       }
     },
     {
-      "id": 537424,
-      "date": "2026-06-30T17:00:00Z",
-      "group": "Match 78",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Ivory Coast",
-      "awayTeam": "Norway",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Norway",
-        "Conor": "Norway",
-        "Dan": "Norway",
-        "Crow": "Ivory Coast",
-        "Hugh": "Draw",
-        "Muff": "Ivory Coast",
-        "Mick": "Ivory Coast",
-        "Marc": "Draw"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
       "id": 537425,
       "date": "2026-07-01T01:00:00Z",
       "group": "Match 79",
@@ -3204,8 +3211,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Mexico",
       "awayTeam": "Ecuador",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
