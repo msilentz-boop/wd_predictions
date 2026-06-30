@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T21:01:54.875792+00:00",
+  "lastUpdated": "2026-06-30T08:46:55.172125+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -15,57 +15,57 @@
       "name": "Marc",
       "points": 45.27,
       "correct": 43,
-      "played": 74,
-      "accuracy": 0.581
+      "played": 76,
+      "accuracy": 0.566
     },
     {
       "name": "Hugh",
       "points": 44.6,
       "correct": 44,
-      "played": 74,
-      "accuracy": 0.595
+      "played": 76,
+      "accuracy": 0.579
+    },
+    {
+      "name": "Muff",
+      "points": 44.6,
+      "correct": 37,
+      "played": 76,
+      "accuracy": 0.487
     },
     {
       "name": "Crow",
       "points": 44.27,
       "correct": 42,
-      "played": 74,
-      "accuracy": 0.568
+      "played": 76,
+      "accuracy": 0.553
     },
     {
       "name": "Patrick",
       "points": 42.67,
       "correct": 41,
-      "played": 74,
-      "accuracy": 0.554
+      "played": 76,
+      "accuracy": 0.539
     },
     {
       "name": "Dan",
       "points": 42.6,
       "correct": 42,
-      "played": 74,
-      "accuracy": 0.568
+      "played": 76,
+      "accuracy": 0.553
     },
     {
       "name": "Conor",
       "points": 39,
       "correct": 39,
-      "played": 74,
-      "accuracy": 0.527
-    },
-    {
-      "name": "Muff",
-      "points": 36.6,
-      "correct": 36,
-      "played": 74,
-      "accuracy": 0.486
+      "played": 76,
+      "accuracy": 0.513
     },
     {
       "name": "Mick",
       "points": 35,
       "correct": 35,
-      "played": 74,
-      "accuracy": 0.473
+      "played": 76,
+      "accuracy": 0.461
     }
   ],
   "finished": [
@@ -3002,6 +3002,86 @@
       }
     },
     {
+      "id": 537415,
+      "date": "2026-06-29T20:30:00Z",
+      "group": "Match 74",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Germany",
+      "awayTeam": "Paraguay",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Kai Havertz 54'"
+      ],
+      "awayScorers": [
+        "Khvliv Ansisv 42'"
+      ],
+      "result": "Paraguay",
+      "picks": {
+        "Patrick": "Germany",
+        "Conor": "Draw",
+        "Dan": "Germany",
+        "Crow": "Germany",
+        "Hugh": "Germany",
+        "Muff": "Germany",
+        "Mick": "Germany",
+        "Marc": "Germany"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
+      }
+    },
+    {
+      "id": 537418,
+      "date": "2026-06-30T01:00:00Z",
+      "group": "Match 75",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Netherlands",
+      "awayTeam": "Morocco",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Kvdi Khakpv 72'"
+      ],
+      "awayScorers": [
+        "Issa Diop 90+1'"
+      ],
+      "result": "Morocco",
+      "picks": {
+        "Patrick": "Netherlands",
+        "Conor": "Netherlands",
+        "Dan": "Draw",
+        "Crow": "Netherlands",
+        "Hugh": "Netherlands",
+        "Muff": "Morocco",
+        "Mick": "Draw",
+        "Marc": "Draw"
+      },
+      "correct": {
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": false
+      }
+    },
+    {
       "id": 537423,
       "date": "2026-06-29T17:00:00Z",
       "group": "Match 76",
@@ -3044,78 +3124,6 @@
     }
   ],
   "upcoming": [
-    {
-      "id": 537415,
-      "date": "2026-06-29T20:30:00Z",
-      "group": "Match 74",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Germany",
-      "awayTeam": "Paraguay",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Germany",
-        "Conor": "Draw",
-        "Dan": "Germany",
-        "Crow": "Germany",
-        "Hugh": "Germany",
-        "Muff": "Germany",
-        "Mick": "Germany",
-        "Marc": "Germany"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537418,
-      "date": "2026-06-30T01:00:00Z",
-      "group": "Match 75",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Netherlands",
-      "awayTeam": "Morocco",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Netherlands",
-        "Conor": "Netherlands",
-        "Dan": "Draw",
-        "Crow": "Netherlands",
-        "Hugh": "Netherlands",
-        "Muff": "Morocco",
-        "Mick": "Draw",
-        "Marc": "Draw"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
     {
       "id": 537416,
       "date": "2026-06-30T21:00:00Z",
@@ -3160,8 +3168,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Ivory Coast",
       "awayTeam": "Norway",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
