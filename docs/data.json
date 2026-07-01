@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T22:02:09.573533+00:00",
+  "lastUpdated": "2026-07-01T10:56:21.244986+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Patrick",
-      "points": 45.33,
-      "correct": 42,
-      "played": 77,
-      "accuracy": 0.545
-    },
-    {
-      "name": "Dan",
-      "points": 45.27,
-      "correct": 43,
-      "played": 77,
-      "accuracy": 0.558
-    },
-    {
-      "name": "Marc",
-      "points": 45.27,
-      "correct": 43,
-      "played": 77,
-      "accuracy": 0.558
-    },
-    {
-      "name": "Hugh",
-      "points": 44.6,
+      "points": 50.33,
       "correct": 44,
-      "played": 77,
-      "accuracy": 0.571
+      "played": 79,
+      "accuracy": 0.557
     },
     {
       "name": "Muff",
-      "points": 44.6,
-      "correct": 37,
-      "played": 77,
-      "accuracy": 0.481
+      "points": 49.6,
+      "correct": 39,
+      "played": 79,
+      "accuracy": 0.494
+    },
+    {
+      "name": "Dan",
+      "points": 46.27,
+      "correct": 44,
+      "played": 79,
+      "accuracy": 0.557
+    },
+    {
+      "name": "Marc",
+      "points": 46.27,
+      "correct": 44,
+      "played": 79,
+      "accuracy": 0.557
+    },
+    {
+      "name": "Hugh",
+      "points": 45.6,
+      "correct": 45,
+      "played": 79,
+      "accuracy": 0.57
     },
     {
       "name": "Crow",
-      "points": 44.27,
-      "correct": 42,
-      "played": 77,
-      "accuracy": 0.545
+      "points": 45.27,
+      "correct": 43,
+      "played": 79,
+      "accuracy": 0.544
     },
     {
       "name": "Conor",
-      "points": 41.67,
-      "correct": 40,
-      "played": 77,
+      "points": 42.67,
+      "correct": 41,
+      "played": 79,
       "accuracy": 0.519
     },
     {
       "name": "Mick",
-      "points": 35,
-      "correct": 35,
-      "played": 77,
-      "accuracy": 0.455
+      "points": 36.0,
+      "correct": 36,
+      "played": 79,
+      "accuracy": 0.456
     }
   ],
   "finished": [
@@ -3123,6 +3123,46 @@
       }
     },
     {
+      "id": 537416,
+      "date": "2026-06-30T21:00:00Z",
+      "group": "Match 77",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "France",
+      "awayTeam": "Sweden",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Kylian Mbapp\u00e9 45'",
+        "Bradley Barcola 53'",
+        "Kylian Mbapp\u00e9 74'"
+      ],
+      "awayScorers": [],
+      "result": "France",
+      "picks": {
+        "Patrick": "France",
+        "Conor": "France",
+        "Dan": "France",
+        "Crow": "France",
+        "Hugh": "France",
+        "Muff": "France",
+        "Mick": "France",
+        "Marc": "France"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
+      }
+    },
+    {
       "id": 537424,
       "date": "2026-06-30T17:00:00Z",
       "group": "Match 78",
@@ -3162,46 +3202,6 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
-    {
-      "id": 537416,
-      "date": "2026-06-30T21:00:00Z",
-      "group": "Match 77",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "France",
-      "awayTeam": "Sweden",
-      "homeScore": 1,
-      "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
-      "homeScorers": [
-        "Kylian Mbapp\u00e9 45'"
-      ],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "France",
-        "Conor": "France",
-        "Dan": "France",
-        "Crow": "France",
-        "Hugh": "France",
-        "Muff": "France",
-        "Mick": "France",
-        "Marc": "France"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
     },
     {
       "id": 537425,
@@ -3211,13 +3211,16 @@
       "pointsAvailable": 8,
       "homeTeam": "Mexico",
       "awayTeam": "Ecuador",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Jvlian Kviinvnz 22'",
+        "Ra\u00fal Jim\u00e9nez 31'"
+      ],
       "awayScorers": [],
-      "result": null,
+      "result": "Mexico",
       "picks": {
         "Patrick": "Mexico",
         "Conor": "Draw",
@@ -3229,16 +3232,18 @@
         "Marc": "Ecuador"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537426,
       "date": "2026-07-01T16:00:00Z",
