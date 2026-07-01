@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T18:19:51.682070+00:00",
+  "lastUpdated": "2026-07-01T22:50:17.660599+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -3288,8 +3288,8 @@
       "pointsAvailable": 8,
       "homeTeam": "USA",
       "awayTeam": "Bosnia & Herzegovina",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -3324,12 +3324,18 @@
       "pointsAvailable": 8,
       "homeTeam": "Belgium",
       "awayTeam": "Senegal",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScore": 3,
+      "awayScore": 2,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
+      "homeScorers": [
+        "Romelu Lukaku 86'",
+        "Youri Tielemans 89'"
+      ],
+      "awayScorers": [
+        "Habib Diarra 25'",
+        "Isma\u00efla Sarr 51'"
+      ],
       "result": null,
       "picks": {
         "Patrick": "Senegal",
