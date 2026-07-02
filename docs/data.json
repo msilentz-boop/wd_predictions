@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T16:30:19.979840+00:00",
+  "lastUpdated": "2026-07-02T20:43:32.592774+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -3422,11 +3422,14 @@
       "pointsAvailable": 8,
       "homeTeam": "Spain",
       "awayTeam": "Austria",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
+      "homeScorers": [
+        "Mikel Oyarzabal 36'",
+        "Pedro Porro 66'"
+      ],
       "awayScorers": [],
       "result": null,
       "picks": {
