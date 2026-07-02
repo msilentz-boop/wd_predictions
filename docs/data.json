@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T22:50:17.660599+00:00",
+  "lastUpdated": "2026-07-02T10:15:39.917910+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -12,60 +12,60 @@
   ],
   "leaderboard": [
     {
-      "name": "Muff",
-      "points": 51.2,
-      "correct": 40,
-      "played": 80,
-      "accuracy": 0.5
+      "name": "Hugh",
+      "points": 55.2,
+      "correct": 47,
+      "played": 82,
+      "accuracy": 0.573
     },
     {
       "name": "Patrick",
-      "points": 50.33,
-      "correct": 44,
-      "played": 80,
-      "accuracy": 0.55
+      "points": 51.67,
+      "correct": 45,
+      "played": 82,
+      "accuracy": 0.549
+    },
+    {
+      "name": "Muff",
+      "points": 51.2,
+      "correct": 40,
+      "played": 82,
+      "accuracy": 0.488
     },
     {
       "name": "Dan",
-      "points": 47.87,
-      "correct": 45,
-      "played": 80,
-      "accuracy": 0.562
+      "points": 49.2,
+      "correct": 46,
+      "played": 82,
+      "accuracy": 0.561
     },
     {
       "name": "Marc",
-      "points": 47.87,
-      "correct": 45,
-      "played": 80,
-      "accuracy": 0.562
-    },
-    {
-      "name": "Hugh",
-      "points": 47.2,
+      "points": 49.2,
       "correct": 46,
-      "played": 80,
-      "accuracy": 0.575
+      "played": 82,
+      "accuracy": 0.561
     },
     {
       "name": "Crow",
-      "points": 46.87,
-      "correct": 44,
-      "played": 80,
-      "accuracy": 0.55
+      "points": 48.2,
+      "correct": 45,
+      "played": 82,
+      "accuracy": 0.549
     },
     {
       "name": "Conor",
-      "points": 42.67,
-      "correct": 41,
-      "played": 80,
+      "points": 44.0,
+      "correct": 42,
+      "played": 82,
       "accuracy": 0.512
     },
     {
       "name": "Mick",
-      "points": 36.0,
-      "correct": 36,
-      "played": 80,
-      "accuracy": 0.45
+      "points": 37.33,
+      "correct": 37,
+      "played": 82,
+      "accuracy": 0.451
     }
   ],
   "finished": [
@@ -894,8 +894,12 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "J. Neves 6'"
+      ],
+      "awayScorers": [
+        "Y. Wissa 45+5'"
+      ],
       "result": "Draw",
       "picks": {
         "Patrick": "Portugal",
@@ -2101,7 +2105,9 @@
       "awayScore": 0,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Dnil Mvnvz 76'"
+      ],
       "awayScorers": [],
       "result": "Colombia",
       "picks": {
@@ -2939,8 +2945,13 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Fistvn Mail 78'",
+        "Yoane Wissa 90+1'"
+      ],
+      "awayScorers": [
+        "Aldvr Shvmvrvdvf 10'"
+      ],
       "result": "DR Congo",
       "picks": {
         "Patrick": "DR Congo",
@@ -3205,7 +3216,7 @@
     },
     {
       "id": 537425,
-      "date": "2026-07-01T01:00:00Z",
+      "date": "2026-07-01T02:00:00Z",
       "group": "Match 79",
       "stage": "LAST_32",
       "pointsAvailable": 8,
@@ -3254,8 +3265,13 @@
       "awayScore": 1,
       "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScorers": [
+        "Hri Kin 75'",
+        "Hri Kin 86'"
+      ],
+      "awayScorers": [
+        "Braian Sipnga 7'"
+      ],
       "result": "England",
       "picks": {
         "Patrick": "DR Congo",
@@ -3277,9 +3293,7 @@
         "Mick": false,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537421,
       "date": "2026-07-02T00:00:00Z",
@@ -3288,13 +3302,16 @@
       "pointsAvailable": 8,
       "homeTeam": "USA",
       "awayTeam": "Bosnia & Herzegovina",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Flvrin Balvgan 45'",
+        "Malik Tillman 82'"
+      ],
       "awayScorers": [],
-      "result": null,
+      "result": "USA",
       "picks": {
         "Patrick": "USA",
         "Conor": "USA",
@@ -3306,14 +3323,14 @@
         "Marc": "USA"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -3326,17 +3343,18 @@
       "awayTeam": "Senegal",
       "homeScore": 3,
       "awayScore": 2,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
+      "status": "FINISHED",
+      "timeElapsed": null,
       "homeScorers": [
         "Romelu Lukaku 86'",
-        "Youri Tielemans 89'"
+        "Youri Tielemans 89'",
+        "Youri Tielemans 125(P)'"
       ],
       "awayScorers": [
         "Habib Diarra 25'",
         "Isma\u00efla Sarr 51'"
       ],
-      "result": null,
+      "result": "Belgium",
       "picks": {
         "Patrick": "Senegal",
         "Conor": "Senegal",
@@ -3348,16 +3366,18 @@
         "Marc": "Draw"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537419,
       "date": "2026-07-02T23:00:00Z",
