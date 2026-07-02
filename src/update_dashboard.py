@@ -38,7 +38,7 @@ LIVE_TO_SHEET = {
     "Curaçao": "Curacao",
     "Czechia": "Czech Republic",
     "Cape Verde Islands": "Cape Verde",
-    "Congo DR": "DR Congo",
+    "Democratic Republic of the Congo": "DR Congo",
 }
 
 
@@ -205,8 +205,30 @@ def main():
             except (KeyError, TypeError, ValueError):
                 pass
 
+        is_knockout = m["stage"] != "GROUP_STAGE"
+
         if status == "FINISHED":
             result_label = derive_result_label(m, home_sheet, away_sheet)
+            # Fallback for knockout games: football-data.org may lag behind worldcup26.ir.
+            # Derive winner from live scores so the result isn't lost until next sync.
+            if result_label is None and is_knockout and live:
+                try:
+                    h = int(live["home_score"])
+                    a = int(live["away_score"])
+                    if h > a:
+                        result_label = home_sheet
+                    elif a > h:
+                        result_label = away_sheet
+                    else:
+                        # Regulation/ET tied — knockout matches are decided by penalties.
+                        hp = int(live["home_penalty_score"])
+                        ap = int(live["away_penalty_score"])
+                        if hp > ap:
+                            result_label = home_sheet
+                        elif ap > hp:
+                            result_label = away_sheet
+                except (KeyError, TypeError, ValueError):
+                    pass
 
         picks = {}
         correct_map = {}
@@ -219,8 +241,6 @@ def main():
                 correct_map[p] = pick == result_label
             else:
                 correct_map[p] = None
-
-        is_knockout = m["stage"] != "GROUP_STAGE"
         knockout_pool = 8
 
         if result_label is not None:

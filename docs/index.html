@@ -776,7 +776,7 @@
       'Curaçao': 'Curacao',
       'Czechia': 'Czech Republic',
       'Cape Verde Islands': 'Cape Verde',
-      'Congo DR': 'DR Congo',
+      'Democratic Republic of the Congo': 'DR Congo',
     };
     const toSheetName = n => LIVE_TO_SHEET[n] || n;
 
@@ -890,7 +890,14 @@
           as_ = game.away_score !== '' && game.away_score != null ? +game.away_score : null;
           result = null;
           if (status === 'FINISHED' && hs != null && as_ != null) {
-            result = hs > as_ ? homeSheet : as_ > hs ? awaySheet : 'Draw';
+            if (hs !== as_) {
+              result = hs > as_ ? homeSheet : awaySheet;
+            } else {
+              // Regulation/ET tied — knockout matches are decided by penalties.
+              const hp = game.home_penalty_score !== '' && game.home_penalty_score != null ? +game.home_penalty_score : null;
+              const ap = game.away_penalty_score !== '' && game.away_penalty_score != null ? +game.away_penalty_score : null;
+              result = (hp != null && ap != null && hp !== ap) ? (hp > ap ? homeSheet : awaySheet) : 'Draw';
+            }
           }
           stage = game.type === 'group' ? 'GROUP_STAGE' : (game.type || 'R32').toUpperCase();
           timeElapsed = status === 'IN_PLAY' ? 'live' : status === 'PAUSED' ? 'halftime' : null;
@@ -1099,9 +1106,18 @@
       liveNow.forEach(m => {
         const hs = m.homeScore ?? 0, as = m.awayScore ?? 0;
         const cur = hs > as ? m.homeTeam : as > hs ? m.awayTeam : 'Draw';
-        data.players.forEach(p => {
-          if ((m.picks?.[p] ?? '') === cur) projBonus[p]++;
-        });
+        const isKnockout = m.stage !== 'GROUP_STAGE';
+        if (isKnockout) {
+          const correctCount = data.players.filter(p => (m.picks?.[p] ?? '') === cur).length;
+          const pts = correctCount > 0 ? 8 / correctCount : 0;
+          data.players.forEach(p => {
+            if ((m.picks?.[p] ?? '') === cur) projBonus[p] += pts;
+          });
+        } else {
+          data.players.forEach(p => {
+            if ((m.picks?.[p] ?? '') === cur) projBonus[p]++;
+          });
+        }
       });
       const hasLive = liveNow.length > 0;
 
