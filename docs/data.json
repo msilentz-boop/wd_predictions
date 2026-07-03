@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T20:43:32.592774+00:00",
+  "lastUpdated": "2026-07-03T08:36:50.060462+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 55.2,
-      "correct": 47,
-      "played": 82,
-      "accuracy": 0.573
+      "points": 59.8,
+      "correct": 50,
+      "played": 85,
+      "accuracy": 0.588
     },
     {
       "name": "Patrick",
-      "points": 51.67,
-      "correct": 45,
-      "played": 82,
-      "accuracy": 0.549
+      "points": 56.27,
+      "correct": 48,
+      "played": 85,
+      "accuracy": 0.565
     },
     {
       "name": "Muff",
-      "points": 51.2,
-      "correct": 40,
-      "played": 82,
-      "accuracy": 0.488
+      "points": 54.2,
+      "correct": 42,
+      "played": 85,
+      "accuracy": 0.494
     },
     {
       "name": "Dan",
-      "points": 49.2,
-      "correct": 46,
-      "played": 82,
-      "accuracy": 0.561
+      "points": 51.8,
+      "correct": 48,
+      "played": 85,
+      "accuracy": 0.565
     },
     {
       "name": "Marc",
-      "points": 49.2,
-      "correct": 46,
-      "played": 82,
-      "accuracy": 0.561
+      "points": 51.8,
+      "correct": 48,
+      "played": 85,
+      "accuracy": 0.565
     },
     {
       "name": "Crow",
-      "points": 48.2,
-      "correct": 45,
-      "played": 82,
-      "accuracy": 0.549
+      "points": 50.8,
+      "correct": 47,
+      "played": 85,
+      "accuracy": 0.553
     },
     {
       "name": "Conor",
-      "points": 44.0,
-      "correct": 42,
-      "played": 82,
-      "accuracy": 0.512
+      "points": 45.0,
+      "correct": 43,
+      "played": 85,
+      "accuracy": 0.506
     },
     {
       "name": "Mick",
-      "points": 37.33,
-      "correct": 37,
-      "played": 82,
-      "accuracy": 0.451
+      "points": 40.33,
+      "correct": 39,
+      "played": 85,
+      "accuracy": 0.459
     }
   ],
   "finished": [
@@ -3375,9 +3375,7 @@
         "Mick": false,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537419,
       "date": "2026-07-02T23:00:00Z",
@@ -3386,13 +3384,17 @@
       "pointsAvailable": 8,
       "homeTeam": "Portugal",
       "awayTeam": "Croatia",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Gvnchalv Ramvs 90+4'"
+      ],
+      "awayScorers": [
+        "Ivan Peri\u0161i\u0107 53'"
+      ],
+      "result": "Portugal",
       "picks": {
         "Patrick": "Portugal",
         "Conor": "Croatia",
@@ -3404,14 +3406,14 @@
         "Marc": "Portugal"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": true
       }
     },
     {
@@ -3422,16 +3424,17 @@
       "pointsAvailable": 8,
       "homeTeam": "Spain",
       "awayTeam": "Austria",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
+      "status": "FINISHED",
+      "timeElapsed": null,
       "homeScorers": [
         "Mikel Oyarzabal 36'",
-        "Pedro Porro 66'"
+        "Pedro Porro 66'",
+        "Mikel Oyarzabal 89'"
       ],
       "awayScorers": [],
-      "result": null,
+      "result": "Spain",
       "picks": {
         "Patrick": "Spain",
         "Conor": "Spain",
@@ -3443,14 +3446,14 @@
         "Marc": "Spain"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -3461,13 +3464,16 @@
       "pointsAvailable": 8,
       "homeTeam": "Switzerland",
       "awayTeam": "Algeria",
-      "homeScore": 0,
+      "homeScore": 2,
       "awayScore": 0,
-      "status": "TIMED",
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
+      "homeScorers": [
+        "Breel Embolo 10'",
+        "Dn Andvi 46'"
+      ],
       "awayScorers": [],
-      "result": null,
+      "result": "Switzerland",
       "picks": {
         "Patrick": "Switzerland",
         "Conor": "Draw",
@@ -3479,16 +3485,18 @@
         "Marc": "Algeria"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537427,
       "date": "2026-07-03T22:00:00Z",
