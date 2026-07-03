@@ -959,10 +959,21 @@
       return { lastUpdated: new Date().toISOString(), players, leaderboard, finished, upcoming };
     }
 
-    function render(data, isLive) {
+    function updateSyncTime(data, isLive) {
       document.getElementById('sync-time').textContent =
         (isLive ? '⚡ live · ' : 'cached · ') +
         new Date(data.lastUpdated).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    }
+
+    // Content fingerprint that ignores lastUpdated, so a fresh fetch with
+    // identical leaderboard/match data doesn't trigger a visible re-render.
+    function dataFingerprint(data) {
+      if (!data) return '';
+      return JSON.stringify({ leaderboard: data.leaderboard, finished: data.finished, upcoming: data.upcoming });
+    }
+
+    function render(data, isLive) {
+      updateSyncTime(data, isLive);
 
       // ── Live Now ─────────────────────────────────────────────────
       function renderLive() {
@@ -1269,6 +1280,7 @@
       // 1a. Render from localStorage synchronously — zero network latency
       const stored = loadFromStorage();
       if (stored) render(stored, false);
+      let lastFingerprint = dataFingerprint(stored);
 
       // 1b. Revalidate data.json — cache:'no-cache' forces a conditional GET
       //     (sends If-None-Match, gets 304 if unchanged or fresh content if updated)
@@ -1276,10 +1288,14 @@
       try {
         const r = await fetch('./data.json', { cache: 'no-cache' });
         cached = await r.json();
-        if (!stored || cached.lastUpdated !== stored?.lastUpdated) {
+        const fp = dataFingerprint(cached);
+        if (fp !== lastFingerprint) {
           render(cached, false);
-          saveToStorage(cached);
+          lastFingerprint = fp;
+        } else {
+          updateSyncTime(cached, false);
         }
+        saveToStorage(cached);
       } catch {
         if (!stored) document.getElementById('sync-time').textContent = 'loading live…';
       }
@@ -1295,7 +1311,13 @@
           setTimeout(() => reject(new Error('timeout')), timeoutMs)
         );
         const data = await Promise.race([livePromise, timeoutPromise]);
-        render(data, true);
+        const fp = dataFingerprint(data);
+        if (fp !== lastFingerprint) {
+          render(data, true);
+          lastFingerprint = fp;
+        } else {
+          updateSyncTime(data, true);
+        }
         saveToStorage(data);
       } catch (err) {
         console.warn('Live fetch failed or timed out:', err);
