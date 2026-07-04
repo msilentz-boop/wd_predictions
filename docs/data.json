@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T20:21:09.736880+00:00",
+  "lastUpdated": "2026-07-04T00:16:17.626668+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -15,57 +15,57 @@
       "name": "Hugh",
       "points": 59.8,
       "correct": 50,
-      "played": 85,
-      "accuracy": 0.588
+      "played": 86,
+      "accuracy": 0.581
     },
     {
       "name": "Patrick",
-      "points": 56.27,
-      "correct": 48,
-      "played": 85,
-      "accuracy": 0.565
+      "points": 57.6,
+      "correct": 49,
+      "played": 86,
+      "accuracy": 0.57
     },
     {
       "name": "Muff",
-      "points": 54.2,
-      "correct": 42,
-      "played": 85,
-      "accuracy": 0.494
+      "points": 55.53,
+      "correct": 43,
+      "played": 86,
+      "accuracy": 0.5
+    },
+    {
+      "name": "Marc",
+      "points": 53.13,
+      "correct": 49,
+      "played": 86,
+      "accuracy": 0.57
+    },
+    {
+      "name": "Crow",
+      "points": 52.13,
+      "correct": 48,
+      "played": 86,
+      "accuracy": 0.558
     },
     {
       "name": "Dan",
       "points": 51.8,
       "correct": 48,
-      "played": 85,
-      "accuracy": 0.565
-    },
-    {
-      "name": "Marc",
-      "points": 51.8,
-      "correct": 48,
-      "played": 85,
-      "accuracy": 0.565
-    },
-    {
-      "name": "Crow",
-      "points": 50.8,
-      "correct": 47,
-      "played": 85,
-      "accuracy": 0.553
+      "played": 86,
+      "accuracy": 0.558
     },
     {
       "name": "Conor",
-      "points": 45.0,
-      "correct": 43,
-      "played": 85,
-      "accuracy": 0.506
+      "points": 46.33,
+      "correct": 44,
+      "played": 86,
+      "accuracy": 0.512
     },
     {
       "name": "Mick",
-      "points": 40.33,
-      "correct": 39,
-      "played": 85,
-      "accuracy": 0.459
+      "points": 41.67,
+      "correct": 40,
+      "played": 86,
+      "accuracy": 0.465
     }
   ],
   "finished": [
@@ -3494,6 +3494,46 @@
         "Mick": true,
         "Marc": false
       }
+    },
+    {
+      "id": 537428,
+      "date": "2026-07-03T18:00:00Z",
+      "group": "Match 88",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Australia",
+      "awayTeam": "Egypt",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Mohamed Hany 55'"
+      ],
+      "awayScorers": [
+        "Emam Ashour 13'"
+      ],
+      "result": "Egypt",
+      "picks": {
+        "Patrick": "Egypt",
+        "Conor": "Egypt",
+        "Dan": "Australia",
+        "Crow": "Egypt",
+        "Hugh": "Draw",
+        "Muff": "Egypt",
+        "Mick": "Egypt",
+        "Marc": "Egypt"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": false,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
+      }
     }
   ],
   "upcoming": [
@@ -3505,12 +3545,17 @@
       "pointsAvailable": 8,
       "homeTeam": "Argentina",
       "awayTeam": "Cape Verde",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
+      "homeScorers": [
+        "Lionel Messi 29'",
+        "Lisandro Mart\u00ednez 92'"
+      ],
+      "awayScorers": [
+        "Drvi Dviart 59'"
+      ],
       "result": null,
       "picks": {
         "Patrick": "Argentina",
@@ -3541,8 +3586,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Colombia",
       "awayTeam": "Ghana",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -3557,46 +3602,6 @@
         "Muff": "Colombia",
         "Mick": "Ghana",
         "Marc": "Colombia"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537428,
-      "date": "2026-07-03T18:00:00Z",
-      "group": "Match 88",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Australia",
-      "awayTeam": "Egypt",
-      "homeScore": 1,
-      "awayScore": 1,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
-      "homeScorers": [
-        "Mohamed Hany 55'"
-      ],
-      "awayScorers": [
-        "Emam Ashour 13'"
-      ],
-      "result": null,
-      "picks": {
-        "Patrick": "Egypt",
-        "Conor": "Egypt",
-        "Dan": "Australia",
-        "Crow": "Egypt",
-        "Hugh": "Draw",
-        "Muff": "Egypt",
-        "Mick": "Egypt",
-        "Marc": "Egypt"
       },
       "correct": {
         "Patrick": null,
