@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T00:16:17.626668+00:00",
+  "lastUpdated": "2026-07-04T05:05:11.388296+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 59.8,
-      "correct": 50,
-      "played": 86,
-      "accuracy": 0.581
+      "points": 68.8,
+      "correct": 52,
+      "played": 88,
+      "accuracy": 0.591
     },
     {
       "name": "Patrick",
-      "points": 57.6,
-      "correct": 49,
-      "played": 86,
-      "accuracy": 0.57
-    },
-    {
-      "name": "Muff",
-      "points": 55.53,
-      "correct": 43,
-      "played": 86,
-      "accuracy": 0.5
-    },
-    {
-      "name": "Marc",
-      "points": 53.13,
-      "correct": 49,
-      "played": 86,
-      "accuracy": 0.57
-    },
-    {
-      "name": "Crow",
-      "points": 52.13,
-      "correct": 48,
-      "played": 86,
-      "accuracy": 0.558
+      "points": 58.87,
+      "correct": 50,
+      "played": 88,
+      "accuracy": 0.568
     },
     {
       "name": "Dan",
-      "points": 51.8,
-      "correct": 48,
-      "played": 86,
-      "accuracy": 0.558
+      "points": 57.07,
+      "correct": 51,
+      "played": 88,
+      "accuracy": 0.58
+    },
+    {
+      "name": "Marc",
+      "points": 57.07,
+      "correct": 51,
+      "played": 88,
+      "accuracy": 0.58
     },
     {
       "name": "Conor",
-      "points": 46.33,
-      "correct": 44,
-      "played": 86,
-      "accuracy": 0.512
+      "points": 54.0,
+      "correct": 45,
+      "played": 88,
+      "accuracy": 0.511
+    },
+    {
+      "name": "Crow",
+      "points": 53.4,
+      "correct": 49,
+      "played": 88,
+      "accuracy": 0.557
+    },
+    {
+      "name": "Muff",
+      "points": 48.8,
+      "correct": 43,
+      "played": 88,
+      "accuracy": 0.489
     },
     {
       "name": "Mick",
-      "points": 41.67,
-      "correct": 40,
-      "played": 86,
-      "accuracy": 0.465
+      "points": 44.0,
+      "correct": 41,
+      "played": 88,
+      "accuracy": 0.466
     }
   ],
   "finished": [
@@ -3030,7 +3030,7 @@
       "awayScorers": [
         "Khvliv Ansisv 42'"
       ],
-      "result": "Paraguay",
+      "result": "Draw",
       "picks": {
         "Patrick": "Germany",
         "Conor": "Draw",
@@ -3043,7 +3043,7 @@
       },
       "correct": {
         "Patrick": false,
-        "Conor": false,
+        "Conor": true,
         "Dan": false,
         "Crow": false,
         "Hugh": false,
@@ -3070,7 +3070,7 @@
       "awayScorers": [
         "Issa Diop 90+1'"
       ],
-      "result": "Morocco",
+      "result": "Draw",
       "picks": {
         "Patrick": "Netherlands",
         "Conor": "Netherlands",
@@ -3084,12 +3084,12 @@
       "correct": {
         "Patrick": false,
         "Conor": false,
-        "Dan": false,
+        "Dan": true,
         "Crow": false,
         "Hugh": false,
-        "Muff": true,
-        "Mick": false,
-        "Marc": false
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
     },
     {
@@ -3496,6 +3496,87 @@
       }
     },
     {
+      "id": 537427,
+      "date": "2026-07-03T22:00:00Z",
+      "group": "Match 86",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Argentina",
+      "awayTeam": "Cape Verde",
+      "homeScore": 3,
+      "awayScore": 2,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Lionel Messi 29'",
+        "Lisandro Mart\u00ednez 92'",
+        "Dini Bvrgs 111'"
+      ],
+      "awayScorers": [
+        "Drvi Dviart 59'",
+        "Lvpz Kabral 103'"
+      ],
+      "result": "Argentina",
+      "picks": {
+        "Patrick": "Argentina",
+        "Conor": "Argentina",
+        "Dan": "Argentina",
+        "Crow": "Argentina",
+        "Hugh": "Argentina",
+        "Muff": "Argentina",
+        "Mick": "Argentina",
+        "Marc": "Argentina"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
+      }
+    },
+    {
+      "id": 537430,
+      "date": "2026-07-04T01:30:00Z",
+      "group": "Match 87",
+      "stage": "LAST_32",
+      "pointsAvailable": 8,
+      "homeTeam": "Colombia",
+      "awayTeam": "Ghana",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [
+        "Jan Arias 14'"
+      ],
+      "awayScorers": [],
+      "result": "Colombia",
+      "picks": {
+        "Patrick": "Colombia",
+        "Conor": "Draw",
+        "Dan": "Colombia",
+        "Crow": "Colombia",
+        "Hugh": "Draw",
+        "Muff": "Colombia",
+        "Mick": "Ghana",
+        "Marc": "Colombia"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": false,
+        "Marc": true
+      }
+    },
+    {
       "id": 537428,
       "date": "2026-07-03T18:00:00Z",
       "group": "Match 88",
@@ -3513,7 +3594,7 @@
       "awayScorers": [
         "Emam Ashour 13'"
       ],
-      "result": "Egypt",
+      "result": "Draw",
       "picks": {
         "Patrick": "Egypt",
         "Conor": "Egypt",
@@ -3525,94 +3606,16 @@
         "Marc": "Egypt"
       },
       "correct": {
-        "Patrick": true,
-        "Conor": true,
+        "Patrick": false,
+        "Conor": false,
         "Dan": false,
-        "Crow": true,
-        "Hugh": false,
-        "Muff": true,
-        "Mick": true,
-        "Marc": true
+        "Crow": false,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": false,
+        "Marc": false
       }
     }
   ],
-  "upcoming": [
-    {
-      "id": 537427,
-      "date": "2026-07-03T22:00:00Z",
-      "group": "Match 86",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Argentina",
-      "awayTeam": "Cape Verde",
-      "homeScore": 2,
-      "awayScore": 1,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
-      "homeScorers": [
-        "Lionel Messi 29'",
-        "Lisandro Mart\u00ednez 92'"
-      ],
-      "awayScorers": [
-        "Drvi Dviart 59'"
-      ],
-      "result": null,
-      "picks": {
-        "Patrick": "Argentina",
-        "Conor": "Argentina",
-        "Dan": "Argentina",
-        "Crow": "Argentina",
-        "Hugh": "Argentina",
-        "Muff": "Argentina",
-        "Mick": "Argentina",
-        "Marc": "Argentina"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    },
-    {
-      "id": 537430,
-      "date": "2026-07-04T01:30:00Z",
-      "group": "Match 87",
-      "stage": "LAST_32",
-      "pointsAvailable": 8,
-      "homeTeam": "Colombia",
-      "awayTeam": "Ghana",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
-      "picks": {
-        "Patrick": "Colombia",
-        "Conor": "Draw",
-        "Dan": "Colombia",
-        "Crow": "Colombia",
-        "Hugh": "Draw",
-        "Muff": "Colombia",
-        "Mick": "Ghana",
-        "Marc": "Colombia"
-      },
-      "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
-      }
-    }
-  ]
+  "upcoming": []
 }
