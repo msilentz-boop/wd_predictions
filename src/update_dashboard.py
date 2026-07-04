@@ -15,6 +15,17 @@ KNOCKOUT_CSV_URL = os.environ.get(
     "KNOCKOUT_CSV_URL",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGds2d4oRC1LtJo8CcBfZwjpywjt-G5gB1TdwRuAZlkBycPMKl-nLe80Q86ZSAKQ/pub?output=csv",
 )
+ROUND_OF_16_CSV_URL = os.environ.get(
+    "ROUND_OF_16_CSV_URL",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTlx-D1bX_VeigEA6048ym-dvixoX_Ev9NsX8Fnp6eP1lVGZP_BWKbYICaq3N6o9g/pub?output=csv",
+)
+
+# Additional knockout-round sheets, each paired with the stage label used when
+# football-data.org doesn't have the fixture yet and the row must be synthesized.
+KNOCKOUT_SHEETS = [
+    (KNOCKOUT_CSV_URL, "ROUND_OF_32"),
+    (ROUND_OF_16_CSV_URL, "ROUND_OF_16"),
+]
 API_KEY = os.environ["FOOTBALL_DATA_API_KEY"]
 API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
 LIVE_API_URL = "https://worldcup26.ir/get/games"
@@ -132,20 +143,24 @@ def main():
     rows_group, players_group = fetch_sheet_rows(CSV_URL)
     print(f"  Players: {players_group}, Rows: {len(rows_group)}")
 
-    print("Fetching knockout stage predictions…")
-    rows_knockout, players_knockout = fetch_sheet_rows(KNOCKOUT_CSV_URL)
-    print(f"  Players: {players_knockout}, Rows: {len(rows_knockout)}")
+    all_players = list(players_group)
+    tagged_rows = [(row, "GROUP_STAGE") for row in rows_group]
+    for url, fallback_stage in KNOCKOUT_SHEETS:
+        print(f"Fetching {fallback_stage} predictions…")
+        rows_stage, players_stage = fetch_sheet_rows(url)
+        print(f"  Players: {players_stage}, Rows: {len(rows_stage)}")
+        all_players += players_stage
+        tagged_rows += [(row, fallback_stage) for row in rows_stage]
 
-    players = list(dict.fromkeys(players_group + players_knockout))
-    rows = rows_group + rows_knockout
-    print(f"  Combined: {len(players)} players, {len(rows)} rows")
+    players = list(dict.fromkeys(all_players))
+    print(f"  Combined: {len(players)} players, {len(tagged_rows)} rows")
 
     leaderboard = {p: {"name": p, "points": 0, "correct": 0, "played": 0} for p in players}
     finished_matches = []
     upcoming_matches = []
     unmatched = []
 
-    for row in rows:
+    for row, fallback_stage in tagged_rows:
         home_sheet = row["Home Team"].strip()
         away_sheet = row["Away Team"].strip()
         if not home_sheet or not away_sheet:
@@ -171,8 +186,8 @@ def main():
                 "id": hash(f"{home_sheet}|{away_sheet}") & 0x7FFFFFFF,
                 "date": iso_date,
                 "group": row.get("Group") or row.get("Match", ""),
-                "stage": "ROUND_OF_32",
-                "pointsAvailable": 8,
+                "stage": fallback_stage,
+                "pointsAvailable": 1 if fallback_stage == "GROUP_STAGE" else 8,
                 "homeTeam": home_sheet,
                 "awayTeam": away_sheet,
                 "homeScore": None,
