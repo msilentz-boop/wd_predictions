@@ -890,14 +890,9 @@
           as_ = game.away_score !== '' && game.away_score != null ? +game.away_score : null;
           result = null;
           if (status === 'FINISHED' && hs != null && as_ != null) {
-            if (hs !== as_) {
-              result = hs > as_ ? homeSheet : awaySheet;
-            } else {
-              // Regulation/ET tied — knockout matches are decided by penalties.
-              const hp = game.home_penalty_score !== '' && game.home_penalty_score != null ? +game.home_penalty_score : null;
-              const ap = game.away_penalty_score !== '' && game.away_penalty_score != null ? +game.away_penalty_score : null;
-              result = (hp != null && ap != null && hp !== ap) ? (hp > ap ? homeSheet : awaySheet) : 'Draw';
-            }
+            // Tied after regulation/ET is scored as a Draw regardless of
+            // the penalty shootout outcome.
+            result = hs > as_ ? homeSheet : as_ > hs ? awaySheet : 'Draw';
           }
           stage = game.type === 'group' ? 'GROUP_STAGE' : (game.type || 'R32').toUpperCase();
           timeElapsed = status === 'IN_PLAY' ? 'live' : status === 'PAUSED' ? 'halftime' : null;

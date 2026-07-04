@@ -102,8 +102,15 @@ def fetch_sheet_rows(url):
 
 
 def derive_result_label(match, home_sheet, away_sheet):
-    """Return the sheet-style result label for a finished match."""
-    winner = match["score"]["winner"]
+    """Return the sheet-style result label for a finished match.
+
+    Knockout matches decided by a penalty shootout are scored as a Draw:
+    penalties only decide who advances, not the predicted outcome.
+    """
+    score = match["score"]
+    if score.get("duration") == "PENALTY_SHOOTOUT":
+        return "Draw"
+    winner = score["winner"]
     if winner == "HOME_TEAM":
         return home_sheet
     if winner == "AWAY_TEAM":
@@ -220,13 +227,9 @@ def main():
                     elif a > h:
                         result_label = away_sheet
                     else:
-                        # Regulation/ET tied — knockout matches are decided by penalties.
-                        hp = int(live["home_penalty_score"])
-                        ap = int(live["away_penalty_score"])
-                        if hp > ap:
-                            result_label = home_sheet
-                        elif ap > hp:
-                            result_label = away_sheet
+                        # Tied after regulation/ET — scored as a Draw regardless
+                        # of the penalty shootout outcome.
+                        result_label = "Draw"
                 except (KeyError, TypeError, ValueError):
                     pass
 
