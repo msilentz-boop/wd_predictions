@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T16:34:05.007449+00:00",
+  "lastUpdated": "2026-07-04T19:36:42.490677+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -15,57 +15,57 @@
       "name": "Hugh",
       "points": 68.8,
       "correct": 52,
-      "played": 88,
-      "accuracy": 0.591
+      "played": 89,
+      "accuracy": 0.584
     },
     {
       "name": "Patrick",
-      "points": 58.87,
-      "correct": 50,
-      "played": 88,
-      "accuracy": 0.568
+      "points": 60.01,
+      "correct": 51,
+      "played": 89,
+      "accuracy": 0.573
     },
     {
       "name": "Dan",
-      "points": 57.07,
-      "correct": 51,
-      "played": 88,
-      "accuracy": 0.58
+      "points": 58.21,
+      "correct": 52,
+      "played": 89,
+      "accuracy": 0.584
     },
     {
       "name": "Marc",
-      "points": 57.07,
-      "correct": 51,
-      "played": 88,
-      "accuracy": 0.58
+      "points": 58.21,
+      "correct": 52,
+      "played": 89,
+      "accuracy": 0.584
     },
     {
       "name": "Conor",
-      "points": 54.0,
-      "correct": 45,
-      "played": 88,
-      "accuracy": 0.511
+      "points": 55.14,
+      "correct": 46,
+      "played": 89,
+      "accuracy": 0.517
     },
     {
       "name": "Crow",
-      "points": 53.4,
-      "correct": 49,
-      "played": 88,
-      "accuracy": 0.557
+      "points": 54.54,
+      "correct": 50,
+      "played": 89,
+      "accuracy": 0.562
     },
     {
       "name": "Muff",
-      "points": 48.8,
-      "correct": 43,
-      "played": 88,
-      "accuracy": 0.489
+      "points": 49.94,
+      "correct": 44,
+      "played": 89,
+      "accuracy": 0.494
     },
     {
       "name": "Mick",
-      "points": 44.0,
-      "correct": 41,
-      "played": 88,
-      "accuracy": 0.466
+      "points": 45.14,
+      "correct": 42,
+      "played": 89,
+      "accuracy": 0.472
     }
   ],
   "finished": [
@@ -3615,7 +3615,288 @@
         "Mick": false,
         "Marc": false
       }
+    },
+    {
+      "id": 537376,
+      "date": "2026-07-04T17:00:00Z",
+      "group": "Match 89",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Canada",
+      "awayTeam": "Morocco",
+      "homeScore": 0,
+      "awayScore": 3,
+      "status": "FINISHED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [
+        "Azdin Avnahi 50'",
+        "Azdin Avnahi 82'",
+        "Svfian Rhimi 90+8'"
+      ],
+      "result": "Morocco",
+      "picks": {
+        "Patrick": "Morocco",
+        "Conor": "Morocco",
+        "Dan": "Morocco",
+        "Crow": "Morocco",
+        "Hugh": "Draw",
+        "Muff": "Morocco",
+        "Mick": "Morocco",
+        "Marc": "Morocco"
+      },
+      "correct": {
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": false,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
+      }
     }
   ],
-  "upcoming": []
+  "upcoming": [
+    {
+      "id": 537375,
+      "date": "2026-07-04T21:00:00Z",
+      "group": "Match 90",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Paraguay",
+      "awayTeam": "France",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "France",
+        "Conor": "France",
+        "Dan": "France",
+        "Crow": "France",
+        "Hugh": "France",
+        "Muff": "France",
+        "Mick": "France",
+        "Marc": "France"
+      },
+      "correct": {
+        "Patrick": null,
+        "Conor": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    },
+    {
+      "id": 537377,
+      "date": "2026-07-05T20:00:00Z",
+      "group": "Match 91",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Brazil",
+      "awayTeam": "Norway",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "Norway",
+        "Dan": "Brazil",
+        "Crow": "Brazil",
+        "Hugh": "Norway",
+        "Muff": "Norway",
+        "Mick": "Norway",
+        "Marc": "Brazil"
+      },
+      "correct": {
+        "Patrick": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    },
+    {
+      "id": 537378,
+      "date": "2026-07-06T00:00:00Z",
+      "group": "Match 92",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Mexico",
+      "awayTeam": "England",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "Mexico",
+        "Dan": "England",
+        "Crow": "England",
+        "Hugh": "England",
+        "Muff": "Mexico",
+        "Mick": "England",
+        "Marc": "England"
+      },
+      "correct": {
+        "Patrick": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    },
+    {
+      "id": 537379,
+      "date": "2026-07-06T19:00:00Z",
+      "group": "Match 93",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Portugal",
+      "awayTeam": "Spain",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "Spain",
+        "Dan": "Portugal",
+        "Crow": "Spain",
+        "Hugh": "Spain",
+        "Muff": "Portugal",
+        "Mick": "Spain",
+        "Marc": "Portugal"
+      },
+      "correct": {
+        "Patrick": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    },
+    {
+      "id": 537380,
+      "date": "2026-07-07T00:00:00Z",
+      "group": "Match 94",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "USA",
+      "awayTeam": "Belgium",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "USA",
+        "Dan": "USA",
+        "Crow": "USA",
+        "Hugh": "Draw",
+        "Muff": "Belgium",
+        "Mick": "USA",
+        "Marc": "Belgium"
+      },
+      "correct": {
+        "Patrick": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    },
+    {
+      "id": 537381,
+      "date": "2026-07-07T16:00:00Z",
+      "group": "Match 95",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Argentina",
+      "awayTeam": "Egypt",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "Argentina",
+        "Dan": "Argentina",
+        "Crow": "Argentina",
+        "Hugh": "Argentina",
+        "Muff": "Egypt",
+        "Mick": "Argentina",
+        "Marc": "Argentina"
+      },
+      "correct": {
+        "Patrick": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    },
+    {
+      "id": 537382,
+      "date": "2026-07-07T20:00:00Z",
+      "group": "Match 96",
+      "stage": "LAST_16",
+      "pointsAvailable": 8,
+      "homeTeam": "Switzerland",
+      "awayTeam": "Colombia",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "TIMED",
+      "timeElapsed": null,
+      "homeScorers": [],
+      "awayScorers": [],
+      "result": null,
+      "picks": {
+        "Patrick": "Colombia",
+        "Dan": "Colombia",
+        "Crow": "Colombia",
+        "Hugh": "Draw",
+        "Muff": "Colombia",
+        "Mick": "Switzerland",
+        "Marc": "Colombia"
+      },
+      "correct": {
+        "Patrick": null,
+        "Dan": null,
+        "Crow": null,
+        "Hugh": null,
+        "Muff": null,
+        "Mick": null,
+        "Marc": null
+      }
+    }
+  ]
 }
