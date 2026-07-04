@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T20:16:44.945045+00:00",
+  "lastUpdated": "2026-07-04T23:46:05.783660+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 68.8,
-      "correct": 52,
-      "played": 89,
-      "accuracy": 0.584
+      "points": 70.8,
+      "correct": 54,
+      "played": 90,
+      "accuracy": 0.6
     },
     {
       "name": "Patrick",
-      "points": 60.01,
-      "correct": 51,
-      "played": 89,
-      "accuracy": 0.573
+      "points": 60.87,
+      "correct": 52,
+      "played": 90,
+      "accuracy": 0.578
     },
     {
       "name": "Dan",
-      "points": 58.21,
-      "correct": 52,
-      "played": 89,
-      "accuracy": 0.584
+      "points": 59.07,
+      "correct": 53,
+      "played": 90,
+      "accuracy": 0.589
     },
     {
       "name": "Marc",
-      "points": 58.21,
-      "correct": 52,
-      "played": 89,
-      "accuracy": 0.584
+      "points": 59.07,
+      "correct": 53,
+      "played": 90,
+      "accuracy": 0.589
     },
     {
       "name": "Conor",
-      "points": 55.14,
-      "correct": 46,
-      "played": 89,
-      "accuracy": 0.517
+      "points": 56.0,
+      "correct": 47,
+      "played": 90,
+      "accuracy": 0.522
     },
     {
       "name": "Crow",
-      "points": 54.54,
-      "correct": 50,
-      "played": 89,
-      "accuracy": 0.562
+      "points": 55.4,
+      "correct": 51,
+      "played": 90,
+      "accuracy": 0.567
     },
     {
       "name": "Muff",
-      "points": 49.94,
-      "correct": 44,
-      "played": 89,
-      "accuracy": 0.494
+      "points": 50.8,
+      "correct": 45,
+      "played": 90,
+      "accuracy": 0.5
     },
     {
       "name": "Mick",
-      "points": 45.14,
-      "correct": 42,
-      "played": 89,
-      "accuracy": 0.472
+      "points": 46.0,
+      "correct": 43,
+      "played": 90,
+      "accuracy": 0.478
     }
   ],
   "finished": [
@@ -3640,7 +3640,7 @@
         "Conor": "Morocco",
         "Dan": "Morocco",
         "Crow": "Morocco",
-        "Hugh": "Draw",
+        "Hugh": "Morocco",
         "Muff": "Morocco",
         "Mick": "Morocco",
         "Marc": "Morocco"
@@ -3650,14 +3650,12 @@
         "Conor": true,
         "Dan": true,
         "Crow": true,
-        "Hugh": false,
+        "Hugh": true,
         "Muff": true,
         "Mick": true,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537375,
       "date": "2026-07-04T21:00:00Z",
@@ -3666,13 +3664,13 @@
       "pointsAvailable": 8,
       "homeTeam": "Paraguay",
       "awayTeam": "France",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 0,
+      "awayScore": 1,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
       "awayScorers": [],
-      "result": null,
+      "result": "France",
       "picks": {
         "Patrick": "France",
         "Conor": "France",
@@ -3684,16 +3682,18 @@
         "Marc": "France"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537377,
       "date": "2026-07-05T20:00:00Z",
@@ -3711,6 +3711,7 @@
       "result": null,
       "picks": {
         "Patrick": "Norway",
+        "Conor": "Norway",
         "Dan": "Brazil",
         "Crow": "Brazil",
         "Hugh": "Norway",
@@ -3720,6 +3721,7 @@
       },
       "correct": {
         "Patrick": null,
+        "Conor": null,
         "Dan": null,
         "Crow": null,
         "Hugh": null,
@@ -3745,6 +3747,7 @@
       "result": null,
       "picks": {
         "Patrick": "Mexico",
+        "Conor": "England",
         "Dan": "England",
         "Crow": "England",
         "Hugh": "England",
@@ -3754,6 +3757,7 @@
       },
       "correct": {
         "Patrick": null,
+        "Conor": null,
         "Dan": null,
         "Crow": null,
         "Hugh": null,
@@ -3779,6 +3783,7 @@
       "result": null,
       "picks": {
         "Patrick": "Spain",
+        "Conor": "Spain",
         "Dan": "Portugal",
         "Crow": "Spain",
         "Hugh": "Spain",
@@ -3788,6 +3793,7 @@
       },
       "correct": {
         "Patrick": null,
+        "Conor": null,
         "Dan": null,
         "Crow": null,
         "Hugh": null,
@@ -3813,15 +3819,17 @@
       "result": null,
       "picks": {
         "Patrick": "USA",
+        "Conor": "USA",
         "Dan": "USA",
         "Crow": "USA",
-        "Hugh": "Draw",
+        "Hugh": "Belgium",
         "Muff": "Belgium",
         "Mick": "USA",
         "Marc": "Belgium"
       },
       "correct": {
         "Patrick": null,
+        "Conor": null,
         "Dan": null,
         "Crow": null,
         "Hugh": null,
@@ -3847,6 +3855,7 @@
       "result": null,
       "picks": {
         "Patrick": "Argentina",
+        "Conor": "Egypt",
         "Dan": "Argentina",
         "Crow": "Argentina",
         "Hugh": "Argentina",
@@ -3856,6 +3865,7 @@
       },
       "correct": {
         "Patrick": null,
+        "Conor": null,
         "Dan": null,
         "Crow": null,
         "Hugh": null,
@@ -3881,15 +3891,17 @@
       "result": null,
       "picks": {
         "Patrick": "Colombia",
+        "Conor": "Switzerland",
         "Dan": "Colombia",
         "Crow": "Colombia",
-        "Hugh": "Draw",
+        "Hugh": "Switzerland",
         "Muff": "Colombia",
         "Mick": "Switzerland",
         "Marc": "Colombia"
       },
       "correct": {
         "Patrick": null,
+        "Conor": null,
         "Dan": null,
         "Crow": null,
         "Hugh": null,
