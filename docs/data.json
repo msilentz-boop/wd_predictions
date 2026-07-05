@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T18:45:50.478060+00:00",
+  "lastUpdated": "2026-07-05T22:15:21.511125+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 70.8,
-      "correct": 54,
-      "played": 90,
-      "accuracy": 0.6
+      "points": 72.4,
+      "correct": 55,
+      "played": 91,
+      "accuracy": 0.604
     },
     {
       "name": "Patrick",
-      "points": 60.87,
-      "correct": 52,
-      "played": 90,
-      "accuracy": 0.578
+      "points": 62.47,
+      "correct": 53,
+      "played": 91,
+      "accuracy": 0.582
     },
     {
       "name": "Dan",
       "points": 59.07,
       "correct": 53,
-      "played": 90,
-      "accuracy": 0.589
+      "played": 91,
+      "accuracy": 0.582
     },
     {
       "name": "Marc",
       "points": 59.07,
       "correct": 53,
-      "played": 90,
-      "accuracy": 0.589
+      "played": 91,
+      "accuracy": 0.582
     },
     {
       "name": "Conor",
-      "points": 56.0,
-      "correct": 47,
-      "played": 90,
-      "accuracy": 0.522
+      "points": 57.6,
+      "correct": 48,
+      "played": 91,
+      "accuracy": 0.527
     },
     {
       "name": "Crow",
       "points": 55.4,
       "correct": 51,
-      "played": 90,
-      "accuracy": 0.567
+      "played": 91,
+      "accuracy": 0.56
     },
     {
       "name": "Muff",
-      "points": 50.8,
-      "correct": 45,
-      "played": 90,
-      "accuracy": 0.5
+      "points": 52.4,
+      "correct": 46,
+      "played": 91,
+      "accuracy": 0.505
     },
     {
       "name": "Mick",
-      "points": 46.0,
-      "correct": 43,
-      "played": 90,
-      "accuracy": 0.478
+      "points": 47.6,
+      "correct": 44,
+      "played": 91,
+      "accuracy": 0.484
     }
   ],
   "finished": [
@@ -3691,9 +3691,7 @@
         "Mick": true,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537377,
       "date": "2026-07-05T20:00:00Z",
@@ -3702,13 +3700,16 @@
       "pointsAvailable": 8,
       "homeTeam": "Brazil",
       "awayTeam": "Norway",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 2,
+      "status": "FINISHED",
       "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "awayScorers": [
+        "Erling Haaland 79'",
+        "Erling Haaland 90'"
+      ],
+      "result": "Norway",
       "picks": {
         "Patrick": "Norway",
         "Conor": "Norway",
@@ -3720,16 +3721,18 @@
         "Marc": "Brazil"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": true,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537378,
       "date": "2026-07-06T00:00:00Z",
@@ -3738,8 +3741,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Mexico",
       "awayTeam": "England",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
