@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T22:15:21.511125+00:00",
+  "lastUpdated": "2026-07-06T12:31:40.018666+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 72.4,
-      "correct": 55,
-      "played": 91,
-      "accuracy": 0.604
+      "points": 73.73,
+      "correct": 56,
+      "played": 92,
+      "accuracy": 0.609
     },
     {
       "name": "Patrick",
       "points": 62.47,
       "correct": 53,
-      "played": 91,
-      "accuracy": 0.582
+      "played": 92,
+      "accuracy": 0.576
     },
     {
       "name": "Dan",
-      "points": 59.07,
-      "correct": 53,
-      "played": 91,
-      "accuracy": 0.582
+      "points": 60.4,
+      "correct": 54,
+      "played": 92,
+      "accuracy": 0.587
     },
     {
       "name": "Marc",
-      "points": 59.07,
-      "correct": 53,
-      "played": 91,
-      "accuracy": 0.582
+      "points": 60.4,
+      "correct": 54,
+      "played": 92,
+      "accuracy": 0.587
     },
     {
       "name": "Conor",
-      "points": 57.6,
-      "correct": 48,
-      "played": 91,
-      "accuracy": 0.527
+      "points": 58.93,
+      "correct": 49,
+      "played": 92,
+      "accuracy": 0.533
     },
     {
       "name": "Crow",
-      "points": 55.4,
-      "correct": 51,
-      "played": 91,
-      "accuracy": 0.56
+      "points": 56.73,
+      "correct": 52,
+      "played": 92,
+      "accuracy": 0.565
     },
     {
       "name": "Muff",
       "points": 52.4,
       "correct": 46,
-      "played": 91,
-      "accuracy": 0.505
+      "played": 92,
+      "accuracy": 0.5
     },
     {
       "name": "Mick",
-      "points": 47.6,
-      "correct": 44,
-      "played": 91,
-      "accuracy": 0.484
+      "points": 48.93,
+      "correct": 45,
+      "played": 92,
+      "accuracy": 0.489
     }
   ],
   "finished": [
@@ -3730,24 +3730,27 @@
         "Mick": true,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537378,
-      "date": "2026-07-06T00:00:00Z",
+      "date": "2026-07-06T01:00:00Z",
       "group": "Match 92",
       "stage": "LAST_16",
       "pointsAvailable": 8,
       "homeTeam": "Mexico",
       "awayTeam": "England",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 2,
+      "awayScore": 3,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Jvlian Kviinvnz 42'"
+      ],
+      "awayScorers": [
+        "Jvd Blingham 36'",
+        "Jvd Blingham 38'"
+      ],
+      "result": "England",
       "picks": {
         "Patrick": "Mexico",
         "Conor": "England",
@@ -3759,16 +3762,18 @@
         "Marc": "England"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": true,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537379,
       "date": "2026-07-06T19:00:00Z",
@@ -3777,8 +3782,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
@@ -3813,8 +3818,8 @@
       "pointsAvailable": 8,
       "homeTeam": "USA",
       "awayTeam": "Belgium",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
