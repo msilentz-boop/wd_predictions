@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T19:18:33.041656+00:00",
+  "lastUpdated": "2026-07-06T23:35:13.452662+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 73.73,
-      "correct": 56,
-      "played": 92,
-      "accuracy": 0.609
+      "points": 75.33,
+      "correct": 57,
+      "played": 93,
+      "accuracy": 0.613
     },
     {
       "name": "Patrick",
-      "points": 62.47,
-      "correct": 53,
-      "played": 92,
-      "accuracy": 0.576
+      "points": 64.07,
+      "correct": 54,
+      "played": 93,
+      "accuracy": 0.581
+    },
+    {
+      "name": "Conor",
+      "points": 60.53,
+      "correct": 50,
+      "played": 93,
+      "accuracy": 0.538
     },
     {
       "name": "Dan",
       "points": 60.4,
       "correct": 54,
-      "played": 92,
-      "accuracy": 0.587
+      "played": 93,
+      "accuracy": 0.581
     },
     {
       "name": "Marc",
       "points": 60.4,
       "correct": 54,
-      "played": 92,
-      "accuracy": 0.587
-    },
-    {
-      "name": "Conor",
-      "points": 58.93,
-      "correct": 49,
-      "played": 92,
-      "accuracy": 0.533
+      "played": 93,
+      "accuracy": 0.581
     },
     {
       "name": "Crow",
-      "points": 56.73,
-      "correct": 52,
-      "played": 92,
-      "accuracy": 0.565
+      "points": 58.33,
+      "correct": 53,
+      "played": 93,
+      "accuracy": 0.57
     },
     {
       "name": "Muff",
       "points": 52.4,
       "correct": 46,
-      "played": 92,
-      "accuracy": 0.5
+      "played": 93,
+      "accuracy": 0.495
     },
     {
       "name": "Mick",
-      "points": 48.93,
-      "correct": 45,
-      "played": 92,
-      "accuracy": 0.489
+      "points": 50.53,
+      "correct": 46,
+      "played": 93,
+      "accuracy": 0.495
     }
   ],
   "finished": [
@@ -3771,9 +3771,7 @@
         "Mick": true,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537379,
       "date": "2026-07-06T19:00:00Z",
@@ -3783,12 +3781,14 @@
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
       "homeScore": 0,
-      "awayScore": 0,
-      "status": "IN_PLAY",
-      "timeElapsed": "live",
+      "awayScore": 1,
+      "status": "FINISHED",
+      "timeElapsed": null,
       "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "awayScorers": [
+        "Mikel Merino 90+1'"
+      ],
+      "result": "Spain",
       "picks": {
         "Patrick": "Spain",
         "Conor": "Spain",
@@ -3800,16 +3800,18 @@
         "Marc": "Portugal"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": true,
+        "Dan": false,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": false
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537380,
       "date": "2026-07-07T00:00:00Z",
