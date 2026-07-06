@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T12:31:40.018666+00:00",
+  "lastUpdated": "2026-07-06T19:18:33.041656+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -3782,10 +3782,10 @@
       "pointsAvailable": 8,
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
       "homeScorers": [],
       "awayScorers": [],
       "result": null,
