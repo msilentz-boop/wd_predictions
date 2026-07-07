@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T23:35:13.452662+00:00",
+  "lastUpdated": "2026-07-07T10:40:28.459174+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 75.33,
-      "correct": 57,
-      "played": 93,
-      "accuracy": 0.613
+      "points": 78.0,
+      "correct": 58,
+      "played": 94,
+      "accuracy": 0.617
     },
     {
       "name": "Patrick",
       "points": 64.07,
       "correct": 54,
-      "played": 93,
-      "accuracy": 0.581
+      "played": 94,
+      "accuracy": 0.574
+    },
+    {
+      "name": "Marc",
+      "points": 63.07,
+      "correct": 55,
+      "played": 94,
+      "accuracy": 0.585
     },
     {
       "name": "Conor",
       "points": 60.53,
       "correct": 50,
-      "played": 93,
-      "accuracy": 0.538
+      "played": 94,
+      "accuracy": 0.532
     },
     {
       "name": "Dan",
       "points": 60.4,
       "correct": 54,
-      "played": 93,
-      "accuracy": 0.581
-    },
-    {
-      "name": "Marc",
-      "points": 60.4,
-      "correct": 54,
-      "played": 93,
-      "accuracy": 0.581
+      "played": 94,
+      "accuracy": 0.574
     },
     {
       "name": "Crow",
       "points": 58.33,
       "correct": 53,
-      "played": 93,
-      "accuracy": 0.57
+      "played": 94,
+      "accuracy": 0.564
     },
     {
       "name": "Muff",
-      "points": 52.4,
-      "correct": 46,
-      "played": 93,
-      "accuracy": 0.495
+      "points": 55.07,
+      "correct": 47,
+      "played": 94,
+      "accuracy": 0.5
     },
     {
       "name": "Mick",
       "points": 50.53,
       "correct": 46,
-      "played": 93,
-      "accuracy": 0.495
+      "played": 94,
+      "accuracy": 0.489
     }
   ],
   "finished": [
@@ -3809,9 +3809,7 @@
         "Mick": true,
         "Marc": false
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537380,
       "date": "2026-07-07T00:00:00Z",
@@ -3820,13 +3818,20 @@
       "pointsAvailable": 8,
       "homeTeam": "USA",
       "awayTeam": "Belgium",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
+      "homeScore": 1,
+      "awayScore": 4,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Malik Tillman 31'"
+      ],
+      "awayScorers": [
+        "Sharl D Ktlar 9'",
+        "Sharl D Ktlar 33'",
+        "Hans Vanaken 57'",
+        "Romelu Lukaku 90+3'"
+      ],
+      "result": "Belgium",
       "picks": {
         "Patrick": "USA",
         "Conor": "USA",
@@ -3838,16 +3843,18 @@
         "Marc": "Belgium"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": false,
+        "Conor": false,
+        "Dan": false,
+        "Crow": false,
+        "Hugh": true,
+        "Muff": true,
+        "Mick": false,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537381,
       "date": "2026-07-07T16:00:00Z",
