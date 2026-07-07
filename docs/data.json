@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T10:40:28.459174+00:00",
+  "lastUpdated": "2026-07-07T18:24:35.268891+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -13,59 +13,59 @@
   "leaderboard": [
     {
       "name": "Hugh",
-      "points": 78.0,
-      "correct": 58,
-      "played": 94,
-      "accuracy": 0.617
+      "points": 79.33,
+      "correct": 59,
+      "played": 95,
+      "accuracy": 0.621
     },
     {
       "name": "Patrick",
-      "points": 64.07,
-      "correct": 54,
-      "played": 94,
-      "accuracy": 0.574
+      "points": 65.4,
+      "correct": 55,
+      "played": 95,
+      "accuracy": 0.579
     },
     {
       "name": "Marc",
-      "points": 63.07,
+      "points": 64.4,
+      "correct": 56,
+      "played": 95,
+      "accuracy": 0.589
+    },
+    {
+      "name": "Dan",
+      "points": 61.73,
       "correct": 55,
-      "played": 94,
-      "accuracy": 0.585
+      "played": 95,
+      "accuracy": 0.579
     },
     {
       "name": "Conor",
       "points": 60.53,
       "correct": 50,
-      "played": 94,
-      "accuracy": 0.532
-    },
-    {
-      "name": "Dan",
-      "points": 60.4,
-      "correct": 54,
-      "played": 94,
-      "accuracy": 0.574
+      "played": 95,
+      "accuracy": 0.526
     },
     {
       "name": "Crow",
-      "points": 58.33,
-      "correct": 53,
-      "played": 94,
-      "accuracy": 0.564
+      "points": 59.67,
+      "correct": 54,
+      "played": 95,
+      "accuracy": 0.568
     },
     {
       "name": "Muff",
       "points": 55.07,
       "correct": 47,
-      "played": 94,
-      "accuracy": 0.5
+      "played": 95,
+      "accuracy": 0.495
     },
     {
       "name": "Mick",
-      "points": 50.53,
-      "correct": 46,
-      "played": 94,
-      "accuracy": 0.489
+      "points": 51.87,
+      "correct": 47,
+      "played": 95,
+      "accuracy": 0.495
     }
   ],
   "finished": [
@@ -3852,9 +3852,7 @@
         "Mick": false,
         "Marc": true
       }
-    }
-  ],
-  "upcoming": [
+    },
     {
       "id": 537381,
       "date": "2026-07-07T16:00:00Z",
@@ -3863,13 +3861,20 @@
       "pointsAvailable": 8,
       "homeTeam": "Argentina",
       "awayTeam": "Egypt",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "TIMED",
+      "homeScore": 3,
+      "awayScore": 2,
+      "status": "FINISHED",
       "timeElapsed": null,
-      "homeScorers": [],
-      "awayScorers": [],
-      "result": null,
+      "homeScorers": [
+        "Cristian Romero 79'",
+        "Lionel Messi 83'",
+        "Enzo Fern\u00e1ndez 90+2'"
+      ],
+      "awayScorers": [
+        "Yasser Ibrahim 15'",
+        "Mostafa Ziko 67'"
+      ],
+      "result": "Argentina",
       "picks": {
         "Patrick": "Argentina",
         "Conor": "Egypt",
@@ -3881,16 +3886,18 @@
         "Marc": "Argentina"
       },
       "correct": {
-        "Patrick": null,
-        "Conor": null,
-        "Dan": null,
-        "Crow": null,
-        "Hugh": null,
-        "Muff": null,
-        "Mick": null,
-        "Marc": null
+        "Patrick": true,
+        "Conor": false,
+        "Dan": true,
+        "Crow": true,
+        "Hugh": true,
+        "Muff": false,
+        "Mick": true,
+        "Marc": true
       }
-    },
+    }
+  ],
+  "upcoming": [
     {
       "id": 537382,
       "date": "2026-07-07T20:00:00Z",
@@ -3899,8 +3906,8 @@
       "pointsAvailable": 8,
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "status": "TIMED",
       "timeElapsed": null,
       "homeScorers": [],
