@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T18:24:35.268891+00:00",
+  "lastUpdated": "2026-07-07T22:37:05.064029+00:00",
   "players": [
     "Patrick",
     "Conor",
@@ -3906,10 +3906,10 @@
       "pointsAvailable": 8,
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "TIMED",
-      "timeElapsed": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "IN_PLAY",
+      "timeElapsed": "live",
       "homeScorers": [],
       "awayScorers": [],
       "result": null,
